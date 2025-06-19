@@ -1,0 +1,152 @@
+/* src/styles/TechnicalSkills.css */
+
+.technical-skills {
+  position: relative;
+  padding: 40px;
+  background-color: #000000;
+  border-radius: 10px;
+  width: 1420px;
+  height: 550px;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Large title (Technical) - positioned on top */
+.technical-title-large {
+  position: absolute;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-stroke: 0.2px #fff;
+  -webkit-text-stroke: 0.2px #fff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+  left: -35px;
+  top: 200px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* Small title (Skills) - positioned at bottom of Technical */
+.technical-title-small {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #d6fdff;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  left: 80px;
+  top: 200px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.skills-content {
+  margin-left: 150px; /* Add space for the rotated title */
+  padding-right: 40px;
+}
+
+.technical-skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d6fdff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Changed to 6 columns for better distribution */
+  gap: 15px; /* Reduced gap for better space utilization */
+  justify-content: center;
+  align-items: start;
+  overflow-x: hidden;
+  max-width: 1200px; /* Added max-width for better control */
+}
+
+.skill-category {
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 180px; /* Slightly reduced min-width */
+  max-width: 200px; /* Added max-width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Ensure all content is left-aligned */
+}
+
+/* Specific positioning for better layout */
+.skill-category:nth-child(1) { /* Programming Languages */
+  grid-column: 1;
+}
+
+.skill-category:nth-child(2) { /* Big Data / Database */
+  grid-column: 2;
+}
+
+.skill-category:nth-child(3) { /* ML / AI Libraries */
+  grid-column: 3;
+}
+
+.skill-category:nth-child(4) { /* DevOps / Tools */
+  grid-column: 4;
+}
+
+.skill-category:nth-child(5) { /* Frameworks */
+  grid-column: 5;
+}
+
+.skill-category:nth-child(6) { /* Operating Systems */
+  grid-column: 6;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #63f4fc;
+  text-align: left; /* Left align category titles to match skill items */
+  padding-left: 0; /* Ensure no extra padding */
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1400px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .skill-category:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .skill-category:nth-child(2) { grid-column: 2; grid-row: 1; }
+  .skill-category:nth-child(3) { grid-column: 3; grid-row: 1; }
+  .skill-category:nth-child(4) { grid-column: 1; grid-row: 2; }
+  .skill-category:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .skill-category:nth-child(6) { grid-column: 3; grid-row: 2; }
+}

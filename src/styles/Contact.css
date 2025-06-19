@@ -1,0 +1,167 @@
+/* src/styles/Contact.css */
+.projects {
+  margin-bottom: 3rem; /* Adjust the size as you want */
+  margin-top: 1rem;
+}
+
+.contact-section {
+  background-color: #000000;
+  color: #000000;
+  padding: 4rem 2rem;
+  text-align: left;
+  width: 100%;
+  max-width: 700px; /* Changed from fixed width to max-width */
+  height: auto; /* Changed from fixed height to auto */
+  min-height: 650px; /* Maintain minimum height */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  /* Ensure the section itself is centered */
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative; /* Added for absolute positioning of titles */
+}
+
+/* Large title (Contact) - positioned on top */
+.contact-title-large {
+  position: absolute;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-stroke: 0.2px #fff;
+  -webkit-text-stroke: 0.2px #fff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+  left: 0px;
+  top: 350px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+}
+
+/* Small title (Me) - positioned at bottom */
+.contact-title-small {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #d6fdff;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  left: 20px;
+  top: 280px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  width: 100%;
+  max-width: 500px; /* Limit form width */
+  margin: 0 auto; /* Center the form within the section */
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.contact-form label {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background-color: #000000;
+  color: #ffffff; /* Changed from #000000 to #ffffff for better visibility */
+  resize: vertical; /* allow vertical resize for textarea */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ffffff;
+}
+
+.contact-form button {
+  background-color: #63f4fc;
+  color: #000000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button:hover {
+  background-color: #63f4fc;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 1rem;
+  }
+
+  .contact-section {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .contact-title-large {
+    font-size: 3.5rem;
+    left: -40px;
+    top: -60px;
+  }
+
+  .contact-title-small {
+    font-size: 1.4rem;
+    left: -50px;
+    top: -30px;
+  }
+}
+
+.top-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #63f4fc;
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}

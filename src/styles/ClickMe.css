@@ -1,0 +1,78 @@
+/* src/components/ClickMe.css */
+.clickme-container {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.clickme-container:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.clickme-container:active {
+  transform: scale(0.95);
+}
+
+.clickme-container:focus {
+  outline: 2px solid #63f4fc;
+  outline-offset: 2px;
+}
+
+.clickme-gif {
+  display: block;
+  border-radius: 8px;
+  transition: filter 0.2s ease;
+}
+
+/* Size variations */
+.clickme-container.small .clickme-gif {
+  width: 60px;
+  height: auto;
+}
+
+.clickme-container.medium .clickme-gif {
+  width: 80px;
+  height: auto;
+}
+
+.clickme-container.large .clickme-gif {
+  width: 120px;
+  height: auto;
+}
+
+/* Optional: Add a subtle glow effect */
+.clickme-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #63f4fc, #4fd2dc);
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.clickme-container:hover::before {
+  opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clickme-container.small .clickme-gif {
+    width: 50px;
+  }
+  
+  .clickme-container.medium .clickme-gif {
+    width: 70px;
+  }
+  
+  .clickme-container.large .clickme-gif {
+    width: 100px;
+  }
+}

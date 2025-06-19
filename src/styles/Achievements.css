@@ -1,0 +1,101 @@
+.achievements-container {
+  padding: 2%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin: 0px 0px; /* Add some margin to separate from other sections */
+  background-color: #000000;
+  width: 1420px;
+  height: auto; /* Changed from fixed 120px to auto */
+  min-height: 100px; /* Maintain minimum height when closed */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Header with title and GIF side by side */
+.achievements-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 0px; /* Add margin when PDF is open */
+}
+
+.achievements-title {
+  font-size: 4rem; /* Increased from 2.5rem to 4.5rem */
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  text-stroke: 0.2px #fff;
+  -webkit-text-stroke: 0.2px #fff;
+  -webkit-text-fill-color: transparent; /* Makes it hollow */
+  letter-spacing: -2px;
+}
+
+/* Close button styling */
+.achievements-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.achievements-close:hover {
+  background-color: #ffffff; /* Slightly different hover color */
+}
+
+.achievements-pdf {
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  height: 600px;
+  width: 100%; /* Ensure it fits within container */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start */
+  padding: 1px; /* Add some padding */
+  min-height: auto; /* Remove min-height constraint */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1500px) {
+  .achievements-container {
+    width: 95%;
+    max-width: 1420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-container {
+    width: 95%;
+    padding: 1.0rem;
+  }
+  
+  .achievements-title {
+    font-size: 1.3rem;
+  }
+  
+  .achievements-pdf {
+    height: 400px; /* Smaller height on mobile */
+  }
+}
+
+.click-me-gif {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}

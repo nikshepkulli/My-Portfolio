@@ -1,0 +1,21 @@
+/* Import Monoton Regular */
+@font-face {
+  font-family: 'Monoton'; /* This is the name you'll use in your CSS */
+  src: url('../fonts/Monoton/Monoton-Regular.woff2') format('woff2'),
+       url('../fonts/Monoton/Monoton-Regular.woff') format('woff');
+  font-weight: 400; /* Monoton typically only has a regular weight */
+  font-style: normal;
+  font-display: swap; /* Crucial for performance: display fallback text first */
+}
+
+/* You might want to keep your body font-family as a standard sans-serif or system font */
+/* body {
+  font-family: Arial, sans-serif;
+} */
+
+/* Global reset (keep this if you want it) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

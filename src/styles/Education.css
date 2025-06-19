@@ -1,0 +1,129 @@
+
+
+.education-section {
+  position: relative;
+  width: 1420px;
+  background-color: #000000;
+  border-radius: 12px;
+  margin: 0 auto 3rem auto;
+  text-align: left;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+/* Rotated Title for Education */
+.education-title-container {
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: center;
+  white-space: nowrap;
+  height: auto;
+  width: auto;
+}
+
+/* Large title (My) - positioned on top */
+.education-title-large {
+  position: absolute;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-stroke: 0.2px #fff;
+  -webkit-text-stroke: 0.2px #fff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+  left: -40px;
+  top: 100px;
+}
+
+/* Small title (Education) - positioned at bottom of My */
+.education-title-small {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #d6fdff;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  left: -50px;
+  top: 140px;
+}
+
+.education-content {
+  margin-left: 150px; /* Increased from 80px to move degrees further right */
+  padding-right: 40px;
+}
+
+.education-section p {
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.education-entry {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  background-color: #000000;
+  width: calc(100% - 40px);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.education-entry .degree {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 0.4rem;
+  color: #63f4fc;
+}
+
+.education-entry .institution {
+  margin-top: 0rem;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.education-entry .date {
+  margin-top: 0rem;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.highlight-text {
+  margin-top: 0.5rem;
+}
+
+.highlight-text p {
+  color: #83dcf2;
+  font-size: 0.9rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.education-container {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 10px;
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  margin-top: 0 !important;
+  padding-top: 10px;
+}

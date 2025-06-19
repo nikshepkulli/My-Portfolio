@@ -1,0 +1,143 @@
+.experience-section {
+  position: relative;
+  width: 1420px;
+  background-color: #000000;
+  border-radius: 12px;
+  margin: 0 auto 3rem auto;
+  text-align: left;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+/* Large title (My) - positioned on top */
+.experience-title-large {
+  position: absolute;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-stroke: 0.2px #fff;
+  -webkit-text-stroke: 0.2px #fff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+  left: 30px;
+  top: 280px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* Small title (Experience) - positioned at bottom of My */
+.experience-title-small {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #d6fdff;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  left: 35px;
+  top: 310px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.experience-content {
+  margin-left: 160px; /* Increased from 150px to move experience cards further right */
+  padding-right: 40px;
+}
+
+.experience-card {
+  background-color: #000000;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(43, 43, 43, 0.2);
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+  width: auto;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.click-me-gif {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.click-me-gif:hover {
+  transform: scale(1.1);
+}
+
+.title-text {
+  font-size: 1.5rem;
+  color: #63f4fc;
+  margin: 0;
+}
+
+.experience-date {
+  font-style: italic;
+  color: #ccc;
+}
+
+.toggle-summary {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.toggle-arrow {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+.experience-details {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.experience-details h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.experience-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.experience-details li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.title-with-gif {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.click-me-gif {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
