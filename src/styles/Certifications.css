@@ -20,7 +20,7 @@
   font-family: 'Monoton', cursive;
   font-size: 3rem;
   margin-bottom: 2rem;
-  color: #0077cc;
+  color: #000000;
   text-shadow:
     0 0 7px rgba(0, 119, 204, 0.7),
     0 0 15px rgba(0, 119, 204, 0.5),
@@ -133,7 +133,7 @@
 .certifications-carousel-name {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #0066cc;
+  color: #000000;
   text-decoration: none;
   text-align: center;
   line-height: 1.2;
