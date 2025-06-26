@@ -156,7 +156,7 @@ p {
 
 /* Make form labels blue */
 .contact-form label {
-  color: #0077cc !important;
+  color: #000000 !important;
   font-family: 'DM Sans', sans-serif !important;
 }
 
@@ -166,7 +166,7 @@ p {
   padding: 2rem;
   margin-top: 2rem;
   font-family: 'DM Sans', sans-serif !important;
-  color: #666;
+  color: #494949;
   font-size: 0.9rem;
 }
 

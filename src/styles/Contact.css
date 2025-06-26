@@ -75,7 +75,7 @@
 
 .contact-form label {
   font-size: 1.2rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 .contact-form input, .contact-form textarea {
@@ -151,7 +151,7 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, rgba(0,119,204,0.9) 0%, rgba(0,85,170,0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(0,85,170,0.9) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.3);
   color: #ffffff;

@@ -7,14 +7,12 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 15px;
-  width: 1420px;
-  height: 550px;
+  width: 90%;
+  max-width: 1400px;
+  min-height: 400px;
   color: #000000;
   text-align: left;
-  margin-top: 50px;
-  margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto 3rem auto;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
@@ -51,72 +49,45 @@
   top: 220px;
   transform: rotate(-90deg);
   transform-origin: center;
-  text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
 }
 
 .skills-content {
-  margin-left: 150px;
-  padding-right: 40px;
+  margin-left: 140px;
+  padding-right: 20px;
 }
 
 .technical-skills h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #2a4a5c;
+  color: #000000;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(6, 1fr); /* Fixed 6 columns */
+  gap: 15px; /* Added some gap back */
   justify-content: center;
   align-items: start;
-  overflow-x: hidden;
-  max-width: 1200px;
+  width: 100%; /* Changed from 80% to 100% */
 }
 
 .skill-category {
   background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  padding: 15px;
-  min-width: 180px;
-  max-width: 200px;
+  padding: 5px;
+  width: 100%; /* Changed from fixed 150px to 100% */
+  height: 380px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-/* Specific positioning for better layout */
-.skill-category:nth-child(1) { /* Programming Languages */
-  grid-column: 1;
-}
-
-.skill-category:nth-child(2) { /* Big Data / Database */
-  grid-column: 2;
-}
-
-.skill-category:nth-child(3) { /* ML / AI Libraries */
-  grid-column: 3;
-}
-
-.skill-category:nth-child(4) { /* DevOps / Tools */
-  grid-column: 4;
-}
-
-.skill-category:nth-child(5) { /* Frameworks */
-  grid-column: 5;
-}
-
-.skill-category:nth-child(6) { /* Operating Systems */
-  grid-column: 6;
+  text-align: center;
 }
 
 .skill-category h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
   margin-top: 30px;
-  color: #0077cc;
+  color: #000000;
   text-align: left;
   padding-left: 0;
 }
@@ -130,7 +101,7 @@
 .skill-category li {
   margin-bottom: 6px;
   font-size: 0.95rem;
-  color: #333333;
+  color: #474747;
   display: flex;
   align-items: center;
 }
@@ -141,17 +112,26 @@
   margin-right: 8px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1400px) {
+/* Responsive adjustments */
+@media (max-width: 1200px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technical-skills {
+    width: 95%;
+    padding: 20px;
   }
   
-  .skill-category:nth-child(1) { grid-column: 1; grid-row: 1; }
-  .skill-category:nth-child(2) { grid-column: 2; grid-row: 1; }
-  .skill-category:nth-child(3) { grid-column: 3; grid-row: 1; }
-  .skill-category:nth-child(4) { grid-column: 1; grid-row: 2; }
-  .skill-category:nth-child(5) { grid-column: 2; grid-row: 2; }
-  .skill-category:nth-child(6) { grid-column: 3; grid-row: 2; }
+  .skills-content {
+    margin-left: 100px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }

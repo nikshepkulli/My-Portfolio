@@ -1,3 +1,5 @@
+/* src/styles/Achievements.css */
+
 .achievements-container {
   padding: 2%;
   background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
@@ -43,28 +45,51 @@
   user-select: none;
   width: 30px;
   height: 30px;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
-  color: #ffffff;
+  color: #000000;
   border-radius: 50%;
   transition: background-color 0.3s ease;
   font-size: 1.2rem;
   font-weight: bold;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .achievements-close:hover {
-  background-color: rgba(51,51,51,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* PDF wrapper with glass effect */
+.pdf-wrapper {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .achievements-pdf {
-  border: 1px solid rgba(255,255,255,0.3);
+  border: none;
+  border-radius: 8px;
+  height: 580px;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Alternative if you don't want to change JSX */
+.achievements-pdf-standalone {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   margin-top: 10px;
   height: 600px;
   width: 100%;
   box-sizing: border-box;
-  backdrop-filter: blur(5px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.2), 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .center-wrapper {
@@ -73,6 +98,13 @@
   align-items: flex-start;
   padding: 1px;
   min-height: auto;
+}
+
+.click-me-gif {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
 }
 
 /* Responsive adjustments */
@@ -93,14 +125,15 @@
     font-size: 1.3rem;
   }
   
+  .pdf-wrapper {
+    padding: 5px;
+  }
+  
   .achievements-pdf {
+    height: 380px;
+  }
+  
+  .achievements-pdf-standalone {
     height: 400px;
   }
-}
-
-.click-me-gif {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  transition: transform 0.2s ease;
 }

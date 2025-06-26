@@ -7,7 +7,7 @@ const skills = {
   'Big Data / Database': ['Hadoop', 'Cassandra', 'MongoDB', 'PostgreSQL'],
   'ML / AI Libraries and Tools': [
     'Keras', 'Pandas', 'NumPy', 'Scikit-learn', 'Jupyter', 'Pytest',
-    'NLTK', 'SpaCy', 'Hugging Face', 'Seaborn', 'Matplotlib'
+    'NLTK', 'SpaCy', 'Hugging Face', 'Seaborn'
   ],
   'DevOps / Tools': ['Jira', 'Jenkins', 'Git', 'Docker', 'Kubernetes', 'Airflow'],
   'Operating Systems': ['Linux', 'Windows'],
