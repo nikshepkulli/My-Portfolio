@@ -16,7 +16,12 @@ function App() {
      <div className="container">
       {/* All your components here */}
 
-    <div style={{ backgroundColor: 'transparent', minHeight: '100vh', padding: '2rem', color: 'black' }}>
+    <div style={{ 
+      background: 'linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a8edea 100%)', 
+      minHeight: '100vh', 
+      padding: '2rem', 
+      color: 'black' 
+    }}>
       {/* Stack Hero and About vertically */}
       <Hero />
       <About />
