@@ -1,23 +1,19 @@
-/* Global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Publications Section CSS */
 .publications-section {
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
   text-align: center;
   margin-bottom: 2rem;
-  padding: 2rem 0; /* Increased from 1rem to 2rem for better balance */
-  width: 450px;
-  height: 700px;
+  padding: 2rem 0;
+  width: 900px; /* Decreased by 100px */
+  height: 350px; /* Decreased by 100px */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Better space distribution */
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .publications-container {
@@ -25,16 +21,15 @@
   margin-bottom: 1.5rem;
 }
 
-/* Publications Section CSS */
 .publications-section h2 {
   font-family: 'Monoton', cursive;
   font-size: 3rem;
-  margin-bottom: 2rem; /* Reduced from 4rem to 2rem */
-  color: #63f4fc;
+  margin-bottom: 2rem;
+  color: #0077cc;
   text-shadow:
-    0 0 7px rgba(99, 244, 252, 0.7),
-    0 0 15px rgba(99, 244, 252, 0.5),
-    0 0 25px rgba(99, 244, 252, 0.3);
+    0 0 7px rgba(0, 119, 204, 0.7),
+    0 0 15px rgba(0, 119, 204, 0.5),
+    0 0 25px rgba(0, 119, 204, 0.3);
 }
 
 .publications-content {
@@ -43,83 +38,73 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-grow: 1; /* Take up remaining space */
+  flex-grow: 1;
 }
 
-/* Carousel box - This is the component that holds the actual content of the publications */
 .carousel-box {
   position: relative;
   font-size: 1.8rem;
-  background-color: #000000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 10px;
-  padding: 2rem; /* Reduced from 5rem to 2rem */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px; /* Increased from 100px to better fit content */
-  height: 400px; /* Reduced from 450px */
-  margin: 0 auto; /* Center the carousel */
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 500px; /* Keeping your size */
+  height: 300px; /* Keeping your size */
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end; /* Your setting */
+  justify-content: right; /* Your setting */
 }
 
-/* Rotated Title for Publications */
 .publications-title-container {
   position: absolute;
-  left: -40px; /* Adjusted for better positioning */
-  top: 50%; /* Center vertically */
+  left: 30px;
+  top: 50%;
   transform: rotate(-90deg) translateY(-50%);
   transform-origin: center;
   white-space: nowrap;
-  height: 0px;
-  width: 0px;
+  height: auto;
+  width: auto;
 }
 
-/* Large title (My) - positioned on top */
 .publications-title-large {
   position: absolute;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #fff;
-  text-stroke: 2px #fff;
-  -webkit-text-stroke: 0.2px #fff;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
   letter-spacing: 1px;
   line-height: 1;
   margin: 0;
-  z-index: 2;
-  left: -60px;
-  top: -45px;
+  z-index: 1; /* Back layer like "About" */
+  left: -40px;
+  top: 10px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
-/* Small title (Publications) - positioned at bottom of M */
 .publications-title-small {
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: normal;
-  color: #d6fdff;
+  color: #000000;
   letter-spacing: 0px;
   line-height: 1;
   margin: 0;
-  z-index: 1;
+  z-index: 2; /* Front layer like "Me" */
   left: -80px;
-  top: -5px;
+  top: 50px;
+  /*text-shadow: 2px 2px 4px rgba(255,255,255,0.8);*/
 }
 
 .publications-carousel-frame {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem; /* Added gap between arrows and content */
-  width: 100%;
-  height: 100%;
-}
-
-.certifications-carousel-frame {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem; /* Added gap between arrows and content */
-  width: 100%;
+  gap: 1rem;
+  width: 400px; /* Your setting */
   height: 100%;
 }
 
@@ -129,53 +114,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
+  width: 100px; /* Decreased width */
 }
 
 .carousel-img {
-  width: 180px; /* Slightly reduced */
-  height: 180px; /* Slightly reduced */
+  width: 300px; /* Your setting */
+  height: 200px; /* Your setting */
   object-fit: cover;
   border-radius: 0px;
   margin-bottom: 1rem;
 }
 
 .carousel-name {
-  font-size: 1.3rem; /* Slightly reduced */
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #63f4fc;
+  color: #000000;
   text-decoration: none;
   text-align: center;
-  width: 450px;
-  line-height: 1.2; /* Better line spacing */
+  width: 550px; /* Decreased width */
+  line-height: 1.2;
 }
 
 .carousel-name:hover {
-  color: #63f4fc;
+  color: #0055aa;
 }
 
 .carousel-link {
   margin-top: 0.5rem;
-  font-size: 0.9rem; /* Slightly reduced */
-  color: #63b3ed;
+  font-size: 0.9rem;
+  color: #0077cc;
   word-break: break-word;
   cursor: pointer;
 }
 
 .carousel-link:hover {
-  color: #63b3ed;
-}
-
-.clickme-gif {
-  width: 60px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  position: right;
-}
-
-.clickme-gif:hover {
-  transform: scale(1.1);
+  color: #0055aa;
 }
 
 .publication-name-container {
@@ -183,14 +156,14 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 250px;
+  width: 100px; /* Decreased width */
 }
 
 .publications-arrow {
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: #000000;
   cursor: pointer;
   border-radius: 50%;
   width: 50px;
@@ -199,11 +172,11 @@
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
-  flex-shrink: 0; /* Prevent arrows from shrinking */
+  flex-shrink: 0;
 }
 
 .publications-arrow:hover {
-  color: #2196f3;
+  color: #0077cc;
 }
 
 .publications-arrow:disabled {
@@ -212,100 +185,17 @@
 }
 
 .publications-arrow:disabled:hover {
-  color: white;
+  color: #000000;
 }
 
-.arrow {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
+.clickme-gif {
+  width: 40px;
+  height: auto;
   cursor: pointer;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-  flex-shrink: 0; /* Prevent arrows from shrinking */
+  transition: transform 0.3s ease;
+  position: right;
 }
 
-.arrow:hover {
-  color: #2196f3;
-}
-
-.arrow:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.arrow:disabled:hover {
-  color: white;
-}
-
-/* Publications list for legacy support */
-.publications-list {
-  text-align: center;
-  margin-top: 2rem;
-  padding-left: 2rem;
-}
-
-.publications-list ul {
-  list-style-type: disc;
-}
-
-.publications-list li {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-.publications-list a {
-  color:  #63b3ed;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.publications-list a:hover {
-  color: #63b3ed;
-  text-decoration: underline;
-}
-
-/* Legacy publications styles for backwards compatibility */
-.publications {
-  padding: 2rem 6rem;
-  background: #000000;
-  color: #fff;
-}
-
-.publications h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.publications ul {
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-
-.publications li {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.publications a {
-  color:  #63b3ed;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.publications a:hover {
-  color: #63b3ed;
-  text-decoration: underline;
-}
-
-.publications-grid {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 2rem;
+.clickme-gif:hover {
+  transform: scale(1.1);
 }

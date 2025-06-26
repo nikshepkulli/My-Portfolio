@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Hey there,</h1>
-        <h2>I'm Nikshep A Kulli</h2>
+        <h1>Glad you're here,</h1>
+        <h2> I'm Nikshep A Kulli</h2>
         <p>Full-Stack Developer | DevOps-Focused Full-Stack Engineer</p>
         
         {/* Slogan content embedded here */}
@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="linktree">
           <h3>Get In Touch</h3>
           <a href="#" target="_blank" rel="noopener noreferrer">
-            🌐 Visit My Linktree
+            ⚪ Visit My Linktree
           </a>
         </div>
       </div>

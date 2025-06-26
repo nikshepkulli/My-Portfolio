@@ -1,14 +1,15 @@
-
-
 .education-section {
   position: relative;
   width: 1420px;
-  background-color: #000000;
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
   margin: 0 auto 3rem auto;
   text-align: left;
-  color: #ffffff;
+  color: #000000;
   padding: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 /* Rotated Title for Education */
@@ -28,10 +29,11 @@
   position: absolute;
   font-size: 4.5rem;
   font-weight: bold;
-  color: #fff;
-  text-stroke: 0.2px #fff;
-  -webkit-text-stroke: 0.2px #fff;
+  color: #ffffff;
+  text-stroke: 0.2px #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   letter-spacing: 1px;
   line-height: 1;
   margin: 0;
@@ -45,7 +47,7 @@
   position: absolute;
   font-size: 1.8rem;
   font-weight: normal;
-  color: #d6fdff;
+  color: #000000;
   letter-spacing: 0px;
   line-height: 1;
   margin: 0;
@@ -64,7 +66,7 @@
   margin-bottom: 0rem;
   margin-top: 0rem;
   text-align: left;
-  color: #ffffff;
+  color: #000000;
 }
 
 .education-entry {
@@ -73,10 +75,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
-  background-color: #000000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
   width: calc(100% - 40px);
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .education-entry .degree {
@@ -84,13 +88,14 @@
   font-size: 1.5rem;
   margin-top: 0rem;
   margin-bottom: 0.4rem;
-  color: #63f4fc;
+  color: #000000;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .education-entry .institution {
   margin-top: 0rem;
   font-style: italic;
-  color: #ffffff;
+  color: #000000;
   font-size: 0.95rem;
 }
 
@@ -107,7 +112,7 @@
 }
 
 .highlight-text p {
-  color: #83dcf2;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 
@@ -118,12 +123,15 @@ html, body {
 
 .education-container {
   padding: 20px;
-  color: #ffffff;
-  background-color: #000000;
-  border-radius: 10px;
+  color: #000000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
   width: 1000px;
   text-align: center;
   margin: 0 auto 3rem auto;
   margin-top: 0 !important;
   padding-top: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }

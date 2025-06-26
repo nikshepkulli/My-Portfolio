@@ -1,15 +1,17 @@
 .achievements-container {
   padding: 2%;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  margin: 0px 0px; /* Add some margin to separate from other sections */
-  background-color: #000000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  margin: 0px 0px;
   width: 1420px;
-  height: auto; /* Changed from fixed 120px to auto */
-  min-height: 100px; /* Maintain minimum height when closed */
+  height: auto;
+  min-height: 100px;
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 /* Header with title and GIF side by side */
@@ -18,18 +20,18 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 0px; /* Add margin when PDF is open */
+  margin-bottom: 0px;
 }
 
 .achievements-title {
-  font-size: 4rem; /* Increased from 2.5rem to 4.5rem */
+  font-size: 4rem;
   font-weight: bold;
   margin: 0;
-  color: #fff;
-  text-stroke: 0.2px #fff;
-  -webkit-text-stroke: 0.2px #fff;
-  -webkit-text-fill-color: transparent; /* Makes it hollow */
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
   letter-spacing: -2px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
 /* Close button styling */
@@ -41,33 +43,36 @@
   user-select: none;
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
   border-radius: 50%;
   transition: background-color 0.3s ease;
   font-size: 1.2rem;
   font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .achievements-close:hover {
-  background-color: #ffffff; /* Slightly different hover color */
+  background-color: rgba(51,51,51,0.8);
 }
 
 .achievements-pdf {
-  border: none;
-  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
   margin-top: 10px;
   height: 600px;
-  width: 100%; /* Ensure it fits within container */
-  box-sizing: border-box; /* Include padding in width calculation */
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
 }
 
 .center-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Changed from center to flex-start */
-  padding: 1px; /* Add some padding */
-  min-height: auto; /* Remove min-height constraint */
+  align-items: flex-start;
+  padding: 1px;
+  min-height: auto;
 }
 
 /* Responsive adjustments */
@@ -89,7 +94,7 @@
   }
   
   .achievements-pdf {
-    height: 400px; /* Smaller height on mobile */
+    height: 400px;
   }
 }
 

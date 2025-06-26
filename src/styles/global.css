@@ -1,3 +1,201 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global font consistency - Apply to all text except specific title classes */
+body, 
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+span, 
+div, 
+li, 
+a, 
+button, 
+input, 
+textarea, 
+label,
+.degree,
+.institution,
+.date,
+.experience-details,
+.project-details,
+.skill-category li,
+.carousel-name,
+.carousel-link,
+.education-entry,
+.experience-card,
+.project-block,
+.contact-form,
+.hero-content,
+.about-content,
+.job-title,
+.tagline,
+.title-text,
+.experience-date,
+.project-title {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Force DM Sans font for experience job titles specifically */
+.experience-card .title-text,
+.experience-header .title-text,
+.title-row .title-text {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Apply DM Sans to ALL elements on the website */
+* {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Keep the exceptions for rotated titles */
+.publications-title-small,
+.certifications-title-small,
+.education-title-small,
+.experience-title-small,
+.technical-title-small,
+.contact-title-small,
+.about-title-small,
+.title-small,
+.title-projects {
+  font-family: inherit !important;
+}
+
+/* Force DM Sans for Hero section specifically */
+.hero,
+.hero *,
+.hero h1,
+.hero h2,
+.hero p,
+.hero-content,
+.hero-content *,
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.slogan,
+.slogan *,
+.slogan-box,
+.slogan-box *,
+.tagline,
+.tagline *,
+.linktree,
+.linktree * {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Even more aggressive - target the main headings */
+h1, h2 {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Force DM Sans for publication and certification names */
+.carousel-name,
+.certifications-carousel-name,
+.publications-carousel-name,
+.degree {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 300 !important; /* Make it thinner like the side titles */
+}
+
+/* Target all blue clickable titles specifically */
+a[style*="color"],
+.carousel-link,
+.degree,
+h3, h4 {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+/* Most aggressive approach - override everything */
+.carousel-content *,
+.education-entry * {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+/* Force DM Sans for About section specifically */
+.about,
+.about *,
+.about p,
+.about-content,
+.about-content *,
+.about-content p,
+.about-section,
+.about-section *,
+.about-section p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Target all paragraph text specifically */
+p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Force DM Sans for Contact section form */
+.contact-section,
+.contact-section *,
+.contact-form,
+.contact-form *,
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Make form labels blue */
+.contact-form label {
+  color: #0077cc !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Copyright footer */
+.copyright-footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-family: 'DM Sans', sans-serif !important;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Add background image to the entire website */
+body {
+  background-image: url('./src/assets/background.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Also apply to the main app container */
+#root {
+  background-image: url('./src/assets/background.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Apply to the main app div */
+.container {
+  background-image: url('./src/assets/background.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}

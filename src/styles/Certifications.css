@@ -1,27 +1,30 @@
 /* Certifications Section CSS */
 .certifications-section {
-  width: 450px;
-  height: 700px;
-  background-color: #000000;
-  border-radius: 10px;
+  width: 1000px; /* Decreased by 100px */
+  height: 350px; /* Decreased by 100px */
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 2rem;
-  padding: 2rem 0; /* Increased from 1rem to 2rem for better balance */
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Better space distribution */
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .certifications-section h2 {
   font-family: 'Monoton', cursive;
   font-size: 3rem;
-  margin-bottom: 2rem; /* Reduced from 4rem to 2rem */
-  color: #63f4fc;
+  margin-bottom: 2rem;
+  color: #0077cc;
   text-shadow:
-    0 0 7px rgba(99, 244, 252, 0.7),
-    0 0 15px rgba(99, 244, 252, 0.5),
-    0 0 25px rgba(99, 244, 252, 0.3);
+    0 0 7px rgba(0, 119, 204, 0.7),
+    0 0 15px rgba(0, 119, 204, 0.5),
+    0 0 25px rgba(0, 119, 204, 0.3);
 }
 
 .certifications-content {
@@ -29,30 +32,30 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-grow: 1; /* Take up remaining space */
+  flex-grow: 1;
 }
 
-/* Certifications Carousel box */
 .certifications-carousel-box {
   position: relative;
   font-size: 1.8rem;
-  background-color: #000000;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 10px;
-  padding: 2rem; /* Consistent with publications */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px; /* Same as publications */
-  height: 400px; /* Same as publications */
-  margin: 0 auto; /* Center the carousel */
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 500px; /* Match publications exactly */
+  height: 300px; /* Match publications exactly */
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end; /* Your setting */
+  justify-content: right; /* Your setting */
 }
 
-/* Rotated Title for Certifications */
 .certifications-title-container {
   position: absolute;
-  left: -40px; /* Adjusted for better positioning */
-  top: 50%; /* Center vertically */
+  left: 20px;
+  top: 50%;
   transform: rotate(-90deg) translateY(-50%);
   transform-origin: center;
   white-space: nowrap;
@@ -60,112 +63,104 @@
   width: auto;
 }
 
-/* Large title (My) - positioned on top */
 .certifications-title-large {
   position: absolute;
   font-size: 4.5rem;
   font-weight: bold;
-  color: #fff;
-  text-stroke: 0.2px #fff;
-  -webkit-text-stroke: 0.2px #fff;
+  color: #ffffff;
+  text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
   -webkit-text-fill-color: transparent;
+  text-shadow: #ffffff;
   letter-spacing: 1px;
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: -60px;
-  top: -80px;
+  left: -45px;
+  top: 10px;
 }
 
-/* Small title (Certifications) - positioned at bottom of M */
 .certifications-title-small {
   position: absolute;
   font-size: 1.8rem;
   font-weight: normal;
-  color: #d6fdff;
+  color: #000000;
   letter-spacing: 0px;
   line-height: 1;
   margin: 0;
   z-index: 1;
-  left: -80px;
-  top: -40px;
+  left: -90px;
+  top: 60px;
 }
+
 
 .certifications-carousel-frame {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem; /* Added gap between arrows and content */
-  width: 100%;
+  gap: 1rem;
+  width: 400px;
   height: 100%;
 }
 
-/* Keep the original certifications-carousel-content as column layout */
 .certifications-carousel-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
+  width: 400px; /* Decreased width */
 }
 
-/* Add this new style for the container that holds the name and GIF */
 .certification-name-container {
   display: flex;
-  flex-direction: row; /* This makes the name and GIF side by side */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* Space between name and GIF */
+  gap: 1rem;
   margin-top: 1rem;
   width: 100%;
 }
 
 .certifications-carousel-img {
-  width: 180px; /* Same as publications */
-  height: 180px; /* Same as publications */
+  width: 300px; /* Your setting */
+  height: 200px; /* Your setting */
   object-fit: cover;
   border-radius: 0px;
   margin-bottom: 1rem;
 }
 
-/* Keep the original certifications-carousel-name styles */
 .certifications-carousel-name {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #83dcf2;
+  color: #0066cc;
   text-decoration: none;
   text-align: center;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex: 1; /* Allow the name to take available space */
-  cursor: text; /* Make it clear this is not clickable */
+  flex: 1;
+  cursor: text;
 }
-
-/* Remove hover effect from name since it's not clickable */
-/* .certifications-carousel-name:hover {
-  color: #63f4fc;
-} */
 
 .certifications-carousel-link {
   margin-top: 0.5rem;
-  font-size: 0.9rem; /* Same as publications */
-  color: #63f4fc;
+  font-size: 0.9rem;
+  color: #0077cc;
   word-break: break-word;
   cursor: pointer;
 }
 
 .certifications-carousel-link:hover {
-  color: #63b3ed;
+  color: #0055aa;
 }
 
 .certifications-arrow {
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: #000000;
   cursor: pointer;
   border-radius: 50%;
   width: 50px;
@@ -174,11 +169,11 @@
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
-  flex-shrink: 0; /* Prevent arrows from shrinking */
+  flex-shrink: 0;
 }
 
 .certifications-arrow:hover {
-  color: #2196f3;
+  color: #0077cc;
 }
 
 .certifications-arrow:disabled {
@@ -187,75 +182,17 @@
 }
 
 .certifications-arrow:disabled:hover {
-  color: white;
+  color: #000000;
 }
 
-/* Update the GIF styles */
 .clickme-gif {
   width: 60px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
-  flex-shrink: 0; /* Prevent the GIF from shrinking */
+  flex-shrink: 0;
 }
 
 .clickme-gif:hover {
   transform: scale(1.1);
-}
-
-/* Legacy styles for backwards compatibility */
-.certifications {
-  padding: 2rem 6rem;
-  background: #000000;
-  color: #fff;
-}
-
-.certifications h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.certifications ul {
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-
-.certifications li {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.certifications a {
-  color: #81d8e2;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.certifications a:hover {
-  color: #63b3ed;
-}
-
-/* Container to hold both sections side by side */
-.sections-container {
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-  flex-wrap: nowrap;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .sections-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-}
-
-.certifications-grid {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 2rem;
 }

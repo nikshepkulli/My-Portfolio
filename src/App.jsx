@@ -16,7 +16,7 @@ function App() {
      <div className="container">
       {/* All your components here */}
 
-    <div style={{ backgroundColor: 'black', minHeight: '100vh', padding: '2rem', color: 'white' }}>
+    <div style={{ backgroundColor: 'transparent', minHeight: '100vh', padding: '2rem', color: 'black' }}>
       {/* Stack Hero and About vertically */}
       <Hero />
       <About />
