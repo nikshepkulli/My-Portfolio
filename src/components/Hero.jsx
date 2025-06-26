@@ -41,7 +41,7 @@ const Hero = () => {
         {/* Linktree Block */}
         <div className="linktree">
           <h3>Get In Touch</h3>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://linktr.ee/kullitech" target="_blank" rel="noopener noreferrer">
             ⚪ Visit My Linktree
           </a>
         </div>

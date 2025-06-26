@@ -28,14 +28,17 @@ const Contact = () => {
 
     try {
       const result = await emailjs.send(
-        'service_78ijelk',
-        'template_orgvmhf', // Replace this with your actual template ID from dashboard
+        'service_o5kx3yv',
+        'template_3lc5z37',
         {
-          name: formData.fullName,
-          email: formData.email,
-          message: formData.message
+          // Updated to match default EmailJS template variables
+          from_name: formData.fullName,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'nikshepkulli9@gmail.com',
+          to_name: 'Nikshep A Kulli' // Your name for the template
         },
-        'KsEG-OR0yB8jOTu94'
+        'I8zCAD3ZNK3E4KWZc'
       );
 
       console.log('SUCCESS:', result);

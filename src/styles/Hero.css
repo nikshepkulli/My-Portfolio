@@ -180,3 +180,12 @@ h2:hover, p:hover {
   text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8);
   transform: scale(1.05);
 }
+
+.job-title, .tagline {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000;
+  margin-left: 90px; /* Increased margin to account for wider rotated text */
+  line-height: 1.2;
+  margin-top: 35px; /* Add this line */
+}
