@@ -172,7 +172,7 @@ p {
 
 /* Add background image to the entire website */
 body {
-  background-image: url('./src/assets/background.png') !important;
+  background-image: url('/My-Portfolio/src/assets/background.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -182,7 +182,7 @@ body {
 
 /* Also apply to the main app container */
 #root {
-  background-image: url('./src/assets/background.png') !important;
+  background-image: url('/My-Portfolio/src/assets/background.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -192,7 +192,7 @@ body {
 
 /* Apply to the main app div */
 .container {
-  background-image: url('./src/assets/background.png') !important;
+  background-image: url('/My-Portfolio/src/assets/background.png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
