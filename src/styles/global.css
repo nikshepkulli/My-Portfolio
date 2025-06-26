@@ -192,10 +192,10 @@ body {
 
 /* Apply to the main app div */
 .container {
-  background-image: url('/My-Portfolio/src/assets/background.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  min-height: 100vh !important;
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
