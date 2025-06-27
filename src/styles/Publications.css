@@ -8,8 +8,8 @@
   text-align: center;
   margin-bottom: 2rem;
   padding: 2rem 0;
-  width: 900px; /* Decreased by 100px */
-  height: 350px; /* Decreased by 100px */
+  width: 900px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,12 +50,12 @@
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  width: 500px; /* Keeping your size */
-  height: 300px; /* Keeping your size */
+  width: 500px;
+  height: 300px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-end; /* Your setting */
-  justify-content: right; /* Your setting */
+  align-items: flex-end;
+  justify-content: right;
 }
 
 .publications-title-container {
@@ -79,7 +79,7 @@
   letter-spacing: 1px;
   line-height: 1;
   margin: 0;
-  z-index: 1; /* Back layer like "About" */
+  z-index: 1;
   left: -40px;
   top: 10px;
   text-shadow: 0 0 20px rgba(255,255,255,0.5);
@@ -93,10 +93,9 @@
   letter-spacing: 0px;
   line-height: 1;
   margin: 0;
-  z-index: 2; /* Front layer like "Me" */
+  z-index: 2;
   left: -80px;
   top: 50px;
-  /*text-shadow: 2px 2px 4px rgba(255,255,255,0.8);*/
 }
 
 .publications-carousel-frame {
@@ -104,7 +103,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 400px; /* Your setting */
+  width: 400px;
   height: 100%;
 }
 
@@ -114,12 +113,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px; /* Decreased width */
+  width: 100px;
 }
 
 .carousel-img {
-  width: 300px; /* Your setting */
-  height: 200px; /* Your setting */
+  width: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 0px;
   margin-bottom: 1rem;
@@ -131,7 +130,7 @@
   color: #000000;
   text-decoration: none;
   text-align: center;
-  width: 550px; /* Decreased width */
+  width: 550px;
   line-height: 1.2;
 }
 
@@ -156,7 +155,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100px; /* Decreased width */
+  width: 100px;
 }
 
 .publications-arrow {
@@ -198,4 +197,112 @@
 
 .clickme-gif:hover {
   transform: scale(1.1);
+}
+
+/* Mobile Publications Styles */
+.publications-section-mobile {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.publications-mobile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.publications-mobile-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0077cc;
+  margin: 0;
+  text-shadow:
+    0 0 7px rgba(0, 119, 204, 0.7),
+    0 0 15px rgba(0, 119, 204, 0.5),
+    0 0 25px rgba(0, 119, 204, 0.3);
+}
+
+.publications-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.publication-mobile-item {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.publication-mobile-img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.publication-mobile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.publication-mobile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.publication-mobile-link {
+  display: inline-block;
+}
+
+.publication-mobile-gif {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.publication-mobile-gif:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive sizing for smaller screens */
+@media (max-width: 480px) {
+  .publications-section-mobile {
+    max-width: 350px;
+    padding: 0.8rem;
+  }
+  
+  .publications-mobile-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .publication-mobile-img {
+    height: 120px;
+  }
+  
+  .publication-mobile-name {
+    font-size: 1rem;
+  }
+  
+  .publication-mobile-gif {
+    width: 25px;
+    height: 25px;
+  }
 }

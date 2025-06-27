@@ -5,7 +5,8 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 15px;
-  width: 1350px;
+  width: 100%;
+  max-width: 1350px;
   margin: 0 auto;
   color: #000000;
   text-align: left;
@@ -129,45 +130,352 @@
   color: #333;
 }
 
-/* Responsive design */
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .projects {
+    max-width: 1350px;
+  }
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1399px) {
+  .projects {
+    width: 95%;
+    max-width: 1200px;
+    padding: 18px 35px;
+  }
+  
+  .projects-container {
+    margin-left: 120px;
+    gap: 4px;
+  }
+  
+  .project-block {
+    width: 360px;
+  }
+  
+  .project-img {
+    width: 320px;
+    height: 360px;
+  }
+  
+  .title-my {
+    font-size: 3.5rem;
+    left: 8px;
+    top: 160px;
+  }
+  
+  .title-projects {
+    font-size: 1.8rem;
+    left: 15px;
+    top: 175px;
+  }
+}
+
+/* Tablet Large */
+@media (max-width: 1024px) {
+  .projects {
+    width: 95%;
+    padding: 16px 30px;
+  }
+  
+  .projects-container {
+    margin-left: 100px;
+    gap: 3px;
+  }
+  
+  .project-block {
+    width: 320px;
+    padding: 18px;
+  }
+  
+  .project-img {
+    width: 280px;
+    height: 320px;
+  }
+  
+  .title-my {
+    font-size: 3rem;
+    left: 6px;
+    top: 140px;
+  }
+  
+  .title-projects {
+    font-size: 1.6rem;
+    left: 12px;
+    top: 155px;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-details li {
+    font-size: 0.9rem;
+  }
+  
+  .gif-toggle {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Tablet Portrait */
 @media (max-width: 768px) {
   .projects {
-    padding: 40px 20px;
+    width: 95%;
+    padding: 15px 20px;
+    border-radius: 12px;
+  }
+  
+  .projects-title-container {
+    position: static;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .title-my {
+    position: static;
+    transform: none;
+    font-size: 2.8rem;
+    left: auto;
+    top: auto;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  .title-projects {
+    position: static;
+    transform: none;
+    font-size: 1.4rem;
+    left: auto;
+    top: auto;
+    display: inline-block;
+  }
+  
+  .title-vertical {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
   }
   
   .projects-container {
     margin-left: 0;
     justify-content: center;
-  }
-  
-  .projects-title-container {
-    position: static;
-    transform: none;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .title-vertical {
-    writing-mode: horizontal-tb;
-    flex-direction: row;
-    gap: 15px;
-  }
-  
-  .title-my {
-    font-size: 2.5rem;
-    margin-bottom: 0;
-  }
-  
-  .title-projects {
-    font-size: 1.8rem;
+    gap: 10px;
   }
   
   .project-block {
     width: 100%;
+    max-width: 400px;
+    padding: 15px;
   }
   
   .project-img {
     width: 100%;
     height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 1rem;
+  }
+  
+  .project-details li {
+    font-size: 0.85rem;
+  }
+  
+  .gif-toggle {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 600px) {
+  .projects {
+    width: 98%;
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+  
+  .title-my {
+    font-size: 2.4rem;
+    -webkit-text-stroke: 1.5px #ffffff;
+  }
+  
+  .title-projects {
+    font-size: 1.2rem;
+  }
+  
+  .title-vertical {
+    gap: 10px;
+  }
+  
+  .projects-container {
+    gap: 8px;
+  }
+  
+  .project-block {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+  }
+  
+  .project-img {
+    max-height: 250px;
+  }
+  
+  .project-header-row {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .project-title {
+    font-size: 0.95rem;
+  }
+  
+  .project-details {
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .project-details li {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+  
+  .gif-toggle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .projects {
+    width: 98%;
+    padding: 10px 12px;
+  }
+  
+  .projects-title-container {
+    margin-bottom: 15px;
+  }
+  
+  .title-my {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #ffffff;
+    margin-right: 0.8rem;
+  }
+  
+  .title-projects {
+    font-size: 1rem;
+  }
+  
+  .title-vertical {
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .projects-container {
+    gap: 6px;
+  }
+  
+  .project-block {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+  }
+  
+  .project-img {
+    max-height: 200px;
+    margin: 8px 0;
+    border-radius: 8px;
+  }
+  
+  .project-header-row {
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .project-title {
+    font-size: 0.9rem;
+  }
+  
+  .project-details {
+    padding-left: 12px;
+    margin-top: 8px;
+  }
+  
+  .project-details li {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  
+  .gif-toggle {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .projects {
+    padding: 8px 10px;
+  }
+  
+  .projects-title-container {
+    margin-bottom: 12px;
+  }
+  
+  .title-my {
+    font-size: 1.8rem;
+  }
+  
+  .title-projects {
+    font-size: 0.9rem;
+  }
+  
+  .title-vertical {
+    gap: 6px;
+  }
+  
+  .project-block {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+  }
+  
+  .project-img {
+    max-height: 180px;
+    margin: 6px 0;
+  }
+  
+  .project-header-row {
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .project-title {
+    font-size: 0.85rem;
+  }
+  
+  .project-details {
+    padding-left: 10px;
+    margin-top: 6px;
+  }
+  
+  .project-details li {
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+  }
+  
+  .gif-toggle {
+    width: 20px;
+    height: 20px;
   }
 }

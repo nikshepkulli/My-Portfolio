@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cert1 from '../assets/cert1.png';
 import cert2 from '../assets/cert2.jpg';
 import clickmeGif from '../assets/clickme.gif';
@@ -19,6 +19,18 @@ const certifications = [
 
 const Certifications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Mobile detection - fixed to match App.jsx
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const prevSlide = () => {
     if (currentIndex > 0) {
@@ -32,6 +44,46 @@ const Certifications = () => {
     }
   };
 
+  // Mobile layout - show all certifications vertically
+  if (isMobile) {
+    return (
+      <div className="certifications-section-mobile">
+        <div className="certifications-mobile-header">
+          <h2>MY CERTIFICATIONS</h2>
+        </div>
+        <div className="certifications-mobile-list">
+          {certifications.map((certification, index) => (
+            <div key={index} className="certification-mobile-item">
+              <img
+                src={certification.img}
+                alt={`certification-${index}`}
+                className="certification-mobile-img"
+              />
+              <div className="certification-mobile-info">
+                <div className="certification-mobile-name">
+                  {certification.name}
+                </div>
+                <a
+                  href={certification.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="certification-mobile-link"
+                >
+                  <img
+                    src={clickmeGif}
+                    alt="Click me to open certification"
+                    className="certification-mobile-gif"
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop layout - keep original carousel
   return (
     <div className="certifications-carousel-box">
       {/* Rotated Title */}
@@ -39,7 +91,7 @@ const Certifications = () => {
         <div className="certifications-title-large">My</div>
         <div className="certifications-title-small">Certifications</div>
       </div>
-      
+             
       <div className="certifications-carousel-frame">
         <button
           className="certifications-arrow left"

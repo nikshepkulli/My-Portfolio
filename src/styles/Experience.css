@@ -1,6 +1,7 @@
 .experience-section {
   position: relative;
-  width: 1420px;
+  width: 100%;
+  max-width: 1420px;
   background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
@@ -48,7 +49,7 @@
 }
 
 .experience-content {
-  margin-left: 160px; /* Increased from 150px to move experience cards further right */
+  margin-left: 160px;
   padding-right: 40px;
 }
 
@@ -73,7 +74,7 @@
 }
 
 .experience-header p {
-  color: #ffffff; /* White color for dates */
+  color: #ffffff;
   font-style: italic;
   margin: 0;
 }
@@ -152,4 +153,375 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+}
+
+/* Large Desktop */
+@media (min-width: 1500px) {
+  .experience-section {
+    max-width: 1420px;
+  }
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1499px) {
+  .experience-section {
+    width: 95%;
+    max-width: 1200px;
+  }
+  
+  .experience-content {
+    margin-left: 140px;
+    padding-right: 30px;
+  }
+  
+  .experience-title-large {
+    font-size: 4rem;
+    left: 25px;
+    top: 250px;
+  }
+  
+  .experience-title-small {
+    font-size: 1.6rem;
+    left: 30px;
+    top: 275px;
+  }
+}
+
+/* Tablet Large */
+@media (max-width: 1024px) {
+  .experience-section {
+    width: 95%;
+    padding: 1.8rem 0;
+  }
+  
+  .experience-content {
+    margin-left: 120px;
+    padding-right: 25px;
+  }
+  
+  .experience-title-large {
+    font-size: 3.5rem;
+    left: 20px;
+    top: 220px;
+  }
+  
+  .experience-title-small {
+    font-size: 1.4rem;
+    left: 25px;
+    top: 240px;
+  }
+  
+  .experience-card {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .title-text {
+    font-size: 1.3rem;
+  }
+  
+  .experience-details h4 {
+    font-size: 1.1rem;
+  }
+  
+  .experience-details li {
+    font-size: 0.95rem;
+  }
+  
+  .click-me-gif {
+    width: 50px;
+  }
+  
+  .title-with-gif .click-me-gif {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .experience-section {
+    width: 95%;
+    padding: 1.5rem 0;
+    border-radius: 12px;
+  }
+  
+  .experience-title-large {
+    position: static;
+    transform: none;
+    font-size: 2.8rem;
+    left: auto;
+    top: auto;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .experience-title-small {
+    position: static;
+    transform: none;
+    font-size: 1.3rem;
+    left: auto;
+    top: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  
+  .experience-content {
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+  
+  .experience-card {
+    padding: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .title-row {
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .title-text {
+    font-size: 1.2rem;
+  }
+  
+  .experience-header p {
+    align-self: flex-end;
+    font-size: 0.9rem;
+  }
+  
+  .experience-details h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .experience-details li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .click-me-gif {
+    width: 40px;
+  }
+  
+  .title-with-gif .click-me-gif {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 600px) {
+  .experience-section {
+    width: 98%;
+    padding: 1.2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .experience-title-large {
+    font-size: 2.4rem;
+    -webkit-text-stroke: 1.5px #ffffff;
+    margin-bottom: 0.3rem;
+  }
+  
+  .experience-title-small {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-content {
+    padding: 0 0.8rem;
+  }
+  
+  .experience-card {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .title-row {
+    gap: 8px;
+  }
+  
+  .title-text {
+    font-size: 1.1rem;
+  }
+  
+  .experience-header p {
+    font-size: 0.85rem;
+  }
+  
+  .toggle-arrow {
+    font-size: 0.9rem;
+  }
+  
+  .experience-details h4 {
+    font-size: 0.95rem;
+  }
+  
+  .experience-details li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .click-me-gif {
+    width: 35px;
+  }
+  
+  .title-with-gif .click-me-gif {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .experience-section {
+    width: 98%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-title-large {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #ffffff;
+    margin-bottom: 0.2rem;
+  }
+  
+  .experience-title-small {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .experience-content {
+    padding: 0 0.6rem;
+  }
+  
+  .experience-card {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  
+  .experience-header {
+    gap: 8px;
+  }
+  
+  .title-row {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  
+  .title-text {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  
+  .experience-header p {
+    font-size: 0.8rem;
+  }
+  
+  .toggle-summary {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .toggle-arrow {
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+  
+  .experience-details {
+    margin-top: 8px;
+  }
+  
+  .experience-details h4 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .experience-details ul {
+    padding-left: 15px;
+  }
+  
+  .experience-details li {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+  
+  .click-me-gif {
+    width: 30px;
+  }
+  
+  .title-with-gif {
+    gap: 6px;
+  }
+  
+  .title-with-gif .click-me-gif {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .experience-section {
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-title-large {
+    font-size: 1.8rem;
+  }
+  
+  .experience-title-small {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content {
+    padding: 0 0.4rem;
+  }
+  
+  .experience-card {
+    padding: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .title-text {
+    font-size: 0.95rem;
+  }
+  
+  .experience-header p {
+    font-size: 0.75rem;
+  }
+  
+  .toggle-arrow {
+    font-size: 0.8rem;
+  }
+  
+  .experience-details h4 {
+    font-size: 0.85rem;
+  }
+  
+  .experience-details li {
+    font-size: 0.75rem;
+  }
+  
+  .click-me-gif {
+    width: 25px;
+  }
+  
+  .title-with-gif .click-me-gif {
+    width: 12px;
+    height: 12px;
+  }
 }

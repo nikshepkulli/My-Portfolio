@@ -82,3 +82,24 @@
   left: 40px;
   transform: rotate(-5deg);
 }
+
+/* Add this to your main App.css or index.css */
+
+/* Mobile App.jsx Container Adjustment */
+@media (max-width: 768px) {
+  /* Target the flex container in App.jsx that holds Publications and Certifications */
+  .container > div > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 0 !important;
+    align-items: center !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure mobile sections take full width */
+  .publications-section-mobile,
+  .certifications-section-mobile {
+    width: 100% !important;
+    max-width: 95% !important;
+    margin: 0 auto 1rem auto !important;
+  }
+}

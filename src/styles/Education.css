@@ -1,6 +1,7 @@
 .education-section {
   position: relative;
-  width: 1420px;
+  width: 100%;
+  max-width: 1420px;
   background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
@@ -57,7 +58,7 @@
 }
 
 .education-content {
-  margin-left: 150px; /* Increased from 80px to move degrees further right */
+  margin-left: 150px;
   padding-right: 40px;
 }
 
@@ -128,10 +129,348 @@ html, body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 15px;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
   margin: 0 auto 3rem auto;
   margin-top: 0 !important;
   padding-top: 10px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Large Desktop */
+@media (min-width: 1500px) {
+  .education-section {
+    max-width: 1420px;
+  }
+  
+  .education-container {
+    max-width: 1000px;
+  }
+}
+
+/* Desktop/Laptop */
+@media (max-width: 1499px) {
+  .education-section {
+    width: 95%;
+    max-width: 1200px;
+  }
+  
+  .education-container {
+    width: 95%;
+    max-width: 900px;
+  }
+  
+  .education-content {
+    margin-left: 130px;
+    padding-right: 30px;
+  }
+  
+  .education-title-large {
+    font-size: 4rem;
+    left: -35px;
+    top: 90px;
+  }
+  
+  .education-title-small {
+    font-size: 1.6rem;
+    left: -45px;
+    top: 125px;
+  }
+}
+
+/* Tablet Large */
+@media (max-width: 1024px) {
+  .education-section {
+    width: 95%;
+    padding: 1.8rem 0;
+  }
+  
+  .education-container {
+    width: 95%;
+    padding: 18px;
+  }
+  
+  .education-content {
+    margin-left: 110px;
+    padding-right: 25px;
+  }
+  
+  .education-title-container {
+    left: -35px;
+  }
+  
+  .education-title-large {
+    font-size: 3.5rem;
+    left: -30px;
+    top: 80px;
+  }
+  
+  .education-title-small {
+    font-size: 1.4rem;
+    left: -40px;
+    top: 110px;
+  }
+  
+  .education-entry {
+    padding: 12px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .education-entry .degree {
+    font-size: 1.3rem;
+  }
+  
+  .education-entry .institution,
+  .education-entry .date {
+    font-size: 0.9rem;
+  }
+  
+  .highlight-text p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .education-section {
+    width: 95%;
+    padding: 1.5rem 0;
+    border-radius: 12px;
+  }
+  
+  .education-container {
+    width: 95%;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .education-title-container {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .education-title-large {
+    position: static;
+    font-size: 2.8rem;
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+  
+  .education-title-small {
+    position: static;
+    font-size: 1.3rem;
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+  
+  .education-content {
+    margin-left: 0;
+    padding-right: 0;
+    padding: 0 1rem;
+  }
+  
+  .education-entry {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 1rem;
+  }
+  
+  .education-entry .degree {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .education-entry .institution,
+  .education-entry .date {
+    font-size: 0.85rem;
+  }
+  
+  .education-section p {
+    font-size: 0.95rem;
+  }
+  
+  .highlight-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 600px) {
+  .education-section {
+    width: 98%;
+    padding: 1.2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .education-container {
+    width: 98%;
+    padding: 12px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .education-title-large {
+    font-size: 2.4rem;
+    -webkit-text-stroke: 1.5px #ffffff;
+  }
+  
+  .education-title-small {
+    font-size: 1.1rem;
+  }
+  
+  .education-title-container {
+    margin-bottom: 1.5rem;
+    gap: 0.3rem;
+  }
+  
+  .education-content {
+    padding: 0 0.8rem;
+  }
+  
+  .education-entry {
+    padding: 8px;
+    width: calc(100% - 16px);
+    margin-bottom: 0.8rem;
+  }
+  
+  .education-entry .degree {
+    font-size: 1.1rem;
+  }
+  
+  .education-entry .institution,
+  .education-entry .date {
+    font-size: 0.8rem;
+  }
+  
+  .education-section p {
+    font-size: 0.9rem;
+  }
+  
+  .highlight-text p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .education-section {
+    width: 98%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .education-container {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .education-title-container {
+    margin-bottom: 1.2rem;
+    gap: 0.2rem;
+  }
+  
+  .education-title-large {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  
+  .education-title-small {
+    font-size: 1rem;
+  }
+  
+  .education-content {
+    padding: 0 0.6rem;
+  }
+  
+  .education-entry {
+    padding: 6px;
+    width: calc(100% - 12px);
+    margin-bottom: 0.6rem;
+    border-radius: 8px;
+  }
+  
+  .education-entry .degree {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .education-entry .institution,
+  .education-entry .date {
+    font-size: 0.75rem;
+  }
+  
+  .education-section p {
+    font-size: 0.85rem;
+  }
+  
+  .highlight-text {
+    margin-top: 0.3rem;
+  }
+  
+  .highlight-text p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .education-section {
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .education-container {
+    padding: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .education-title-container {
+    margin-bottom: 1rem;
+  }
+  
+  .education-title-large {
+    font-size: 1.8rem;
+  }
+  
+  .education-title-small {
+    font-size: 0.9rem;
+  }
+  
+  .education-content {
+    padding: 0 0.4rem;
+  }
+  
+  .education-entry {
+    padding: 5px;
+    width: calc(100% - 10px);
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-entry .degree {
+    font-size: 0.95rem;
+  }
+  
+  .education-entry .institution,
+  .education-entry .date {
+    font-size: 0.7rem;
+  }
+  
+  .education-section p {
+    font-size: 0.8rem;
+  }
+  
+  .highlight-text p {
+    font-size: 0.65rem;
+  }
 }

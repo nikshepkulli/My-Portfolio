@@ -1,7 +1,7 @@
 /* Certifications Section CSS */
 .certifications-section {
-  width: 1000px; /* Decreased by 100px */
-  height: 350px; /* Decreased by 100px */
+  width: 1000px;
+  height: 350px;
   background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
@@ -44,12 +44,12 @@
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  width: 500px; /* Match publications exactly */
-  height: 300px; /* Match publications exactly */
+  width: 500px;
+  height: 300px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-end; /* Your setting */
-  justify-content: right; /* Your setting */
+  align-items: flex-end;
+  justify-content: right;
 }
 
 .certifications-title-container {
@@ -93,7 +93,6 @@
   top: 60px;
 }
 
-
 .certifications-carousel-frame {
   display: flex;
   align-items: center;
@@ -109,7 +108,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px; /* Decreased width */
+  width: 400px;
 }
 
 .certification-name-container {
@@ -123,8 +122,8 @@
 }
 
 .certifications-carousel-img {
-  width: 300px; /* Your setting */
-  height: 200px; /* Your setting */
+  width: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 0px;
   margin-bottom: 1rem;
@@ -195,4 +194,145 @@
 
 .clickme-gif:hover {
   transform: scale(1.1);
+}
+
+/* MOBILE RESPONSIVE - ONLY AFFECTS MOBILE, DESKTOP STAYS SAME */
+@media (max-width: 768px) {
+  .certifications-section {
+    width: 95%;
+    height: auto;
+    min-height: 280px;
+    padding: 1rem 0;
+    border-radius: 12px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .certifications-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Convert rotated titles to horizontal on mobile */
+  .certifications-title-container {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .certifications-title-large {
+    position: static;
+    font-size: 2.5rem;
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+  
+  .certifications-title-small {
+    position: static;
+    font-size: 1.3rem;
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+  
+  .certifications-carousel-box {
+    width: 90%;
+    max-width: 350px;
+    height: 220px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .certifications-carousel-frame {
+    width: 280px;
+    gap: 0.5rem;
+  }
+  
+  .certifications-carousel-content {
+    width: 280px;
+  }
+  
+  .certifications-carousel-img {
+    width: 180px;
+    height: 120px;
+  }
+  
+  .certifications-carousel-name {
+    font-size: 1rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  
+  .certifications-carousel-link {
+    font-size: 0.8rem;
+  }
+  
+  .certifications-arrow {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .clickme-gif {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-title-container {
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .certifications-title-large {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  
+  .certifications-title-small {
+    font-size: 1rem;
+  }
+  
+  .certifications-carousel-box {
+    width: 95%;
+    max-width: 280px;
+    height: 180px;
+    padding: 0.8rem;
+  }
+  
+  .certifications-carousel-frame {
+    width: 220px;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .certifications-carousel-content {
+    width: 220px;
+  }
+  
+  .certifications-carousel-img {
+    width: 130px;
+    height: 85px;
+  }
+  
+  .certifications-carousel-name {
+    font-size: 0.85rem;
+  }
+  
+  .certifications-arrow {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .clickme-gif {
+    width: 40px;
+  }
 }
