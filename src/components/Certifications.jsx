@@ -19,12 +19,14 @@ const certifications = [
 
 const Certifications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  // FORCE MOBILE - Remove this line later when we fix the detection
+  const [isMobile, setIsMobile] = useState(true); // FORCED TO TRUE
 
-  // Mobile detection - fixed to match App.jsx
+  // Mobile detection - DISABLED FOR NOW
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      // TEMPORARY: Always set to true to force mobile layout
+      setIsMobile(true);
     };
 
     checkScreenSize();
@@ -44,7 +46,7 @@ const Certifications = () => {
     }
   };
 
-  // Mobile layout - show all certifications vertically
+  // Mobile layout - ALWAYS SHOW THIS FOR NOW
   if (isMobile) {
     return (
       <div className="certifications-section-mobile">
@@ -83,7 +85,7 @@ const Certifications = () => {
     );
   }
 
-  // Desktop layout - keep original carousel
+  // Desktop layout - THIS WON'T SHOW FOR NOW
   return (
     <div className="certifications-carousel-box">
       {/* Rotated Title */}

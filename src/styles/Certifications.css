@@ -345,3 +345,15 @@
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+
+/* Make mobile GIF smaller */
+.certification-mobile-gif {
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certification-mobile-gif:hover {
+  transform: scale(1.1);
+}
