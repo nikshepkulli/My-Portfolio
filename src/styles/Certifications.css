@@ -336,3 +336,12 @@
     width: 40px;
   }
 }
+
+.certification-mobile-img {
+  width: 100%;
+  max-width: 200px; /* REDUCE from 250px */
+  height: 120px;    /* REDUCE from 150px */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
