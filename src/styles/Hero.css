@@ -907,6 +907,9 @@ h2:hover, p:hover {
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .slogan {
@@ -918,17 +921,13 @@ h2:hover, p:hover {
   }
   
   .slogan-box {
+    width: 280px !important;
     margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
   }
   
   .linktree {
     margin: 1.5rem auto 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
+    width: 280px !important;
   }
 }
 
@@ -938,6 +937,9 @@ h2:hover, p:hover {
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .slogan {
@@ -949,17 +951,13 @@ h2:hover, p:hover {
   }
   
   .slogan-box {
+    width: 260px !important;
     margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
   }
   
   .linktree {
     margin: 1rem auto 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
+    width: 260px !important;
   }
 }
 
@@ -969,6 +967,9 @@ h2:hover, p:hover {
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .slogan {
@@ -980,17 +981,13 @@ h2:hover, p:hover {
   }
   
   .slogan-box {
+    width: 240px !important;
     margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
   }
   
   .linktree {
     margin: 1rem auto 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
+    width: 240px !important;
   }
 }
 
@@ -1000,6 +997,9 @@ h2:hover, p:hover {
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   
   .slogan {
@@ -1011,16 +1011,12 @@ h2:hover, p:hover {
   }
   
   .slogan-box {
+    width: 220px !important;
     margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
   }
   
   .linktree {
     margin: 1rem auto 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
+    width: 220px !important;
   }
 }

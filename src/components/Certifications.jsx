@@ -19,14 +19,12 @@ const certifications = [
 
 const Certifications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // FORCE MOBILE - Remove this line later when we fix the detection
-  const [isMobile, setIsMobile] = useState(true); // FORCED TO TRUE
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Mobile detection - DISABLED FOR NOW
+  // Mobile detection - fixed to match App.jsx
   useEffect(() => {
     const checkScreenSize = () => {
-      // TEMPORARY: Always set to true to force mobile layout
-      setIsMobile(true);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     checkScreenSize();
@@ -46,7 +44,7 @@ const Certifications = () => {
     }
   };
 
-  // Mobile layout - ALWAYS SHOW THIS FOR NOW
+  // Mobile layout - show all certifications vertically
   if (isMobile) {
     return (
       <div className="certifications-section-mobile">
@@ -85,15 +83,15 @@ const Certifications = () => {
     );
   }
 
-  // Desktop layout - THIS WON'T SHOW FOR NOW
+  // Desktop layout - keep original carousel
   return (
-    <div className="certifications-carousel-box">
-      {/* Rotated Title */}
+    <div className="carousel-box">
+      {/* Add the rotated title structure */}
       <div className="certifications-title-container">
-        <div className="certifications-title-large">My</div>
         <div className="certifications-title-small">Certifications</div>
+        <div className="certifications-title-large">My</div>
       </div>
-             
+      
       <div className="certifications-carousel-frame">
         <button
           className="certifications-arrow left"
@@ -102,21 +100,21 @@ const Certifications = () => {
         >
           ←
         </button>
-        <div className="certifications-carousel-content">
+        <div className="carousel-content">
           <img
             src={certifications[currentIndex].img}
             alt="certification"
-            className="certifications-carousel-img"
+            className="carousel-img"
           />
           <div className="certification-name-container">
-            <div className="certifications-carousel-name">
+            <div className="carousel-name">
               {certifications[currentIndex].name}
             </div>
             <a
               href={certifications[currentIndex].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="certifications-carousel-link"
+              className="carousel-link"
             >
               <img
                 src={clickmeGif}
