@@ -357,3 +357,38 @@
 .certification-mobile-gif:hover {
   transform: scale(1.1);
 }
+
+/* Add glassmorphism container for mobile certifications - same as publications */
+.certifications-section-mobile {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Individual certificate items - same style as publications */
+.certification-mobile-item {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1rem; /* Add space between certificates */
+}
+
+/* Make certificate images bigger - same size as publications */
+.certification-mobile-img {
+  width: 100%;
+  max-width: 250px; /* INCREASE from current size */
+  height: 150px;    /* INCREASE from current size */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
