@@ -307,3 +307,126 @@
   }
 }
 
+/* Add this to your Publications.css to fix mobile title styling */
+
+/* Mobile Publications Header - Match About Style */
+.publications-mobile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.publications-mobile-header h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+}
+
+/* Style for "MY" - White & Hollow (like "ABOUT") */
+.publications-mobile-title-large {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Style for "PUBLICATIONS" - Black (like "ME") */
+.publications-mobile-title-small {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+}
+
+/* Remove the old h2 styling for mobile */
+@media (max-width: 768px) {
+  .publications-mobile-header h2 {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Responsive sizing for smaller screens */
+@media (max-width: 480px) {
+  .publications-mobile-title-large {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+  
+  .publications-mobile-title-small {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .publications-mobile-title-large {
+    font-size: 1.8rem;
+    letter-spacing: 0px;
+  }
+  
+  .publications-mobile-title-small {
+    font-size: 1rem;
+    letter-spacing: 0px;
+  }
+}
+
+/* Add this to your Publications.css to center the mobile section */
+
+/* Mobile Publications Centering Fix */
+@media (max-width: 768px) {
+  .publications-section-mobile {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 0 auto 2rem auto !important;
+    padding: 1rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .publications-section-mobile {
+    width: 97% !important;
+    max-width: 100% !important;
+    padding: 0.8rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .publications-section-mobile {
+    width: 95% !important;
+    max-width: 95% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+

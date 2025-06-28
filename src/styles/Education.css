@@ -364,13 +364,13 @@ html, body {
 /* Mobile Portrait */
 @media (max-width: 480px) {
   .education-section {
-    width: 98%;
+    width: 100%;
     padding: 1rem 0;
     margin-bottom: 1.5rem;
   }
   
   .education-container {
-    width: 98%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 1.5rem;
   }
@@ -395,7 +395,7 @@ html, body {
   
   .education-entry {
     padding: 6px;
-    width: calc(100% - 12px);
+    width: calc(100% - 22px);
     margin-bottom: 0.6rem;
     border-radius: 8px;
   }

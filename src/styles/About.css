@@ -158,13 +158,15 @@
     padding: 1.5rem;
     margin: 2rem auto;
     min-height: auto;
+    text-align: center; /* Center everything on mobile */
   }
   
   .about-content {
-    margin-left: 0;
-    margin-top: 100px;
+    margin-left: 0; /* Remove left margin */
+    margin-top: 2rem; /* Reduced from 100px */
     max-width: 100%;
     padding-top: 0;
+    width: 100%; /* Ensure full width */
   }
   
   .about-content h2 {
@@ -175,6 +177,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%; /* Full width for proper centering */
   }
   
   .about-large {
@@ -194,6 +197,8 @@
     font-size: 1.1rem;
     line-height: 1.7;
     text-align: left;
+    margin-left: 0; /* Ensure no left margin */
+    margin-right: 0; /* Ensure no right margin */
   }
   
   .about-content li {
@@ -208,16 +213,19 @@
     padding: 1rem;
     margin: 1.5rem auto;
     border-radius: 10px;
+    width: 95%; /* Ensure consistent width */
   }
   
   .about-content {
-    margin-top: 80px;
+    margin-top: 1.5rem; /* Reduced from 80px */
+    padding: 0; /* Remove any padding that might cause offset */
   }
   
   .about-content h2 {
     margin-bottom: 1.5rem;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
   .about-large {
@@ -237,6 +245,8 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.2rem;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .about-content li {
@@ -259,6 +269,7 @@
   .about {
     padding: 0.8rem;
     margin: 1rem auto;
+    width: 98%; /* Ensure it fits even on very small screens */
   }
   
   .about-large {
@@ -273,9 +284,312 @@
   
   .about-content p {
     font-size: 0.95rem;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .about-content li {
     font-size: 0.9rem;
+  }
+}
+
+/* Add these mobile-specific overrides to your existing About.css */
+
+/* Mobile landscape - Override existing styles */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 1.5rem !important;
+    margin: 2rem auto !important;
+    min-height: auto;
+    text-align: center;
+    width: 95% !important; /* Force center alignment */
+    max-width: 95% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    position: relative !important;
+  }
+  
+  .about-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 2rem !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    position: relative !important;
+  }
+  
+  .about-content h2 {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 2rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Mobile portrait - Override existing styles */
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem !important;
+    margin: 1.5rem auto !important;
+    border-radius: 10px !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  .about-content {
+    margin-top: 1.5rem !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  .about-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Extra small devices - Override existing styles */
+@media (max-width: 320px) {
+  .about {
+    padding: 0.8rem !important;
+    margin: 1rem auto !important;
+    width: 95% !important;
+    max-width: 85% !important;
+  }
+  
+  .about-content p {
+    font-size: 0.95rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Add this to your About.css to increase mobile width by 5px */
+
+@media (max-width: 768px) {
+  .about {
+    width: calc(95% + 15px) !important;
+    max-width: calc(95% + 15px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    width: calc(90% + 20px) !important;
+    max-width: calc(90% + 20px) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .about {
+    width: calc(85% + 20px) !important;
+    max-width: calc(85% + 20px) !important;
+  }
+}
+
+/* REPLACE all your mobile media queries with this clean version */
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column !important;
+    padding: 1.5rem !important;
+    margin: 2rem auto !important;
+    min-height: auto !important;
+    text-align: center !important;
+    width: calc(95% + 15px) !important;
+    max-width: calc(95% + 15px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .about-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 2rem !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    position: relative !important;
+  }
+  
+  .about-content h2 {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 2rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  
+  .about-large {
+    font-size: 3.5rem !important;
+    letter-spacing: -6px !important;
+  }
+  
+  .me-small {
+    font-size: 1.8rem !important;
+    position: static !important;
+    transform: none !important;
+    margin-left: 1rem !important;
+    padding: 4px 12px !important;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .about-content li {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem !important;
+    margin: 1.5rem auto !important;
+    border-radius: 10px !important;
+    width: calc(90% + 20px) !important;
+    max-width: calc(90% + 20px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .about-content {
+    margin-top: 1.5rem !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  .about-content h2 {
+    margin-bottom: 1.5rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
+  .about-large {
+    font-size: 2.8rem !important;
+    letter-spacing: -4px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .me-small {
+    font-size: 1.4rem !important;
+    margin-left: 0 !important;
+    padding: 3px 10px !important;
+    letter-spacing: 1px !important;
+  }
+  
+  .about-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .about-content li {
+    font-size: 0.95rem !important;
+    padding-left: 20px !important;
+  }
+  
+  .about-content .sub-point {
+    font-size: 0.9rem !important;
+    padding-left: 30px !important;
+  }
+  
+  .about-section {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .about {
+    padding: 0.8rem !important;
+    margin: 1rem auto !important;
+    width: calc(85% + 20px) !important;
+    max-width: calc(85% + 20px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .about-large {
+    font-size: 2.2rem !important;
+    letter-spacing: -2px !important;
+  }
+  
+  .me-small {
+    font-size: 1.2rem !important;
+    padding: 2px 8px !important;
+  }
+  
+  .about-content p {
+    font-size: 0.95rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .about-content li {
+    font-size: 0.9rem !important;
   }
 }

@@ -330,7 +330,7 @@
   }
   
   .contact-section {
-    width: 98%;
+    width: 100%;
     padding: 1.5rem 1rem;
     min-height: 400px;
   }
@@ -423,5 +423,30 @@
     font-size: 0.75rem;
     width: 98%;
     max-width: 260px;
+  }
+}
+
+/* CORRECT FIX - Add this to your Contact.css */
+/* This overrides the absolute positioning and centers the title */
+
+@media (max-width: 768px) {
+  .contact-title-large {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .contact-title-small {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
   }
 }

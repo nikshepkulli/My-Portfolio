@@ -306,3 +306,115 @@
     height: 25px;
   }
 }
+
+/* Add this to your existing Certifications.css - MOBILE ONLY changes */
+
+/* Mobile Certifications Header - Match Publications Style */
+@media (max-width: 768px) {
+  .certifications-mobile-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .certifications-mobile-header h2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    position: relative !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+
+  /* Style for "MY" - White & Hollow (like "ABOUT") */
+  .certifications-mobile-title-large {
+    font-size: 2.8rem !important;
+    font-weight: bold !important;
+    color: transparent !important;
+    -webkit-text-stroke: 2px #ffffff !important;
+    text-stroke: 2px #ffffff !important;
+    letter-spacing: -2px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
+  }
+
+  /* Style for "CERTIFICATIONS" - Black (like "ME") */
+  .certifications-mobile-title-small {
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    letter-spacing: 1px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+  }
+
+  /* Center the mobile section */
+  .certifications-section-mobile {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 0 auto 2rem auto !important;
+    padding: 1rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Mobile portrait - smaller screens */
+@media (max-width: 480px) {
+  .certifications-mobile-title-large {
+    font-size: 2.2rem !important;
+    letter-spacing: -1px !important;
+  }
+  
+  .certifications-mobile-title-small {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .certifications-section-mobile {
+    width: 97% !important;
+    max-width: 97% !important;
+    padding: 0.8rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .certifications-mobile-title-large {
+    font-size: 1.8rem !important;
+    letter-spacing: 0px !important;
+  }
+  
+  .certifications-mobile-title-small {
+    font-size: 1rem !important;
+    letter-spacing: 0px !important;
+  }
+
+  .certifications-section-mobile {
+    width: 80% !important;
+    max-width: 80% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

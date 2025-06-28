@@ -49,7 +49,10 @@ const Publications = () => {
     return (
       <div className="publications-section-mobile">
         <div className="publications-mobile-header">
-          <h2>MY PUBLICATIONS</h2>
+          <h2>
+            <div className="publications-mobile-title-large">My</div>
+            <div className="publications-mobile-title-small">Publications</div>
+          </h2>
         </div>
         <div className="publications-mobile-list">
           {publications.map((publication, index) => (

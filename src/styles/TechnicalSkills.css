@@ -301,6 +301,7 @@
   }
 }
 
+
 /* Mobile Landscape */
 @media (max-width: 600px) {
   .technical-skills {
@@ -448,5 +449,342 @@
     width: 8px;
     height: 8px;
     margin-right: 2px;
+  }
+}
+
+/* Quick fix for mobile technical skills boxes */
+@media (max-width: 768px) {
+  .skills-category {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .skills-box {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Replace your existing mobile breakpoints with these updated ones */
+
+/* Tablet Portrait - Updated */
+@media (max-width: 768px) {
+  .technical-skills {
+    width: 95% !important;
+    padding: 20px !important;
+    margin: 30px auto 2rem auto !important;
+    min-height: 300px !important;
+    border-radius: 12px !important;
+    /* Center the entire section */
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .technical-title-large {
+    position: static !important;
+    transform: none !important;
+    font-size: 2.8rem !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+  }
+  
+  .technical-title-small {
+    position: static !important;
+    transform: none !important;
+    font-size: 1.3rem !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+  }
+  
+  .skills-content {
+    margin-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  .technical-skills h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 280px !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 1rem !important;
+    margin-top: 15px !important;
+    margin-bottom: 6px !important;
+  }
+  
+  .skill-category li {
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .skill-icon {
+    width: 14px !important;
+    height: 14px !important;
+    margin-right: 5px !important;
+  }
+}
+
+/* Mobile Landscape - Updated */
+@media (max-width: 600px) {
+  .technical-skills {
+    width: 95% !important;
+    padding: 15px !important;
+    margin: 20px auto 1.5rem auto !important;
+    min-height: 250px !important;
+    border-radius: 10px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 240px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Mobile Portrait - Updated */
+@media (max-width: 480px) {
+  .technical-skills {
+    width: 93% !important;
+    padding: 12px !important;
+    margin: 15px auto 1rem auto !important;
+    min-height: 200px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: 70% !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 280px !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Remove the conflicting quick fix at the bottom */
+/* CLEAN MOBILE FIXES - Replace your duplicate mobile sections with this */
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .technical-skills {
+    width: 95% !important;
+    padding: 20px !important;
+    margin: 30px auto 2rem auto !important;
+    min-height: 300px !important;
+    border-radius: 12px !important;
+    /* Center the entire section */
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .technical-title-large {
+    position: static !important;
+    transform: none !important;
+    font-size: 2.8rem !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+  }
+  
+  .technical-title-small {
+    position: static !important;
+    transform: none !important;
+    font-size: 1.3rem !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+  }
+  
+  .skills-content {
+    margin-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .technical-skills h2 {
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    justify-items: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 180px !important;
+    height: 280px !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 1rem !important;
+    margin-top: 15px !important;
+    margin-bottom: 6px !important;
+  }
+  
+  .skill-category li {
+    font-size: 0.8rem !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .skill-icon {
+    width: 14px !important;
+    height: 14px !important;
+    margin-right: 5px !important;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 600px) {
+  .technical-skills {
+    width: 95% !important;
+    padding: 15px !important;
+    margin: 20px auto 1.5rem auto !important;
+    min-height: 250px !important;
+    border-radius: 10px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .skills-content {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    justify-items: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 160px !important;
+    height: 240px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .technical-skills {
+    width: 93% !important;
+    padding: 12px !important;
+    margin: 15px auto 1rem auto !important;
+    min-height: 200px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .skills-content {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    justify-items: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .skill-category {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 280px !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
   }
 }

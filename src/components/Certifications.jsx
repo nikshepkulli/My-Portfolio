@@ -49,7 +49,10 @@ const Certifications = () => {
     return (
       <div className="certifications-section-mobile">
         <div className="certifications-mobile-header">
-          <h2>MY CERTIFICATIONS</h2>
+          <h2>
+            <div className="certifications-mobile-title-large">My</div>
+            <div className="certifications-mobile-title-small">Certifications</div>
+          </h2>
         </div>
         <div className="certifications-mobile-list">
           {certifications.map((certification, index) => (
