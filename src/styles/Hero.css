@@ -908,11 +908,55 @@ h2:hover, p:hover {
     transform: translateX(-50%) !important;
     position: relative !important;
   }
+  
+  .slogan {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .slogan-box {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .linktree {
+    margin: 1.5rem auto 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
 }
 
 @media (max-width: 600px) {
   .hero {
     margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .slogan {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .slogan-box {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .linktree {
+    margin: 1rem auto 0 auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
@@ -926,11 +970,55 @@ h2:hover, p:hover {
     transform: translateX(-50%) !important;
     position: relative !important;
   }
+  
+  .slogan {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .slogan-box {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .linktree {
+    margin: 1rem auto 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
 }
 
 @media (max-width: 360px) {
   .hero {
     margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .slogan {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .slogan-box {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+  
+  .linktree {
+    margin: 1rem auto 0 auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: relative !important;
