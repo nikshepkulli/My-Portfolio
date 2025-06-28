@@ -1,0 +1,103 @@
+/* Publications & Certifications Container CSS */
+
+/* Desktop: Side by side layout */
+.pub-cert-container-desktop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: 400px;
+}
+
+.pub-cert-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* Ensure both components fit side by side on desktop */
+.pub-cert-wrapper > * {
+  flex: 0 0 auto;
+}
+
+/* Override individual component widths when in side-by-side layout */
+.pub-cert-container-desktop .carousel-box {
+  width: 450px !important;
+  height: 280px !important;
+  margin: 0 !important;
+}
+
+/* Adjust inner content for smaller carousel */
+.pub-cert-container-desktop .carousel-img {
+  width: 250px !important;
+  height: 160px !important;
+}
+
+.pub-cert-container-desktop .carousel-name {
+  width: 400px !important;
+  font-size: 1.1rem !important;
+}
+
+.pub-cert-container-desktop .publications-title-large,
+.pub-cert-container-desktop .certifications-title-large {
+  font-size: 3.5rem !important;
+}
+
+.pub-cert-container-desktop .publications-title-small,
+.pub-cert-container-desktop .certifications-title-small {
+  font-size: 1.5rem !important;
+}
+
+/* Mobile: Vertical stacking */
+.pub-cert-container-mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+/* Responsive adjustments for smaller desktop screens */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .pub-cert-wrapper {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .pub-cert-container-desktop .carousel-box {
+    width: 400px !important;
+    height: 260px !important;
+  }
+  
+  .pub-cert-container-desktop .carousel-img {
+    width: 220px !important;
+    height: 140px !important;
+  }
+}
+
+/* Ensure mobile layout kicks in properly */
+@media (max-width: 768px) {
+  .pub-cert-container-desktop {
+    display: none !important;
+  }
+  
+  .pub-cert-container-mobile {
+    display: flex !important;
+  }
+}
+
+/* Hide mobile container on desktop */
+@media (min-width: 769px) {
+  .pub-cert-container-mobile {
+    display: none !important;
+  }
+  
+  .pub-cert-container-desktop {
+    display: flex !important;
+  }
+}

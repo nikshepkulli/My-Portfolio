@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Publications from './components/Publications';
@@ -12,6 +12,37 @@ import Contact from './components/Contact';
 import ClickMe from './components/ClickMe';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Mobile detection
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // Inline styles for responsive layout
+  const containerStyle = {
+    width: '100%',
+    maxWidth: '1400px',
+    margin: '0 auto 2rem auto',
+    display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
+    alignItems: 'center',
+    justifyContent: isMobile ? 'center' : 'center',
+    gap: isMobile ? '2rem' : '2rem',
+  };
+
+  // Override styles for desktop side-by-side
+  const componentOverrideStyle = isMobile ? {} : {
+    transform: 'scale(0.85)', // Scale down components to fit side by side
+    transformOrigin: 'center',
+  };
+
   return (
     <div className="container">
       <div style={{
@@ -23,16 +54,8 @@ function App() {
         <Hero />
         <About />
 
-        {/* Publications and Certifications - ALWAYS STACKED VERTICALLY */}
-        <div style={{
-          width: '100%',
-          maxWidth: '1400px',
-          margin: '0 auto 0.2rem auto',
-          display: 'flex',
-          flexDirection: 'column', // ALWAYS VERTICAL
-          alignItems: 'center',
-          gap: '2rem',
-        }}>
+        {/* Publications and Certifications - Responsive Layout */}
+        <div style={containerStyle}>
           <Publications />
           <Certifications />
         </div>
