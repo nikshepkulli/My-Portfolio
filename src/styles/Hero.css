@@ -183,6 +183,285 @@ h2:hover, p:hover {
   transform: scale(1.05);
 }
 
+/* Publications Section CSS */
+.publications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 900px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.publications-container {
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.publications-section h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.publications-content {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.carousel-box {
+  position: relative;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+.publications-title-container {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: center;
+  white-space: nowrap;
+  height: auto;
+  width: auto;
+}
+
+.publications-title-large {
+  position: absolute;
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  left: -40px;
+  top: 10px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.publications-title-small {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #000000;
+  letter-spacing: 0px;
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+  left: -80px;
+  top: 50px;
+}
+
+.publications-carousel-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 400px;
+  height: 100%;
+}
+
+.carousel-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.carousel-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0px;
+  margin-bottom: 1rem;
+}
+
+.carousel-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  width: 550px;
+  line-height: 1.2;
+}
+
+.carousel-name:hover {
+  color: #0055aa;
+}
+
+.carousel-link {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #0077cc;
+  word-break: break-word;
+  cursor: pointer;
+}
+
+.carousel-link:hover {
+  color: #0055aa;
+}
+
+.publication-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100px;
+}
+
+.publications-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.publications-arrow:hover {
+  color: #0077cc;
+}
+
+.publications-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.publications-arrow:disabled:hover {
+  color: #000000;
+}
+
+.clickme-gif {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: right;
+}
+
+.clickme-gif:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Publications Styles */
+.publications-section-mobile {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.publications-mobile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.publications-mobile-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.publications-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.publication-mobile-item {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.publication-mobile-img {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.publication-mobile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.publication-mobile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.publication-mobile-link {
+  display: inline-block;
+}
+
+.publication-mobile-gif {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.publication-mobile-gif:hover {
+  transform: scale(1.1);
+}
+
 /* Large Desktop */
 @media (min-width: 1400px) {
   .hero {
@@ -319,6 +598,7 @@ h2:hover, p:hover {
     padding: 1.5rem 2rem;
     gap: 1.5rem;
     border-radius: 12px;
+    margin: 0 auto;
   }
   
   .hero-content h1 {
@@ -402,6 +682,7 @@ h2:hover, p:hover {
     padding: 1.2rem 1.5rem;
     gap: 1.2rem;
     border-radius: 10px;
+    margin: 0 auto;
   }
   
   .hero-content h1 {
@@ -473,6 +754,7 @@ h2:hover, p:hover {
     padding: 1rem;
     gap: 1rem;
     min-height: 50vh;
+    margin: 0 auto;
   }
   
   .hero-content h1 {
@@ -539,6 +821,28 @@ h2:hover, p:hover {
   .linktree a {
     font-size: 0.8rem;
   }
+  
+  .publications-section-mobile {
+    max-width: 350px;
+    padding: 0.8rem;
+  }
+  
+  .publications-mobile-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .publication-mobile-img {
+    height: 120px;
+  }
+  
+  .publication-mobile-name {
+    font-size: 1rem;
+  }
+  
+  .publication-mobile-gif {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 /* Extra Small Mobile */
@@ -592,5 +896,43 @@ h2:hover, p:hover {
   
   .linktree a {
     font-size: 0.75rem;
+  }
+}
+
+/* Mobile Centering Fix for Hero Section - Add this to your existing CSS */
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
   }
 }
