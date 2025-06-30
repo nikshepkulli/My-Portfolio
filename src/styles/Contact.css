@@ -65,7 +65,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  margin-left: 80px;
+  margin-left: 140px; /* Increased from 80px to 140px for better spacing */
 }
 
 .contact-section h2 {
@@ -147,6 +147,10 @@
   .contact-section {
     max-width: 800px;
   }
+  
+  .contact-form {
+    margin-left: 160px; /* Even more space for large desktops */
+  }
 }
 
 /* Desktop/Laptop */
@@ -158,6 +162,7 @@
   
   .contact-form {
     max-width: 450px;
+    margin-left: 120px; /* Increased from default for better spacing */
   }
 }
 
@@ -183,7 +188,7 @@
   
   .contact-form {
     max-width: 420px;
-    margin-left: 70px;
+    margin-left: 100px; /* Increased for better spacing */
     gap: 1.3rem;
   }
   
@@ -217,25 +222,29 @@
   }
   
   .contact-title-large {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
     font-size: 2.8rem;
     color: transparent;
     -webkit-text-stroke: 2px #ffffff;
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 0.5rem;
-    left: auto;
-    top: auto;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    display: block !important;
   }
   
   .contact-title-small {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 2rem;
-    left: auto;
-    top: auto;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    display: block !important;
   }
   
   .contact-form {
@@ -281,14 +290,28 @@
   }
   
   .contact-title-large {
+    position: static !important;
+    transform: none !important;
     font-size: 2.4rem;
     -webkit-text-stroke: 1.5px #ffffff;
     margin-bottom: 0.3rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-title-small {
+    position: static !important;
+    transform: none !important;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-form {
@@ -336,14 +359,28 @@
   }
   
   .contact-title-large {
+    position: static !important;
+    transform: none !important;
     font-size: 2rem;
     -webkit-text-stroke: 1px #ffffff;
     margin-bottom: 0.2rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-title-small {
+    position: static !important;
+    transform: none !important;
     font-size: 1rem;
     margin-bottom: 1.2rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-form {
@@ -388,12 +425,26 @@
   }
   
   .contact-title-large {
+    position: static !important;
+    transform: none !important;
     font-size: 1.8rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-title-small {
+    position: static !important;
+    transform: none !important;
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    display: block !important;
   }
   
   .contact-form {

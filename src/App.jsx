@@ -9,23 +9,38 @@ import Achievements from './components/Achievements';
 import TechnicalSkills from './components/TechnicalSkills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import ClickMe from './components/ClickMe';
 
 function App() {
+  const [showResume, setShowResume] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Mobile detection
+  // Make these functions available globally - moved inside useEffect
   useEffect(() => {
+    window.showResumePageFunction = () => {
+      console.log('Showing resume page...');
+      setShowResume(true);
+    };
+    
+    window.hideResumePageFunction = () => {
+      console.log('Hiding resume page...');
+      setShowResume(false);
+    };
+
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
+    
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+      // Clean up global functions
+      delete window.showResumePageFunction;
+      delete window.hideResumePageFunction;
+    };
   }, []);
 
-  // Inline styles for responsive layout
   const containerStyle = {
     width: '100%',
     maxWidth: '1400px',
@@ -37,12 +52,12 @@ function App() {
     gap: isMobile ? '2rem' : '2rem',
   };
 
-  // Override styles for desktop side-by-side
-  const componentOverrideStyle = isMobile ? {} : {
-    transform: 'scale(0.85)', // Scale down components to fit side by side
-    transformOrigin: 'center',
-  };
+  // Show resume page
+  if (showResume) {
+    return <Resume />;
+  }
 
+  // Show main page
   return (
     <div className="container">
       <div style={{
@@ -50,16 +65,14 @@ function App() {
         padding: '2rem',
         color: 'black'
       }}>
-        {/* Stack Hero and About vertically */}
         <Hero />
         <About />
-
-        {/* Publications and Certifications - Responsive Layout */}
+        
         <div style={containerStyle}>
           <Publications />
           <Certifications />
         </div>
-
+        
         <div style={{ marginTop: '2rem' }}>
           <Education />
           <Experience />
@@ -74,4 +87,3 @@ function App() {
 }
 
 export default App;
-

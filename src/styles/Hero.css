@@ -4,6 +4,7 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
+/* ===== HERO SECTION ===== */
 .hero {
   min-height: 70vh;
   height: 700px;
@@ -51,7 +52,7 @@ body {
   margin-left: 2rem;
 }
 
-/* Slogan Styles */
+/* ===== SLOGAN BOXES ===== */
 .slogan {
   display: flex;
   flex-direction: row;
@@ -82,7 +83,6 @@ body {
   border-color: transparent;
 }
 
-/* Title Container with 90-degree rotation - Updated positioning */
 .title-container {
   position: absolute;
   left: -35px;
@@ -94,7 +94,6 @@ body {
   width: auto;
 }
 
-/* Large title (positioned on bottom) */
 .title-large {
   position: absolute;
   top: 20px;
@@ -112,7 +111,6 @@ body {
   text-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
-/* Small title (positioned on top) */
 .title-small {
   position: absolute;
   top: 25px;
@@ -140,336 +138,259 @@ body {
   margin-bottom: 0.3rem;
 }
 
-/* Optional hover effects */
-h2, p {
-  transition: transform 0.3s ease;
+/* ===== CONTACT SECTIONS ===== */
+.contact-sections {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-h2:hover, p:hover {
-  transform: scale(1.05);
-}
-
-/* Linktree Styles */
-.linktree {
-  margin-top: 1.5rem;
+.linktree-section,
+.resume-section {
+  width: 300px;
+  height: 84px;
   padding: 1rem;
   background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.3);
   border-left: 4px solid #ffffff;
-  border-radius: 8px;
-  max-width: 300px;
+  border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  color: #000000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-.linktree h3 {
+.linktree-section:hover,
+.resume-section:hover {
+  transform: scale(1.02);
+}
+
+.linktree-section h3,
+.resume-section h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #000000;
+  font-weight: bold;
 }
 
-.linktree a {
+.linktree-section a,
+.resume-link {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
   font-size: 1rem;
   text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6);
   transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-.linktree a:hover {
+.linktree-section a:hover,
+.resume-link:hover {
   text-decoration: underline;
   text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8);
   transform: scale(1.05);
 }
 
-/* Publications Section CSS */
-.publications-section {
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #000000;
-  border-radius: 15px;
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 2rem 0;
-  width: 900px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-}
-
-.publications-container {
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.publications-section h2 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: #000000;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.publications-content {
-  font-size: 3rem;
+/* ===== PDF DROPDOWN ===== */
+.pdf-dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  flex-grow: 1;
-}
-
-.carousel-box {
-  position: relative;
-  font-size: 1.8rem;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 10px;
+  z-index: 9999;
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  width: 500px;
-  height: 300px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: right;
+  animation: fadeIn 0.3s ease;
 }
 
-.publications-title-container {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: center;
-  white-space: nowrap;
-  height: auto;
-  width: auto;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.publications-title-large {
-  position: absolute;
-  font-size: 4rem;
-  font-weight: bold;
-  color: transparent;
-  -webkit-text-stroke: 2px #ffffff;
-  text-stroke: 2px #ffffff;
-  letter-spacing: 1px;
-  line-height: 1;
-  margin: 0;
-  z-index: 1;
-  left: -40px;
-  top: 10px;
-  text-shadow: 0 0 20px rgba(255,255,255,0.5);
-}
-
-.publications-title-small {
-  position: absolute;
-  font-size: 1.8rem;
-  font-weight: normal;
-  color: #000000;
-  letter-spacing: 0px;
-  line-height: 1;
-  margin: 0;
-  z-index: 2;
-  left: -80px;
-  top: 50px;
-}
-
-.publications-carousel-frame {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 400px;
-  height: 100%;
-}
-
-.carousel-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-}
-
-.carousel-img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0px;
-  margin-bottom: 1rem;
-}
-
-.carousel-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-  width: 550px;
-  line-height: 1.2;
-}
-
-.carousel-name:hover {
-  color: #0055aa;
-}
-
-.carousel-link {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #0077cc;
-  word-break: break-word;
-  cursor: pointer;
-}
-
-.carousel-link:hover {
-  color: #0055aa;
-}
-
-.publication-name-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100px;
-}
-
-.publications-arrow {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #000000;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-  flex-shrink: 0;
-}
-
-.publications-arrow:hover {
-  color: #0077cc;
-}
-
-.publications-arrow:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.publications-arrow:disabled:hover {
-  color: #000000;
-}
-
-.clickme-gif {
-  width: 40px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  position: right;
-}
-
-.clickme-gif:hover {
-  transform: scale(1.1);
-}
-
-/* Mobile Publications Styles */
-.publications-section-mobile {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 2rem auto;
-  padding: 1rem;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+.pdf-dropdown-content {
+  width: 90%;
+  max-width: 1200px;
+  height: 85vh;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-}
-
-.publications-mobile-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.publications-mobile-header h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #000000;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-.publications-mobile-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.publication-mobile-item {
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.publication-mobile-img {
-  width: 100%;
-  max-width: 250px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.publication-mobile-info {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  animation: slideIn 0.3s ease;
 }
 
-.publication-mobile-name {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-}
-
-.publication-mobile-link {
-  display: inline-block;
-}
-
-.publication-mobile-gif {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.publication-mobile-gif:hover {
-  transform: scale(1.1);
-}
-
-/* Large Desktop */
-@media (min-width: 1400px) {
-  .hero {
-    max-width: 1250px;
+@keyframes slideIn {
+  from { 
+    transform: scale(0.9) translateY(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
 }
 
-/* Desktop/Laptop */
+.pdf-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+.pdf-dropdown-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.pdf-dropdown-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pdf-download-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.pdf-download-btn:hover {
+  background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.pdf-close-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #fd7e14 100%);
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.pdf-close-btn:hover {
+  background: linear-gradient(135deg, #fd7e14 0%, #dc3545 100%);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.pdf-dropdown-viewer {
+  flex: 1;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.pdf-dropdown-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.mobile-pdf-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px dashed #007bff;
+}
+
+.mobile-pdf-preview:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  transform: scale(1.02);
+}
+
+.mobile-pdf-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.mobile-pdf-preview h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-pdf-preview p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-open-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.mobile-open-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1399px) {
   .hero {
     width: 95%;
@@ -515,7 +436,6 @@ h2:hover, p:hover {
   }
 }
 
-/* Tablet Large */
 @media (max-width: 1024px) {
   .hero {
     width: 95%;
@@ -585,20 +505,28 @@ h2:hover, p:hover {
     margin-top: 25px;
   }
   
-  .linktree {
-    max-width: 100%;
-    margin: 1.5rem auto 0 auto;
+  .contact-sections {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .linktree-section, .resume-section {
+    margin: 0 auto;
+    width: 280px;
+    height: 80px;
   }
 }
 
-/* Tablet Portrait */
 @media (max-width: 768px) {
   .hero {
     width: 95%;
     padding: 1.5rem 2rem;
     gap: 1.5rem;
     border-radius: 12px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .hero-content h1 {
@@ -623,11 +551,18 @@ h2:hover, p:hover {
   
   .slogan {
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .slogan-box {
-    height: 140px;
+    height: 147px;
     padding: 1.2rem;
+    width: 280px;
+    margin: 0 auto;
   }
   
   .title-container {
@@ -661,100 +596,81 @@ h2:hover, p:hover {
     text-align: center;
   }
   
-  .linktree {
-    margin-top: 1rem;
+  .contact-sections {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+  
+  .linktree-section, .resume-section {
     padding: 0.8rem;
-  }
-  
-  .linktree h3 {
-    font-size: 1.1rem;
-  }
-  
-  .linktree a {
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile Landscape */
-@media (max-width: 600px) {
-  .hero {
-    width: 98%;
-    padding: 1.2rem 1.5rem;
-    gap: 1.2rem;
-    border-radius: 10px;
+    width: 280px;
+    height: 70px;
     margin: 0 auto;
   }
   
-  .hero-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.6rem;
+  .linktree-section h3, .resume-section h3 {
+    font-size: 1.1rem;
   }
   
-  .hero-content h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.6rem;
+  .linktree-section a, .resume-link {
+    font-size: 0.9rem;
   }
   
-  .hero-content p {
-    font-size: 1rem;
-  }
-  
-  .profile-image {
-    width: 250px;
-    height: 300px;
-    margin-bottom: 1rem;
-  }
-  
-  .slogan {
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-  
-  .slogan-box {
-    height: 120px;
+  /* PDF Dropdown Mobile */
+  .pdf-dropdown-overlay {
     padding: 1rem;
   }
   
-  .title-large {
-    font-size: 2.4rem;
-    -webkit-text-stroke: 1.5px #ffffff;
+  .pdf-dropdown-content {
+    width: 95%;
+    height: 90vh;
   }
   
-  .title-small {
-    font-size: 1rem;
+  .pdf-dropdown-header {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
   
-  .job-title, .tagline {
-    font-size: 1.1rem;
-    margin-top: 0.3rem;
+  .pdf-dropdown-header h2 {
+    font-size: 1.5rem;
   }
   
-  .job-title div, .tagline div {
-    margin-bottom: 0.2rem;
+  .pdf-dropdown-controls {
+    justify-content: center;
   }
   
-  .linktree {
-    padding: 0.6rem;
+  .pdf-dropdown-viewer {
+    padding: 0.5rem;
   }
   
-  .linktree h3 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+  .mobile-pdf-preview {
+    padding: 1.5rem;
   }
   
-  .linktree a {
-    font-size: 0.85rem;
+  .mobile-pdf-icon {
+    font-size: 3rem;
+  }
+  
+  .mobile-pdf-preview h3 {
+    font-size: 1.3rem;
   }
 }
 
-/* Mobile Portrait */
 @media (max-width: 480px) {
   .hero {
     width: 98%;
     padding: 1rem;
     gap: 1rem;
     min-height: 50vh;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .hero-content h1 {
@@ -785,8 +701,9 @@ h2:hover, p:hover {
   }
   
   .slogan-box {
-    height: 100px;
+    height: 107px;
     padding: 0.8rem;
+    width: 240px;
   }
   
   .title-large {
@@ -808,215 +725,50 @@ h2:hover, p:hover {
     margin-bottom: 0.1rem;
   }
   
-  .linktree {
-    padding: 0.5rem;
-    border-radius: 6px;
+  .contact-sections {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
   }
   
-  .linktree h3 {
+  .linktree-section, .resume-section {
+    padding: 0.5rem;
+    border-radius: 6px;
+    width: 240px;
+    height: 50px;
+  }
+  
+  .linktree-section h3, .resume-section h3 {
     font-size: 0.95rem;
     margin-bottom: 0.2rem;
   }
   
-  .linktree a {
+  .linktree-section a, .resume-link {
     font-size: 0.8rem;
   }
   
-  .publications-section-mobile {
-    max-width: 350px;
-    padding: 0.8rem;
+  /* PDF Dropdown Mobile */
+  .pdf-dropdown-content {
+    width: 98%;
+    height: 92vh;
   }
   
-  .publications-mobile-header h2 {
-    font-size: 1.5rem;
+  .pdf-dropdown-header {
+    padding: 0.8rem 1rem;
   }
   
-  .publication-mobile-img {
-    height: 120px;
+  .pdf-dropdown-header h2 {
+    font-size: 1.3rem;
   }
   
-  .publication-mobile-name {
-    font-size: 1rem;
-  }
-  
-  .publication-mobile-gif {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-/* Extra Small Mobile */
-@media (max-width: 360px) {
-  .hero {
-    padding: 0.8rem;
-    gap: 0.8rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 1.6rem;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.2rem;
-  }
-  
-  .hero-content p {
+  .pdf-download-btn {
+    padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
   
-  .profile-image {
-    width: 180px;
-    height: 220px;
-  }
-  
-  .slogan-box {
-    height: 90px;
-    padding: 0.6rem;
-  }
-  
-  .title-large {
-    font-size: 1.8rem;
-  }
-  
-  .title-small {
-    font-size: 0.8rem;
-  }
-  
-  .job-title, .tagline {
+  .pdf-close-btn {
+    width: 35px;
+    height: 35px;
     font-size: 0.9rem;
-  }
-  
-  .linktree {
-    padding: 0.4rem;
-  }
-  
-  .linktree h3 {
-    font-size: 0.9rem;
-  }
-  
-  .linktree a {
-    font-size: 0.75rem;
-  }
-}
-
-/* Mobile Centering Fix for Hero Section - Add this to your existing CSS */
-
-@media (max-width: 768px) {
-  .hero {
-    margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .slogan {
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  .slogan-box {
-    width: 280px !important;
-    margin: 0 auto !important;
-  }
-  
-  .linktree {
-    margin: 1.5rem auto 0 auto !important;
-    width: 280px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .slogan {
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  .slogan-box {
-    width: 260px !important;
-    margin: 0 auto !important;
-  }
-  
-  .linktree {
-    margin: 1rem auto 0 auto !important;
-    width: 260px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .slogan {
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  .slogan-box {
-    width: 240px !important;
-    margin: 0 auto !important;
-  }
-  
-  .linktree {
-    margin: 1rem auto 0 auto !important;
-    width: 240px !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .hero {
-    margin: 0 auto !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .slogan {
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  
-  .slogan-box {
-    width: 220px !important;
-    margin: 0 auto !important;
-  }
-  
-  .linktree {
-    margin: 1rem auto 0 auto !important;
-    width: 220px !important;
   }
 }
