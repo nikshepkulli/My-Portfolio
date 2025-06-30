@@ -92,50 +92,62 @@ const Contact = () => {
         </div>
       )}
       
-      <div className="contact-wrapper">
-        <section className="contact-section" id="contact">
-          <span className="contact-title-large">Contact</span>
-          <span className="contact-title-small">Me</span>
-          
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <label htmlFor="fullName">Full Name</label>
-            <input 
-              type="text" 
-              id="fullName" 
-              name="fullName" 
-              placeholder="Your full name" 
-              value={formData.fullName}
-              onChange={handleInputChange}
-              required 
-            />
+      {/* New container for side-by-side layout */}
+      <div className="contact-container">
+        <div className="contact-wrapper">
+          <section className="contact-section" id="contact">
+            <span className="contact-title-large">Contact</span>
+            <span className="contact-title-small">Me</span>
             
-            <label htmlFor="email">Email Address</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="Your email address" 
-              value={formData.email}
-              onChange={handleInputChange}
-              required 
-            />
-            
-            <label htmlFor="message">Message</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              placeholder="Your message..." 
-              rows="5" 
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-            />
-            
-            <button type="submit" disabled={isLoading}>
-              {isLoading ? 'Sending...' : 'Send'}
-            </button>
-          </form>
-        </section>
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <label htmlFor="fullName">Full Name</label>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                placeholder="Your full name" 
+                value={formData.fullName}
+                onChange={handleInputChange}
+                required 
+              />
+              
+              <label htmlFor="email">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Your email address" 
+                value={formData.email}
+                onChange={handleInputChange}
+                required 
+              />
+              
+              <label htmlFor="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Your message..." 
+                rows="5" 
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+              />
+              
+              <button type="submit" disabled={isLoading}>
+                {isLoading ? 'Sending...' : 'Send'}
+              </button>
+            </form>
+          </section>
+        </div>
+        
+        {/* Image section beside the contact form */}
+        <div className="contact-image-wrapper">
+          <img 
+            src="./assets/resume/pic.jpg" 
+            alt="Profile" 
+            className="contact-image"
+          />
+        </div>
       </div>
       
       {/* Copyright stays OUTSIDE the contact section */}
