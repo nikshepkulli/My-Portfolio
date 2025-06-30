@@ -103,7 +103,7 @@
 .education-entry .date {
   margin-top: 0rem;
   font-style: italic;
-  color: #ffffff;
+  color: #000000;
   font-size: 0.95rem;
   text-align: right;
 }
@@ -113,7 +113,7 @@
 }
 
 .highlight-text p {
-  color: #ffffff;
+  color: #000000;
   font-size: 0.9rem;
 }
 

@@ -184,10 +184,9 @@ body {
 .linktree-section a,
 .resume-link {
   text-decoration: none;
-  color: #ffffff;
+  color: #8b8b8b;
   font-weight: bold;
   font-size: 1rem;
-  text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6);
   transition: all 0.3s ease;
   background: none;
   border: none;
@@ -202,7 +201,7 @@ body {
 .linktree-section a:hover,
 .resume-link:hover {
   text-decoration: underline;
-  text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8);
+  text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 30px rgba(255,255,255,0.8);
   transform: scale(1.05);
 }
 
