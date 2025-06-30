@@ -956,3 +956,42 @@ body {
   box-shadow: 0 4px 20px rgba(255,255,255,0.2); /* Light shadow */
   background: rgba(255,255,255,0.9); /* Light background for PDF content */
 }
+
+/* Mobile-only hero centering fixes */
+
+@media (max-width: 768px) {
+  .hero {
+    width: calc(100% - 1rem); /* Account for mobile margins */
+    margin: 0.5rem auto; /* Center properly on mobile */
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    width: calc(100% - 0.5rem); /* Tighter margins for very small screens */
+    margin: 0.25rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    width: calc(100% - 0.25rem); /* Minimal margins for ultra-small screens */
+    margin: 0.125rem auto;
+    padding: 0.8rem;
+    box-sizing: border-box;
+  }
+}
