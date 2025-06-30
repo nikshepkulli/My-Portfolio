@@ -25,9 +25,13 @@ const Hero = () => {
     setShowPdfDropdown(false);
   };
 
+  const handleOpenPDF = () => {
+    window.open('./assets/resume/nikshep-resume.pdf', '_blank');
+  };
+
   const handleDownloadPDF = () => {
     const link = document.createElement('a');
-    link.href = '/assets/resume/nikshep-resume.pdf';
+    link.href = './assets/resume/nikshep-resume.pdf';
     link.download = 'Nikshep_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -96,9 +100,6 @@ const Hero = () => {
             <div className="pdf-dropdown-header">
               <h2>My Resume</h2>
               <div className="pdf-dropdown-controls">
-                <button onClick={handleDownloadPDF} className="pdf-download-btn">
-                  📥 Download
-                </button>
                 <button onClick={closePdfDropdown} className="pdf-close-btn">
                   ✕
                 </button>
@@ -106,21 +107,10 @@ const Hero = () => {
             </div>
             
             <div className="pdf-dropdown-viewer">
-              {isMobile ? (
-                // Mobile View - Tap to Open
-                <div 
-                  className="mobile-pdf-preview"
-                  onClick={() => window.open('/assets/resume/nikshep-resume.pdf', '_blank')}
-                >
-                  <div className="mobile-pdf-icon">📄</div>
-                  <h3>Resume PDF</h3>
-                  <p>Tap to view in browser</p>
-                  <div className="mobile-open-btn">📖 Open Resume</div>
-                </div>
-              ) : (
-                // Desktop View - Direct PDF Display
+              {/* Desktop view - show iframe */}
+              {!isMobile && (
                 <iframe
-                  src="/assets/resume/nikshep-resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
+                  src="./assets/resume/nikshep-resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
                   width="100%"
                   height="100%"
                   title="Resume PDF"
@@ -128,11 +118,29 @@ const Hero = () => {
                 >
                   <p>
                     Your browser does not support PDFs. 
-                    <a href="/assets/resume/nikshep-resume.pdf" target="_blank">
+                    <a href="./assets/resume/nikshep-resume.pdf" target="_blank">
                       Download the PDF
                     </a>
                   </p>
                 </iframe>
+              )}
+
+              {/* Mobile view - show buttons only */}
+              {isMobile && (
+                <div className="mobile-resume-options">
+                  <button 
+                    className="resume-option-btn open-btn"
+                    onClick={handleOpenPDF}
+                  >
+                    📄 OPEN RESUME PDF
+                  </button>
+                  <button 
+                    className="resume-option-btn download-btn"
+                    onClick={handleDownloadPDF}
+                  >
+                    ⬇️ DOWNLOAD PDF
+                  </button>
+                </div>
               )}
             </div>
           </div>
