@@ -1,5 +1,4 @@
 /* Publications & Certifications Container CSS */
-
 /* Desktop: Side by side layout */
 .pub-cert-container-desktop {
   width: 100%;
@@ -101,3 +100,4 @@
     display: flex !important;
   }
 }
+

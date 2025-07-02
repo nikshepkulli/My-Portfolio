@@ -788,3 +788,33 @@
     box-sizing: border-box !important;
   }
 }
+
+/* TECHNICAL SKILLS SECTION WIDTH INCREASE - ADD 50PX */
+
+/* Main technical skills container - increase from 1400px to 1450px */
+.technical-skills {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  width: 93%;
+  max-width: 1450px; /* INCREASED from 1400px to 1450px (+50px) */
+  min-height: 400px;
+  color: #000000;
+  text-align: left;
+  margin: 50px auto 3rem auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Large Desktop - increase from 1400px to 1450px */
+@media (min-width: 1500px) {
+  .technical-skills {
+    max-width: 1450px; /* INCREASED from 1400px to 1450px (+50px) */
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

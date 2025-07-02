@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Achievements.css";
-import ClickMe from "../components/ClickMe";
+// Removed ClickMe import since we're not using the icon anymore
 import achievementsPDF from "../assets/Achievements.pdf";
 
 const Achievements = () => {
@@ -36,27 +36,33 @@ const Achievements = () => {
 
   return (
     <div className="center-wrapper">
-      <div className="achievements-container">
-        {/* Title with ClickMe GIF beside it */}
+      <div 
+        className="achievements-container clickable-achievements"
+        onClick={toggleView}
+        style={{
+          cursor: 'pointer',
+          transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-2px)';
+          e.target.style.boxShadow = '0 12px 40px rgba(0,0,0,0.15)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
+        }}
+      >
+        {/* Title - clickable when PDF is not open */}
         {!isOpen && (
           <div className="achievements-header">
             <h2 className="achievements-title">Achievements</h2>
-            <ClickMe
-              onClick={toggleView}
-              size="small"
-              width="30px"
-              height="30px"
-            />
           </div>
         )}
 
-        {/* Show title with close option when PDF is open */}
+        {/* Show title when PDF is open */}
         {isOpen && (
           <div className="achievements-header">
             <h2 className="achievements-title">Achievements</h2>
-            <div className="achievements-close" onClick={toggleView}>
-              <span>✕</span>
-            </div>
           </div>
         )}
 

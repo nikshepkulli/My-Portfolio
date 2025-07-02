@@ -474,3 +474,32 @@ html, body {
     font-size: 0.65rem;
   }
 }
+
+/* EDUCATION SECTION WIDTH INCREASE - ADD 50PX */
+
+/* Main education section - increase from 1420px to 1470px */
+.education-section {
+  position: relative;
+  width: 100%;
+  max-width: 1470px; /* INCREASED from 1420px to 1470px (+50px) */
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  margin: 0 auto 3rem auto;
+  text-align: left;
+  color: #000000;
+  padding: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Large Desktop - increase from 1420px to 1470px */
+@media (min-width: 1500px) {
+  .education-section {
+    max-width: 1440px; /* INCREASED from 1420px to 1470px (+50px) */
+  }
+  
+  .education-container {
+    max-width: 1050px; /* INCREASED from 1000px to 1050px (+50px) */
+  }
+}

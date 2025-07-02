@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Experience.css"; // Ensure path is correct
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import clickMeGif from "../assets/clickme.gif"; // Import your GIF
+// Removed FaChevronDown, FaChevronUp imports since we're not using arrows anymore
+// Remove this import: import clickMeGif from "../assets/clickme.gif";
 
 const Experiences = [
   {
@@ -97,32 +97,19 @@ const Experience = () => {
       
       <div className="experience-content">
         {Experiences.map((exp, index) => (
-          <div key={index} className="experience-card">
+          <div 
+            key={index} 
+            className={`experience-card clickable-experience-card ${expandedIndexes.includes(index) ? 'expanded' : ''}`}
+            onClick={() => toggleExpand(index)}
+          >
             <div className="experience-header">
-              <div className="title-with-gif">
+              <div className="title-with-icon">
                 <h3 className="title-text">{exp.title}</h3>
-                {!expandedIndexes.includes(index) && (
-                  <img 
-                    src={clickMeGif} 
-                    alt="Click me" 
-                    className="click-me-gif"
-                    onClick={() => toggleExpand(index)}
-                  />
-                )}
+                {/* Removed the expand-icon span and chevron icons */}
               </div>
               <p>{exp.date}</p>
             </div>
-            {expandedIndexes.includes(index) && (
-              <div
-                className="toggle-summary"
-                onClick={() => toggleExpand(index)}
-                style={{ cursor: "pointer", marginBottom: "10px" }}
-              >
-                <span className="toggle-arrow">
-                  <FaChevronUp /> Hide Summary
-                </span>
-              </div>
-            )}
+            
             {expandedIndexes.includes(index) && (
               <div className="experience-details">
                 <h4>{exp.company}</h4>

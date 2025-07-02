@@ -10,7 +10,8 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  max-width: 1400px;
+  max-width: 1500px;
+  width: 95%;
   margin: 0 auto;
   padding: 2rem;
   flex-wrap: wrap;
@@ -31,7 +32,7 @@
   padding: 4rem 2rem;
   text-align: left;
   width: 100%;
-  max-width: 800px;
+  max-width: 1500px;
   height: 600px;
   border-radius: 15px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
@@ -183,7 +184,7 @@
 /* Large Desktop */
 @media (min-width: 1200px) {
   .contact-container {
-    gap: 4rem;
+    gap: 8rem;
   }
   
   .contact-wrapper {
@@ -191,7 +192,7 @@
   }
   
   .contact-section {
-    max-width: 800px;
+    max-width: 1600px;
   }
   
   .contact-form {
@@ -210,7 +211,7 @@
 /* Desktop/Laptop */
 @media (max-width: 1199px) {
   .contact-container {
-    gap: 2.5rem;
+    gap: 6rem;
   }
   
   .contact-wrapper {
@@ -219,7 +220,7 @@
   
   .contact-section {
     width: 95%;
-    max-width: 750px;
+    max-width: 1500px;
   }
   
   .contact-form {

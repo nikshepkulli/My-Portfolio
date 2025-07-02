@@ -4,7 +4,7 @@ import '../styles/Projects.css';
 import prj1 from '../assets/prj1.webp';
 import prj2 from '../assets/prj2.webp';
 import prj3 from '../assets/prj3.webp';
-import clickmeGif from '../assets/clickme.gif'; // Update this path if needed
+// Removed clickmeGif import since we're removing the hand icon
 
 const Projects = () => {
   const [expanded, setExpanded] = useState({
@@ -28,16 +28,26 @@ const Projects = () => {
       <div className="projects-container">
         
         {/* Cerner Corporation */}
-        <div className="project-block">
+        <div 
+          className={`project-block clickable-project ${expanded.cerner ? 'expanded' : ''}`}
+          onClick={() => toggleExpand('cerner')}
+          style={{
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-3px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+          }}
+        >
           <img src={prj1} alt="Cerner Project" className="project-img" />
           <div className="project-header-row">
             <h3 className="project-title">Cerner Corporation</h3>
-            <img
-              src={clickmeGif}
-              alt="Toggle details"
-              className="gif-toggle"
-              onClick={() => toggleExpand('cerner')}
-            />
+            {/* Removed the hand icon */}
           </div>
           {expanded.cerner && (
             <ul className="project-details">
@@ -55,16 +65,26 @@ const Projects = () => {
         </div>
 
         {/* 6D Technology */}
-        <div className="project-block">
+        <div 
+          className={`project-block clickable-project ${expanded.sixD ? 'expanded' : ''}`}
+          onClick={() => toggleExpand('sixD')}
+          style={{
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-3px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+          }}
+        >
           <img src={prj2} alt="6D Project" className="project-img" />
           <div className="project-header-row">
             <h3 className="project-title">6D Technology</h3>
-            <img
-              src={clickmeGif}
-              alt="Toggle details"
-              className="gif-toggle"
-              onClick={() => toggleExpand('sixD')}
-            />
+            {/* Removed the hand icon */}
           </div>
           {expanded.sixD && (
             <ul className="project-details">
@@ -76,16 +96,26 @@ const Projects = () => {
         </div>
 
         {/* Probots Techno Solutions */}
-        <div className="project-block">
+        <div 
+          className={`project-block clickable-project ${expanded.probots ? 'expanded' : ''}`}
+          onClick={() => toggleExpand('probots')}
+          style={{
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-3px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+          }}
+        >
           <img src={prj3} alt="Probots Project" className="project-img" />
           <div className="project-header-row">
             <h3 className="project-title">Probots Techno Solutions</h3>
-            <img
-              src={clickmeGif}
-              alt="Toggle details"
-              className="gif-toggle"
-              onClick={() => toggleExpand('probots')}
-            />
+            {/* Removed the hand icon */}
           </div>
           {expanded.probots && (
             <ul className="project-details">

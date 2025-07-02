@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import pub1 from '../assets/pub1.png';
 import pub2 from '../assets/pub2.png';
-import clickmeGif from '../assets/clickme.gif';
+// Remove this import: import clickmeGif from '../assets/clickme.gif';
 import '../styles/Publications.css';
 
 const publications = [
@@ -12,7 +12,7 @@ const publications = [
   },
   {
     img: pub2,
-    name: "AIRCC Publication",
+    name: "AIRCCPublication",
     link: "https://aircconline.com/csit/papers/vol14/csit142214.pdf",
   },
 ];
@@ -44,6 +44,11 @@ const Publications = () => {
     }
   };
 
+  // Function to handle publication click
+  const handlePublicationClick = (link) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
+
   // Mobile layout - show all publications vertically
   if (isMobile) {
     return (
@@ -56,7 +61,11 @@ const Publications = () => {
         </div>
         <div className="publications-mobile-list">
           {publications.map((publication, index) => (
-            <div key={index} className="publication-mobile-item">
+            <div 
+              key={index} 
+              className="publication-mobile-item clickable-section"
+              onClick={() => handlePublicationClick(publication.link)}
+            >
               <img
                 src={publication.img}
                 alt={`publication-${index}`}
@@ -66,18 +75,7 @@ const Publications = () => {
                 <div className="publication-mobile-name">
                   {publication.name}
                 </div>
-                <a
-                  href={publication.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="publication-mobile-link"
-                >
-                  <img
-                    src={clickmeGif}
-                    alt="Click me to open publication"
-                    className="publication-mobile-gif"
-                  />
-                </a>
+                {/* Removed the hand icon link */}
               </div>
             </div>
           ))}
@@ -88,7 +86,10 @@ const Publications = () => {
 
   // Desktop layout - keep original carousel
   return (
-    <div className="carousel-box">
+    <div 
+      className="carousel-box clickable-section"
+      onClick={() => handlePublicationClick(publications[currentIndex].link)}
+    >
       {/* Add the rotated title structure */}
       <div className="publications-title-container">
         <div className="publications-title-small">Publications</div>
@@ -98,7 +99,10 @@ const Publications = () => {
       <div className="publications-carousel-frame">
         <button
           className="publications-arrow left"
-          onClick={prevSlide}
+          onClick={(e) => {
+            e.stopPropagation();
+            prevSlide();
+          }}
           disabled={currentIndex === 0}
         >
           ←
@@ -113,23 +117,15 @@ const Publications = () => {
             <div className="carousel-name">
               {publications[currentIndex].name}
             </div>
-            <a
-              href={publications[currentIndex].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="carousel-link"
-            >
-              <img
-                src={clickmeGif}
-                alt="Click me to open publication"
-                className="clickme-gif"
-              />
-            </a>
+            {/* Removed the hand icon link */}
           </div>
         </div>
         <button
           className="publications-arrow right"
-          onClick={nextSlide}
+          onClick={(e) => {
+            e.stopPropagation();
+            nextSlide();
+          }}
           disabled={currentIndex === publications.length - 1}
         >
           →

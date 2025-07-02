@@ -80,8 +80,8 @@
   line-height: 1;
   margin: 0;
   z-index: 1;
-  left: -40px;
-  top: 10px;
+  left: 250px;
+  top: -55px;
   text-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
@@ -94,8 +94,8 @@
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: -80px;
-  top: 50px;
+  left: 210px;
+  top: -20px;
 }
 
 .publications-carousel-frame {
@@ -430,3 +430,515 @@
   }
 }
 
+
+/* EQUAL WIDTH SECTIONS FIX */
+/* Apply consistent width to About, Publications, and Certifications sections */
+
+/* About Section - Match width with other sections */
+.about-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  width: 1200px !important; /* Match Publications/Certifications */
+  height: auto;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Publications Section - Increase width to match About */
+.publications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1200px !important; /* Increased from 900px */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Certifications Section - Increase width to match About */
+.certifications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1200px !important; /* Increased from 900px */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Adjust carousel box width to fit the larger container */
+.publications-section .carousel-box,
+.certifications-section .carousel-box {
+  width: 650px !important; /* Increased from 500px */
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* Adjust carousel frame to utilize the extra space */
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  width: 550px !important; /* Increased from 400px */
+  height: 100%;
+}
+
+/* Adjust image size for better proportion in larger carousel */
+.publications-section .carousel-img,
+.certifications-section .carousel-img {
+  width: 350px !important; /* Increased from 300px */
+  height: 220px !important; /* Increased from 200px */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Adjust name container width */
+.publications-section .carousel-name,
+.certifications-section .carousel-name {
+  width: 600px !important; /* Increased from 550px */
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+/* Ensure all sections are centered */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* Container for side-by-side Publications and Certifications (if needed) */
+.pub-cert-container-desktop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+/* When displaying side by side, adjust individual widths */
+.pub-cert-container-desktop .publications-section,
+.pub-cert-container-desktop .certifications-section {
+  width: 580px !important; /* Half of 1200px minus gap */
+  height: 350px;
+}
+
+.pub-cert-container-desktop .carousel-box {
+  width: 450px !important;
+  height: 280px !important;
+}
+
+.pub-cert-container-desktop .carousel-img {
+  width: 280px !important;
+  height: 180px !important;
+}
+
+.pub-cert-container-desktop .carousel-name {
+  width: 450px !important;
+  font-size: 1.1rem !important;
+}
+
+/* Responsive adjustments for smaller desktop screens */
+@media (max-width: 1400px) and (min-width: 769px) {
+  .publications-section,
+  .certifications-section {
+    width: 1000px !important;
+  }
+  
+  .publications-section .carousel-box,
+  .certifications-section .carousel-box {
+    width: 550px !important;
+  }
+  
+  .publications-carousel-frame,
+  .certifications-carousel-frame {
+    width: 450px !important;
+  }
+  
+  .publications-section .carousel-img,
+  .certifications-section .carousel-img {
+    width: 400px !important;
+    height: 200px !important;
+  }
+  
+  .publications-section .carousel-name,
+  .certifications-section .carousel-name {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .publications-section,
+  .certifications-section {
+    width: 900px !important;
+  }
+  
+  .publications-section .carousel-box,
+  .certifications-section .carousel-box {
+    width: 500px !important;
+  }
+  
+  .publications-carousel-frame,
+  .certifications-carousel-frame {
+    width: 400px !important;
+  }
+  
+  .publications-section .carousel-img,
+  .certifications-section .carousel-img {
+    width: 280px !important;
+    height: 190px !important;
+  }
+  
+  .publications-section .carousel-name,
+  .certifications-section .carousel-name {
+    width: 450px !important;
+  }
+}
+
+/* ADD THIS TO THE END OF YOUR PUBLICATIONS.CSS AND CERTIFICATIONS.CSS FILES */
+
+/* Adjust carousel for larger container */
+.carousel-box {
+  width: 650px !important;
+  height: 300px;
+}
+
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  width: 550px !important;
+}
+
+.carousel-img {
+  width: 350px !important;
+  height: 220px !important;
+}
+
+.carousel-name {
+  width: 600px !important;
+}
+
+/* EXACT CHANGES TO MAKE ALL SECTIONS EQUAL WIDTH */
+
+/* 1. IN YOUR PUBLICATIONS CSS FILE - FIND THIS RULE AND UPDATE: */
+.publications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1385px !important; /* CHANGE FROM 900px TO 1385px */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* 2. IN YOUR CERTIFICATIONS CSS FILE - FIND THIS RULE AND UPDATE: */
+.certifications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1385px !important; /* CHANGE FROM 900px TO 1385px */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* 3. ADD THESE RULES TO BOTH CSS FILES TO SCALE UP THE CONTENT: */
+
+/* Make carousel boxes bigger to fit the wider container */
+.carousel-box {
+  width: 750px !important; /* Increased from 500px */
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* Make carousel frames wider */
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  width: 650px !important; /* Increased from 400px */
+  height: 100%;
+}
+
+/* Make images bigger */
+.carousel-img {
+  width: 400px !important; /* Increased from 300px */
+  height: 250px !important; /* Increased from 200px */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Make text container wider */
+.carousel-name {
+  width: 700px !important; /* Increased from 550px */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* FINAL FIX: Match About section width and reduce carousel spacing */
+
+/* 1. REDUCE WIDTH TO MATCH ABOUT SECTION */
+.publications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1378px !important; /* REDUCED from 1385px to match About */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.certifications-section {
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #000000;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 1378px !important; /* REDUCED from 1385px to match About */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* 2. REDUCE CAROUSEL BOX WIDTH AND FIX SPACING */
+.carousel-box {
+  width: 700px !important; /* REDUCED from 750px */
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* CENTER VERTICALLY */
+  justify-content: center; /* CENTER HORIZONTALLY */
+  padding: 1rem; /* REDUCE PADDING */
+}
+
+/* 3. ADJUST CAROUSEL FRAME TO REDUCE GAP */
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* CENTER CONTENT */
+  gap: 1rem !important; /* REDUCE GAP from default */
+  width: 600px !important; /* REDUCED from 650px */
+  height: 100%;
+}
+
+/* 4. ADJUST IMAGES */
+.carousel-img {
+  width: 350px !important; /* SLIGHTLY REDUCED from 400px */
+  height: 220px !important; /* REDUCED from 250px */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  flex-shrink: 0; /* PREVENT SHRINKING */
+}
+
+/* 5. ADJUST TEXT CONTAINER */
+.carousel-name {
+  width: 550px !important; /* REDUCED from 700px */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+  margin-left: 1rem; /* ADD SMALL LEFT MARGIN */
+}
+
+/* 6. ADJUST CAROUSEL CONTENT CONTAINER */
+.carousel-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto; /* CHANGE from fixed 100px */
+  margin-left: 0.5rem; /* SMALL MARGIN TO CLOSE GAP */
+}
+
+/* 7. ENSURE ARROWS DON'T TAKE TOO MUCH SPACE */
+.publications-arrow,
+.certifications-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 180px !important; /* SLIGHTLY SMALLER */
+  height: 45px !important; /* SLIGHTLY SMALLER */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* MUCH LARGER WIDTH INCREASE TO SEE DIFFERENCE */
+
+.publications-section {
+  width: 1420px !important; /* INCREASED from 1400px to 1420px (20px increase) */
+}
+
+.certifications-section {
+  width: 1420px !important; /* INCREASED from 1400px to 1420px (20px increase) */
+}
+
+/* Add these styles to BOTH Publications.css AND Certifications.css */
+
+/* Clickable section styles - for entire sections */
+.clickable-section {
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  user-select: none;
+  position: relative;
+}
+
+.clickable-section:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2) !important;
+}
+
+.clickable-section:active {
+  transform: translateY(-1px) !important;
+  transition: all 0.1s ease !important;
+}
+
+/* Desktop carousel box hover effects */
+.carousel-box.clickable-section:hover {
+  transform: scale(1.02) translateY(-3px) !important;
+}
+
+.carousel-box.clickable-section:active {
+  transform: scale(1.01) translateY(-1px) !important;
+}
+
+/* Mobile item hover effects */
+.publication-mobile-item.clickable-section:hover,
+.certification-mobile-item.clickable-section:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%) !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+}
+
+/* Enhanced visual feedback for entire sections */
+.clickable-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,119,204,0.08) 0%, rgba(0,119,204,0.03) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.clickable-section:hover::before {
+  opacity: 1;
+}
+
+/* Ensure content stays above overlay */
+.clickable-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent arrow buttons from being affected by section click */
+.publications-arrow,
+.certifications-arrow {
+  position: relative;
+  z-index: 10 !important;
+}
+
+/* Remove old hand icon styles - you can delete these from your CSS files */
+/*
+.clickme-gif {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: right;
+}
+
+.clickme-gif:hover {
+  transform: scale(1.1);
+}
+
+.publication-mobile-gif {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.publication-mobile-gif:hover {
+  transform: scale(1.1);
+}
+
+.certification-mobile-gif {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certification-mobile-gif:hover {
+  transform: scale(1.1);
+}
+*/

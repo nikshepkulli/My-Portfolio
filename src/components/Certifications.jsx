@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import cert1 from '../assets/cert1.png';
 import cert2 from '../assets/cert2.jpg';
-import clickmeGif from '../assets/clickme.gif';
+// Remove this import: import clickmeGif from '../assets/clickme.gif';
 import '../styles/Certifications.css';
 
 const certifications = [
   {
     img: cert1,
-    name: "MongoDB Certificate",
+    name: "MongoDBCertificate",
     link: "https://github.com/nikshepkulli/niku/tree/master/MongoDB%20Certificates",
   },
   {
     img: cert2,
-    name: "Forage Certificate",
+    name: "ForageCertificate",
     link: "https://github.com/nikshepkulli/niku/tree/master/Forage%20Certificate",
   },
 ];
@@ -44,6 +44,11 @@ const Certifications = () => {
     }
   };
 
+  // Function to handle certification click
+  const handleCertificationClick = (link) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
+
   // Mobile layout - show all certifications vertically
   if (isMobile) {
     return (
@@ -56,7 +61,11 @@ const Certifications = () => {
         </div>
         <div className="certifications-mobile-list">
           {certifications.map((certification, index) => (
-            <div key={index} className="certification-mobile-item">
+            <div 
+              key={index} 
+              className="certification-mobile-item clickable-section"
+              onClick={() => handleCertificationClick(certification.link)}
+            >
               <img
                 src={certification.img}
                 alt={`certification-${index}`}
@@ -66,18 +75,7 @@ const Certifications = () => {
                 <div className="certification-mobile-name">
                   {certification.name}
                 </div>
-                <a
-                  href={certification.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="certification-mobile-link"
-                >
-                  <img
-                    src={clickmeGif}
-                    alt="Click me to open certification"
-                    className="certification-mobile-gif"
-                  />
-                </a>
+                {/* Removed the hand icon link */}
               </div>
             </div>
           ))}
@@ -88,7 +86,10 @@ const Certifications = () => {
 
   // Desktop layout - keep original carousel
   return (
-    <div className="carousel-box">
+    <div 
+      className="carousel-box clickable-section"
+      onClick={() => handleCertificationClick(certifications[currentIndex].link)}
+    >
       {/* Add the rotated title structure */}
       <div className="certifications-title-container">
         <div className="certifications-title-small">Certifications</div>
@@ -98,7 +99,10 @@ const Certifications = () => {
       <div className="certifications-carousel-frame">
         <button
           className="certifications-arrow left"
-          onClick={prevSlide}
+          onClick={(e) => {
+            e.stopPropagation();
+            prevSlide();
+          }}
           disabled={currentIndex === 0}
         >
           ←
@@ -113,23 +117,15 @@ const Certifications = () => {
             <div className="carousel-name">
               {certifications[currentIndex].name}
             </div>
-            <a
-              href={certifications[currentIndex].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="carousel-link"
-            >
-              <img
-                src={clickmeGif}
-                alt="Click me to open certification"
-                className="clickme-gif"
-              />
-            </a>
+            {/* Removed the hand icon link */}
           </div>
         </div>
         <button
           className="certifications-arrow right"
-          onClick={nextSlide}
+          onClick={(e) => {
+            e.stopPropagation();
+            nextSlide();
+          }}
           disabled={currentIndex === certifications.length - 1}
         >
           →

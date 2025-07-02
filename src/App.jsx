@@ -20,7 +20,7 @@ function App() {
       console.log('Showing resume page...');
       setShowResume(true);
     };
-    
+        
     window.hideResumePageFunction = () => {
       console.log('Hiding resume page...');
       setShowResume(false);
@@ -32,7 +32,7 @@ function App() {
 
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
+        
     return () => {
       window.removeEventListener('resize', checkScreenSize);
       // Clean up global functions
@@ -67,18 +67,22 @@ function App() {
       }}>
         <Hero />
         <About />
-        
+                
         <div style={containerStyle}>
           <Publications />
           <Certifications />
         </div>
-        
+                
         <div style={{ marginTop: '2rem' }}>
           <Education />
           <Experience />
           <Achievements />
           <TechnicalSkills />
           <Projects />
+        </div>
+        
+        {/* Contact section without width constraints */}
+        <div style={{ marginTop: '2rem', width: '100%' }}>
           <Contact />
         </div>
       </div>
