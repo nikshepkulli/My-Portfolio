@@ -1,5 +1,7 @@
+// src/components/Hero.jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/Hero.css';
+// Fix the profile image import path
 import ProfileImage from '../assets/Profile.jpg.png';
 
 const Hero = () => {
@@ -43,7 +45,7 @@ const Hero = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>Glad you're here,</h1>
-          <h2> I'm Nikshep A Kulli</h2>
+          <h2>I'm Nikshep A Kulli</h2>
           <p>Full-Stack Developer | DevOps-Focused Full-Stack Engineer</p>
                    
           <div className="slogan">
@@ -90,10 +92,22 @@ const Hero = () => {
           </div>
         </div>
                
-        <img src={ProfileImage} alt="Nikshep A Kulli" className="profile-image" />
+        {/* Fixed profile image container */}
+        <div className="hero-image-container">
+          <img 
+            src={ProfileImage} 
+            alt="Nikshep A Kulli - Professional Portrait" 
+            className="profile-image"
+            onError={(e) => {
+              console.log('Profile image failed to load:', e.target.src);
+              // Fallback to a placeholder or hide the image
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
       </section>
 
-      {/* PDF Dropdown Overlay */}
+      {/* PDF Dropdown Modal */}
       {showPdfDropdown && (
         <div className="pdf-dropdown-overlay" onClick={closePdfDropdown}>
           <div className="pdf-dropdown-content" onClick={(e) => e.stopPropagation()}>
@@ -107,8 +121,7 @@ const Hero = () => {
             </div>
             
             <div className="pdf-dropdown-viewer">
-              {/* Desktop view - show iframe */}
-              {!isMobile && (
+              {!isMobile ? (
                 <iframe
                   src="./assets/resume/nikshep-resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
                   width="100%"
@@ -123,10 +136,7 @@ const Hero = () => {
                     </a>
                   </p>
                 </iframe>
-              )}
-
-              {/* Mobile view - show buttons only */}
-              {isMobile && (
+              ) : (
                 <div className="mobile-resume-options">
                   <button 
                     className="resume-option-btn open-btn"

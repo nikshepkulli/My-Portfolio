@@ -1,8 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* COMPLETE CLEAN GLOBAL.CSS - Simple Full Width Solution */
 
-/* Global font consistency - Apply to all text except specific title classes */
+/* ===== RESET AND BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+  /* YOUR CUSTOM BACKGROUND IMAGE */
+  background-image: url('/assets/background.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent !important;
+  overflow-x: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent !important;
+  overflow-x: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+/* ===== GLOBAL FONT CONSISTENCY ===== */
 body, 
 p, 
 h1, 
@@ -41,20 +87,12 @@ label,
   font-family: 'DM Sans', sans-serif !important;
 }
 
-/* Force DM Sans font for experience job titles specifically */
-.experience-card .title-text,
-.experience-header .title-text,
-.title-row .title-text {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
-}
-
-/* Apply DM Sans to ALL elements on the website */
+/* Apply DM Sans to ALL elements */
 * {
   font-family: 'DM Sans', sans-serif !important;
 }
 
-/* Keep the exceptions for rotated titles */
+/* Keep exceptions for rotated titles */
 .publications-title-small,
 .certifications-title-small,
 .education-title-small,
@@ -67,100 +105,358 @@ label,
   font-family: inherit !important;
 }
 
-/* Force DM Sans for Hero section specifically */
-.hero,
-.hero *,
-.hero h1,
-.hero h2,
-.hero p,
-.hero-content,
-.hero-content *,
-.hero-content h1,
-.hero-content h2,
-.hero-content p,
-.slogan,
-.slogan *,
-.slogan-box,
-.slogan-box *,
-.tagline,
-.tagline *,
-.linktree,
-.linktree * {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
+/* ===== SIMPLE FULL WIDTH SECTIONS ===== */
+.hero {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1rem !important;
+  
+  /* Force proper hero layout */
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 4rem !important;
+  
+  /* Ensure proper sizing */
+  min-height: 700px !important;
+  height: auto !important;
+  
+  /* Glassmorphism effect */
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
 }
 
-/* Even more aggressive - target the main headings */
-h1, h2 {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
-}
-
-/* Force DM Sans for publication and certification names */
-.carousel-name,
-.certifications-carousel-name,
-.publications-carousel-name,
-.degree {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 300 !important; /* Make it thinner like the side titles */
-}
-
-/* Target all blue clickable titles specifically */
-a[style*="color"],
-.carousel-link,
-.degree,
-h3, h4 {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 300 !important;
-}
-
-/* Most aggressive approach - override everything */
-.carousel-content *,
-.education-entry * {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 300 !important;
-}
-
-/* Force DM Sans for About section specifically */
 .about,
-.about *,
-.about p,
-.about-content,
-.about-content *,
-.about-content p,
-.about-section,
-.about-section *,
-.about-section p {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
+.publications-section,
+.certifications-section,
+.education-section,
+.experience-section,
+.technical-skills,
+.projects,
+.achievements-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1rem !important;
 }
 
-/* Target all paragraph text specifically */
-p {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
+/* ===== PUBLICATIONS & CERTIFICATIONS CONTAINER ===== */
+.pub-cert-container-desktop {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Force DM Sans for Contact section form */
-.contact-section,
-.contact-section *,
-.contact-form,
-.contact-form *,
-.contact-form label,
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 400 !important;
+.pub-cert-container-desktop .publications-section,
+.pub-cert-container-desktop .certifications-section {
+  width: 48% !important;
+  max-width: 48% !important;
+  margin: 0;
+  padding: 0;
 }
 
-/* Make form labels blue */
-.contact-form label {
-  color: #000000 !important;
-  font-family: 'DM Sans', sans-serif !important;
+.pub-cert-container-mobile {
+  display: none;
 }
 
-/* Copyright footer */
+/* ===== CONTACT SECTION ===== */
+.contact-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1rem !important;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-section {
+  flex: 1;
+  min-width: 600px;
+}
+
+.contact-image-wrapper {
+  flex: 0 0 400px;
+}
+
+/* ===== NUCLEAR OPTION - OVERRIDE EVERYTHING ===== */
+* {
+  max-width: none !important;
+}
+
+.App,
+.main-container,
+.page-container,
+.portfolio-container,
+.wrapper,
+.content,
+.layout,
+main,
+section,
+div[class*="container"],
+div[class*="wrapper"],
+div[class*="layout"],
+div[style*="max-width"],
+div[style*="width"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Target specific common React container patterns */
+div[class*="App"],
+div[class*="app"],
+div[class*="Container"],
+div[class*="Layout"],
+div[class*="Wrapper"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override inline styles */
+*[style*="max-width"] {
+  max-width: none !important;
+}
+
+*[style*="margin: 0 auto"],
+*[style*="margin-left: auto"],
+*[style*="margin-right: auto"] {
+  margin: 0 !important;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large screens */
+@media (max-width: 1600px) {
+  .hero,
+  .about,
+  .publications-section,
+  .certifications-section,
+  .education-section,
+  .experience-section,
+  .technical-skills,
+  .projects,
+  .achievements-container,
+  .contact-container,
+  .pub-cert-container-desktop {
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+  .hero,
+  .about,
+  .publications-section,
+  .certifications-section,
+  .education-section,
+  .experience-section,
+  .technical-skills,
+  .projects,
+  .achievements-container,
+  .contact-container,
+  .pub-cert-container-desktop {
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .contact-section {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .contact-image-wrapper {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .hero {
+    flex-direction: column !important;
+    text-align: center !important;
+    height: auto !important;
+    padding: 2rem 1rem !important;
+    gap: 2rem !important;
+  }
+  
+  .hero-content {
+    order: 2 !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-image-container {
+    order: 1 !important;
+    flex: none !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+  }
+  
+  .hero,
+  .about,
+  .education-section,
+  .experience-section,
+  .technical-skills,
+  .projects,
+  .achievements-container,
+  .contact-container {
+    padding: 1.5rem 0.5rem !important;
+  }
+  
+  /* Show mobile publications/certifications, hide desktop */
+  .pub-cert-container-desktop {
+    display: none !important;
+  }
+  
+  .pub-cert-container-mobile {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1.5rem 0.5rem !important;
+  }
+  
+  .publications-section-mobile,
+  .certifications-section-mobile {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .profile-image {
+    width: 300px !important;
+    height: 350px !important;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero,
+  .about,
+  .education-section,
+  .experience-section,
+  .technical-skills,
+  .projects,
+  .achievements-container,
+  .contact-container,
+  .publications-section-mobile,
+  .certifications-section-mobile {
+    padding: 1rem 0.25rem !important;
+  }
+  
+  .profile-image {
+    width: 250px !important;
+    height: 300px !important;
+  }
+}
+
+/* ===== HERO SPECIFIC STYLES ===== */
+.hero-content {
+  flex: 1 !important;
+  max-width: 60% !important;
+  text-align: left !important;
+}
+
+.hero-image-container {
+  flex: 0 0 400px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.profile-image {
+  width: 400px !important;
+  height: 500px !important;
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* Force slogan layout */
+.slogan {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+.slogan-box {
+  width: 300px !important;
+  height: 200px !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 10px !important;
+}
+
+.contact-sections {
+  display: flex !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+}
+
+.linktree-section,
+.resume-section {
+  width: 300px !important;
+  height: 84px !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  border-radius: 10px !important;
+}
+
+@media (max-width: 1024px) {
+  .slogan {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .slogan-box {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+  
+  .contact-sections {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan-box {
+    width: 90% !important;
+    height: 160px !important;
+  }
+}
+
+/* ===== COPYRIGHT FOOTER ===== */
 .copyright-footer {
   text-align: center;
   padding: 2rem;
@@ -168,34 +464,5 @@ p {
   font-family: 'DM Sans', sans-serif !important;
   color: #494949;
   font-size: 0.9rem;
-}
-
-/* Add background image to the entire website */
-body {
-  background-image: url('/My-Portfolio/src/assets/background.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  min-height: 100vh !important;
-}
-
-/* Also apply to the main app container */
-#root {
-  background-image: url('/My-Portfolio/src/assets/background.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  min-height: 100vh !important;
-}
-
-/* Apply to the main app div */
-.container {
-  background-image: url('/assets/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+  width: 100% !important;
 }
