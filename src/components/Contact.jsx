@@ -140,12 +140,16 @@ const Contact = () => {
           </section>
         </div>
         
-        {/* Image section beside the contact form */}
+        {/* Image section beside the contact form - FIXED PATH */}
         <div className="contact-image-wrapper">
           <img 
-            src="./assets/resume/pic.jpg" 
+            src="/assets/resume/pic.jpg" 
             alt="Profile" 
             className="contact-image"
+            onError={(e) => {
+              console.log('Image failed to load:', e.target.src);
+              e.target.style.display = 'none';
+            }}
           />
         </div>
       </div>

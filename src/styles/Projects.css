@@ -68,7 +68,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 5px;
-  margin-left: 140px;
+  margin-left: 220px; /* CHANGED FROM 180px to 220px - moves projects more to the right */
   margin-top: 0;
 }
 
@@ -135,6 +135,10 @@
   .projects {
     max-width: 1350px;
   }
+  
+  .projects-container {
+    margin-left: 250px; /* INCREASED for large screens */
+  }
 }
 
 /* Desktop/Laptop */
@@ -146,7 +150,7 @@
   }
   
   .projects-container {
-    margin-left: 120px;
+    margin-left: 200px; /* CHANGED FROM 160px to 200px */
     gap: 4px;
   }
   
@@ -180,7 +184,7 @@
   }
   
   .projects-container {
-    margin-left: 100px;
+    margin-left: 180px; /* CHANGED FROM 140px to 180px */
     gap: 3px;
   }
   
@@ -223,273 +227,10 @@
 /* Tablet Portrait */
 @media (max-width: 768px) {
   .projects {
-    width: 95%;
-    padding: 15px 20px;
-    border-radius: 12px;
-  }
-  
-  .projects-title-container {
-    position: static;
-    height: auto;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .title-my {
-    position: static;
-    transform: none;
-    font-size: 2.8rem;
-    left: auto;
-    top: auto;
-    display: inline-block;
-    margin-right: 1rem;
-  }
-  
-  .title-projects {
-    position: static;
-    transform: none;
-    font-size: 1.4rem;
-    left: auto;
-    top: auto;
-    display: inline-block;
-  }
-  
-  .title-vertical {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .projects-container {
-    margin-left: 0;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .project-block {
-    width: 100%;
-    max-width: 400px;
-    padding: 15px;
-  }
-  
-  .project-img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-  }
-  
-  .project-title {
-    font-size: 1rem;
-  }
-  
-  .project-details li {
-    font-size: 0.85rem;
-  }
-  
-  .gif-toggle {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-/* Mobile Landscape */
-@media (max-width: 600px) {
-  .projects {
-    width: 98%;
-    padding: 12px 15px;
-    border-radius: 10px;
-  }
-  
-  .title-my {
-    font-size: 2.4rem;
-    -webkit-text-stroke: 1.5px #ffffff;
-  }
-  
-  .title-projects {
-    font-size: 1.2rem;
-  }
-  
-  .title-vertical {
-    gap: 10px;
-  }
-  
-  .projects-container {
-    gap: 8px;
-  }
-  
-  .project-block {
-    width: 100%;
-    max-width: 350px;
-    padding: 12px;
-  }
-  
-  .project-img {
-    max-height: 250px;
-  }
-  
-  .project-header-row {
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .project-title {
-    font-size: 0.95rem;
-  }
-  
-  .project-details {
-    padding-left: 15px;
-    margin-top: 10px;
-  }
-  
-  .project-details li {
-    font-size: 0.8rem;
-    margin-bottom: 6px;
-  }
-  
-  .gif-toggle {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-/* Mobile Portrait */
-@media (max-width: 480px) {
-  .projects {
-    width: 98%;
-    padding: 10px 12px;
-  }
-  
-  .projects-title-container {
-    margin-bottom: 15px;
-  }
-  
-  .title-my {
-    font-size: 2rem;
-    -webkit-text-stroke: 1px #ffffff;
-    margin-right: 0.8rem;
-  }
-  
-  .title-projects {
-    font-size: 1rem;
-  }
-  
-  .title-vertical {
-    gap: 8px;
-    flex-direction: column;
-  }
-  
-  .projects-container {
-    gap: 6px;
-  }
-  
-  .project-block {
-    width: 100%;
-    max-width: 320px;
-    padding: 10px;
-  }
-  
-  .project-img {
-    max-height: 200px;
-    margin: 8px 0;
-    border-radius: 8px;
-  }
-  
-  .project-header-row {
-    gap: 6px;
-    margin-bottom: 6px;
-  }
-  
-  .project-title {
-    font-size: 0.9rem;
-  }
-  
-  .project-details {
-    padding-left: 12px;
-    margin-top: 8px;
-  }
-  
-  .project-details li {
-    font-size: 0.75rem;
-    margin-bottom: 4px;
-    line-height: 1.4;
-  }
-  
-  .gif-toggle {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-/* Extra Small Mobile */
-@media (max-width: 360px) {
-  .projects {
-    padding: 8px 10px;
-  }
-  
-  .projects-title-container {
-    margin-bottom: 12px;
-  }
-  
-  .title-my {
-    font-size: 1.8rem;
-  }
-  
-  .title-projects {
-    font-size: 0.9rem;
-  }
-  
-  .title-vertical {
-    gap: 6px;
-  }
-  
-  .project-block {
-    width: 100%;
-    max-width: 300px;
-    padding: 8px;
-  }
-  
-  .project-img {
-    max-height: 180px;
-    margin: 6px 0;
-  }
-  
-  .project-header-row {
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-  
-  .project-title {
-    font-size: 0.85rem;
-  }
-  
-  .project-details {
-    padding-left: 10px;
-    margin-top: 6px;
-  }
-  
-  .project-details li {
-    font-size: 0.7rem;
-    margin-bottom: 3px;
-  }
-  
-  .gif-toggle {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* FINAL MOBILE FIX - Replace your mobile sections with this */
-
-/* Tablet Portrait - FINAL FIX */
-@media (max-width: 768px) {
-  .projects {
-    width: 90% !important;
-    max-width: 90% !important;
+    width: 95% !important;
+    max-width: 95% !important;
     padding: 15px !important;
     border-radius: 12px !important;
-    /* Perfect centering */
     margin: 2rem auto !important;
     display: block !important;
     position: relative !important;
@@ -556,9 +297,9 @@
   
   .project-img {
     width: 100% !important;
-    height: 200px !important; /* Fixed height for all images */
+    height: 200px !important;
     max-width: 320px !important;
-    object-fit: cover !important; /* Ensures proper cropping */
+    object-fit: cover !important;
     border-radius: 8px !important;
     margin: 8px 0 !important;
   }
@@ -588,11 +329,11 @@
   }
 }
 
-/* Mobile Landscape - FINAL FIX */
+/* Mobile Landscape */
 @media (max-width: 600px) {
   .projects {
-    width: 85% !important;
-    max-width: 85% !important;
+    width: 90% !important;
+    max-width: 90% !important;
     padding: 12px !important;
     border-radius: 10px !important;
     margin: 1.5rem auto !important;
@@ -605,7 +346,7 @@
   
   .project-img {
     width: 100% !important;
-    height: 180px !important; /* Consistent height */
+    height: 180px !important;
     max-width: 290px !important;
     object-fit: cover !important;
   }
@@ -620,11 +361,11 @@
   }
 }
 
-/* Mobile Portrait - FINAL FIX */
+/* Mobile Portrait */
 @media (max-width: 480px) {
   .projects {
-    width: 80% !important;
-    max-width: 80% !important;
+    width: 95% !important;
+    max-width: 95% !important;
     padding: 10px !important;
     margin: 1rem auto !important;
   }
@@ -651,7 +392,7 @@
   
   .project-img {
     width: 100% !important;
-    height: 160px !important; /* Consistent height */
+    height: 160px !important;
     max-width: 260px !important;
     object-fit: cover !important;
   }
@@ -670,11 +411,11 @@
   }
 }
 
-/* Extra Small Mobile - FINAL FIX */
+/* Extra Small Mobile */
 @media (max-width: 360px) {
   .projects {
-    width: 75% !important;
-    max-width: 75% !important;
+    width: 80% !important;
+    max-width: 80% !important;
     padding: 8px !important;
     margin: 0.8rem auto !important;
   }
@@ -686,7 +427,7 @@
   
   .project-img {
     width: 100% !important;
-    height: 140px !important; /* Consistent height */
+    height: 140px !important;
     max-width: 230px !important;
     object-fit: cover !important;
   }
@@ -712,51 +453,3 @@
     height: 20px !important;
   }
 }
-
-/* INCREASE WIDTH BY CHANGING THESE VALUES IN YOUR PROJECTS.CSS */
-
-/* Tablet Portrait (768px and below) */
-@media (max-width: 768px) {
-  .projects {
-    width: 95% !important;        /* Change from 90% to 95% */
-    max-width: 95% !important;    /* Change from 90% to 95% */
-    /* ... rest of styles ... */
-  }
-}
-
-/* Mobile Landscape (600px and below) */
-@media (max-width: 600px) {
-  .projects {
-    width: 90% !important;        /* Change from 85% to 90% */
-    max-width: 90% !important;    /* Change from 85% to 90% */
-    /* ... rest of styles ... */
-  }
-}
-
-/* Mobile Portrait (480px and below) */
-@media (max-width: 480px) {
-  .projects {
-    width: 95% !important;        /* Change from 80% to 85% */
-    max-width: 95% !important;    /* Change from 80% to 85% */
-    /* ... rest of styles ... */
-  }
-}
-
-/* Extra Small Mobile (360px and below) */
-@media (max-width: 360px) {
-  .projects {
-    width: 80% !important;        /* Change from 75% to 80% */
-    max-width: 80% !important;    /* Change from 75% to 80% */
-    /* ... rest of styles ... */
-  }
-}
-
-/* EXAMPLE: If you want even wider, you can use: */
-/* 
-@media (max-width: 768px) {
-  .projects {
-    width: 98% !important;        
-    max-width: 98% !important;    
-  }
-}
-*/

@@ -660,3 +660,258 @@ div[class*="Wrapper"] {
 .pub-cert-container-desktop .certifications-arrow.right {
   margin-left: 40px !important;
 }
+
+/* TECHNICAL SKILLS EQUAL HEIGHT FIXES - Add to global.css */
+
+/* Equal height for all technical skills sections */
+.technical-skills-section {
+  min-height: 650px !important;
+  height: 650px !important; /* Fixed height for all sections */
+  padding: 1.5rem 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Equal height for all skill category containers */
+.skill-category {
+  height: 480px !important; /* Fixed equal height */
+  min-height: 480px !important;
+  max-height: 480px !important;
+  padding: 1.2rem !important;
+  margin-bottom: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important; /* Prevent overflow */
+}
+
+/* Smaller, consistent heading sizes */
+.skill-category h3 {
+  margin-bottom: 1rem !important;
+  font-size: 1.1rem !important; /* Reduced font size */
+  text-align: center !important;
+  padding: 0.3rem !important;
+  line-height: 1.2 !important;
+  font-weight: bold !important;
+  flex-shrink: 0 !important; /* Prevent heading from shrinking */
+}
+
+/* Skills content area with scroll if needed */
+.skill-category .skills-content {
+  flex: 1 !important;
+  overflow-y: auto !important; /* Allow scrolling if content overflows */
+  padding-right: 0.5rem !important;
+}
+
+/* Consistent skill item sizing */
+.skill-item {
+  margin-bottom: 0.8rem !important;
+  padding: 0.6rem !important;
+  min-height: 45px !important;
+  height: 45px !important; /* Fixed height for each skill item */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+/* Consistent skill text sizing */
+.skill-item span,
+.skill-item .skill-name {
+  font-size: 0.9rem !important; /* Smaller, consistent text size */
+  line-height: 1.2 !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: calc(100% - 40px) !important; /* Account for icon space */
+  white-space: nowrap !important; /* Prevent text wrapping to keep items uniform */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; /* Add ... if text is too long */
+}
+
+/* Consistent skill icon sizing */
+.skill-item img,
+.skill-item .skill-icon {
+  margin-right: 0.8rem !important;
+  width: 28px !important; /* Smaller, consistent icons */
+  height: 28px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Equal height grid layout */
+.technical-skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 1.5rem !important;
+  padding: 1rem !important;
+  align-items: stretch !important; /* Ensure all grid items stretch to same height */
+}
+
+/* Responsive adjustments with equal heights */
+@media (min-width: 1400px) {
+  .technical-skills-grid {
+    grid-template-columns: repeat(6, 1fr) !important; /* 6 equal columns */
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+  
+  .skill-category {
+    height: 580px !important; /* Same height for all */
+  }
+  
+  .skill-category h3 {
+    font-size: 1.0rem !important; /* Smaller headings for 6 columns */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .technical-skills-grid {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 equal columns */
+    gap: 1.2rem !important;
+  }
+  
+  .skill-category {
+    height: 580px !important; /* Same height */
+  }
+  
+  .skill-category h3 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Tablet adjustments with equal heights */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .technical-skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+  
+  .skill-category {
+    height: 520px !important; /* Same height for tablet */
+  }
+  
+  .skill-category h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .skill-item {
+    height: 40px !important;
+    min-height: 40px !important;
+  }
+  
+  .skill-item span {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .technical-skills-section {
+    height: auto !important; /* Allow natural height on mobile */
+    min-height: auto !important;
+  }
+  
+  .technical-skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0.5rem !important;
+  }
+  
+  .skill-category {
+    height: auto !important; /* Natural height on mobile */
+    min-height: 300px !important;
+    padding: 1rem !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .skill-item {
+    height: 40px !important;
+    padding: 0.5rem !important;
+  }
+  
+  .skill-item span {
+    font-size: 0.85rem !important;
+  }
+  
+  .skill-item img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* Fix any overflow and ensure equal heights */
+.technical-skills-section * {
+  box-sizing: border-box !important;
+}
+
+/* Ensure all categories are exactly the same height */
+.skill-category {
+  overflow: hidden !important; /* Hide any overflow */
+}
+
+/* Custom scrollbar for skills content if needed */
+.skill-category .skills-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.skill-category .skills-content::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+.skill-category .skills-content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.skill-category .skills-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* Key changes to move project cards right and reveal titles */
+
+/* Main container - increase margin-left to move cards right */
+.projects-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 180px; /* Changed from 140px to 180px */
+  margin-top: 0;
+}
+
+/* Desktop/Laptop adjustment */
+@media (max-width: 1399px) {
+  .projects-container {
+    margin-left: 160px; /* Changed from 120px to 160px */
+    gap: 4px;
+  }
+}
+
+/* Tablet Large adjustment */
+@media (max-width: 1024px) {
+  .projects-container {
+    margin-left: 140px; /* Changed from 100px to 140px */
+    gap: 3px;
+  }
+}
+
+/* Alternative solution - if you want even more space */
+/* 
+.projects-container {
+  margin-left: 200px; // For even more spacing
+}
+
+@media (max-width: 1399px) {
+  .projects-container {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-container {
+    margin-left: 160px;
+  }
+}
+*/
+
