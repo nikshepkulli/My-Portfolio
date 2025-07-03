@@ -39,8 +39,8 @@
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: -40px;
-  top: 100px;
+  left: 680px;
+  top: -650px;
 }
 
 /* Small title (Education) - positioned at bottom of My */
@@ -53,8 +53,8 @@
   line-height: 1;
   margin: 0;
   z-index: 1;
-  left: -50px;
-  top: 140px;
+  left: 670px;
+  top: -610px;
 }
 
 .education-content {

@@ -96,8 +96,8 @@ body {
 
 .title-large {
   position: absolute;
-  top: -170px;
-  left: 170px;
+  top: -200px;
+  left: 190px;
   font-size: 4.5rem;
   font-weight: bold;
   color: transparent;
@@ -113,8 +113,8 @@ body {
 
 .title-small {
   position: absolute;
-  top: -170px;
-  left: 180px;
+  top: -190px;
+  left: 200px;
   font-size: 1.8rem;
   font-weight: normal;
   color: #000000;
@@ -130,7 +130,7 @@ body {
   font-weight: bold;
   color: #000000;
   margin-left: 90px;
-  line-height: 1.2;
+  line-height: 1;
   margin-top: 35px;
 }
 

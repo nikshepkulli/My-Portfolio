@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
   padding: 2rem 0;
   width: 900px;
-  height: 350px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -81,7 +81,7 @@
   margin: 0;
   z-index: 1;
   left: 250px;
-  top: -55px;
+  top: -50px;
   text-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
 
@@ -94,8 +94,8 @@
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: 210px;
-  top: -20px;
+  left: 215px;
+  top: -15px;
 }
 
 .publications-carousel-frame {

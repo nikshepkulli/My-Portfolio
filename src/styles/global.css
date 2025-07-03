@@ -109,7 +109,7 @@ label,
 .hero {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
+  margin: 1rem auto !important;
   padding: 2rem 1rem !important;
   
   /* Force proper hero layout */
@@ -122,11 +122,11 @@ label,
   min-height: 700px !important;
   height: auto !important;
   
-  /* Glassmorphism effect */
+  /* Glassmorphism effect with rounded edges */
   background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%) !important;
   backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255,255,255,0.2) !important;
-  border-radius: 0 !important;
+  border-radius: 20px !important;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
 }
 
@@ -140,15 +140,20 @@ label,
 .achievements-container {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
+  margin: 3rem auto 0 auto !important;
   padding: 2rem 1rem !important;
+}
+
+/* Add extra bottom margin to about section only */
+.about {
+  margin-bottom: 3rem !important;
 }
 
 /* ===== PUBLICATIONS & CERTIFICATIONS CONTAINER ===== */
 .pub-cert-container-desktop {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
+  margin: 3rem auto 0 auto !important;
   padding: 2rem 1rem !important;
   display: flex;
   justify-content: space-between;
@@ -162,17 +167,66 @@ label,
   max-width: 48% !important;
   margin: 0;
   padding: 0;
+  min-height: 400px !important;
 }
 
 .pub-cert-container-mobile {
   display: none;
 }
 
+/* ===== PUBLICATIONS & CERTIFICATIONS IMPROVEMENTS ===== */
+/* Target the main container height */
+.pub-cert-container-desktop {
+  min-height: 370px !important;
+  padding: 2rem 0 !important;
+}
+
+/* Keep original carousel box size */
+.carousel-box {
+  height: 350px !important;
+  min-height: 350px !important;
+  width: 550px !important;
+}
+
+/* Specific targeting for the container version */
+.pub-cert-container-desktop .carousel-box {
+  width: 550px !important;
+  height: 350px !important;
+  min-height: 350px !important;
+  margin: 0 !important;
+}
+
+/* Also target individual sections if they exist */
+.publications-section,
+.certifications-section {
+  min-height: 370px !important;
+  height: 370px !important;
+}
+
+/* Remove arrow backgrounds */
+.publications-arrow,
+.certifications-arrow {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Increase spacing between arrows by 20px */
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  gap: 3rem !important;
+}
+
+/* Alternative approach - add 20px spacing around content */
+.carousel-content {
+  margin: 0 30px !important;
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact-container {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
+  margin: 3rem auto 0 auto !important;
   padding: 2rem 1rem !important;
   display: flex;
   gap: 3rem;
@@ -299,6 +353,7 @@ div[class*="Wrapper"] {
     height: auto !important;
     padding: 2rem 1rem !important;
     gap: 2rem !important;
+    margin: 0.5rem auto !important;
   }
   
   .hero-content {
@@ -309,6 +364,37 @@ div[class*="Wrapper"] {
   .hero-image-container {
     order: 1 !important;
     flex: none !important;
+  }
+  
+  .slogan {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .slogan-box {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    flex: none !important;
+    height: 170px !important;
+  }
+  
+  .contact-sections {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 400px !important;
+    flex: none !important;
+  }
+  
+  /* Keep larger image on tablet */
+  .profile-image {
+    width: 300px !important;
+    height: 350px !important;
   }
 }
 
@@ -329,6 +415,25 @@ div[class*="Wrapper"] {
     padding: 1.5rem 0.5rem !important;
   }
   
+  .hero {
+    margin: 0.25rem auto !important;
+  }
+  
+  /* Mobile profile image - 40x40px */
+  .profile-image {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  /* Mobile equal width boxes */
+  .slogan-box,
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
   /* Show mobile publications/certifications, hide desktop */
   .pub-cert-container-desktop {
     display: none !important;
@@ -339,7 +444,7 @@ div[class*="Wrapper"] {
     flex-direction: column;
     gap: 2rem;
     width: 100% !important;
-    margin: 0 !important;
+    margin: 2rem auto 0 auto !important;
     padding: 1.5rem 0.5rem !important;
   }
   
@@ -348,11 +453,6 @@ div[class*="Wrapper"] {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-  }
-  
-  .profile-image {
-    width: 300px !important;
-    height: 350px !important;
   }
 }
 
@@ -398,7 +498,7 @@ div[class*="Wrapper"] {
   border-radius: 15px !important;
 }
 
-/* Force slogan layout */
+/* Force slogan layout - EQUAL WIDTH BOXES WITH INCREASED HEIGHT */
 .slogan {
   display: flex !important;
   flex-direction: row !important;
@@ -407,12 +507,22 @@ div[class*="Wrapper"] {
 }
 
 .slogan-box {
-  width: 300px !important;
-  height: 200px !important;
+  flex: 1 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 210px !important;
   background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
   backdrop-filter: blur(8px) !important;
   border: 1px solid rgba(255,255,255,0.3) !important;
   border-radius: 10px !important;
+}
+
+/* Move specific text content 5px up in hero section desktop view */
+@media (min-width: 1025px) {
+  .hero .slogan .job-title,
+  .hero .slogan .tagline {
+    transform: translateY(-5px) !important;
+  }
 }
 
 .contact-sections {
@@ -423,7 +533,9 @@ div[class*="Wrapper"] {
 
 .linktree-section,
 .resume-section {
-  width: 300px !important;
+  flex: 1 !important;
+  width: auto !important;
+  min-width: 0 !important;
   height: 84px !important;
   background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
   backdrop-filter: blur(8px) !important;
@@ -465,4 +577,86 @@ div[class*="Wrapper"] {
   color: #494949;
   font-size: 0.9rem;
   width: 100% !important;
+}
+
+/* Add this CSS to both Publications.css and Certifications.css files */
+
+/* Fix arrow spacing - increase gap between left and right arrows */
+.publications-carousel-frame,
+.certifications-carousel-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem !important; /* Increased for more space */
+  width: 650px !important;
+  height: 100%;
+  padding: 0 1rem; /* Add padding to push arrows further apart */
+}
+
+/* Alternative: Use margin to push arrows away from center content */
+.publications-arrow,
+.certifications-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+  margin: 0 40px !important; /* Add 40px margin on both sides */
+}
+
+/* Specific styling for left arrow */
+.publications-arrow.left,
+.certifications-arrow.left {
+  margin-right: 50px !important; /* Extra space on the right side of left arrow */
+}
+
+/* Specific styling for right arrow */
+.publications-arrow.right,
+.certifications-arrow.right {
+  margin-left: 50px !important; /* Extra space on the left side of right arrow */
+}
+
+/* Ensure the carousel content has proper spacing */
+.carousel-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0 10px; /* Add small margins to center content */
+}
+
+/* For the side-by-side layout, adjust spacing accordingly */
+.pub-cert-container-desktop .publications-carousel-frame,
+.pub-cert-container-desktop .certifications-carousel-frame {
+  gap: 2.5rem !important;
+  width: 500px !important;
+  padding: 0 0.5rem;
+}
+
+.pub-cert-container-desktop .publications-arrow,
+.pub-cert-container-desktop .certifications-arrow {
+  margin: 0 30px !important;
+  width: 45px !important;
+  height: 45px !important;
+  font-size: 1.8rem;
+}
+
+.pub-cert-container-desktop .publications-arrow.left,
+.pub-cert-container-desktop .certifications-arrow.left {
+  margin-right: 40px !important;
+}
+
+.pub-cert-container-desktop .publications-arrow.right,
+.pub-cert-container-desktop .certifications-arrow.right {
+  margin-left: 40px !important;
 }

@@ -27,13 +27,15 @@ const Hero = () => {
     setShowPdfDropdown(false);
   };
 
+  // FIXED: Changed from ./assets/ to /assets/
   const handleOpenPDF = () => {
-    window.open('./assets/resume/nikshep-resume.pdf', '_blank');
+    window.open('/assets/resume/nikshep-resume.pdf', '_blank');
   };
 
+  // FIXED: Changed from ./assets/ to /assets/
   const handleDownloadPDF = () => {
     const link = document.createElement('a');
-    link.href = './assets/resume/nikshep-resume.pdf';
+    link.href = '/assets/resume/nikshep-resume.pdf';
     link.download = 'Nikshep_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -123,7 +125,7 @@ const Hero = () => {
             <div className="pdf-dropdown-viewer">
               {!isMobile ? (
                 <iframe
-                  src="./assets/resume/nikshep-resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
+                  src="/assets/resume/nikshep-resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
                   width="100%"
                   height="100%"
                   title="Resume PDF"
@@ -131,7 +133,7 @@ const Hero = () => {
                 >
                   <p>
                     Your browser does not support PDFs. 
-                    <a href="./assets/resume/nikshep-resume.pdf" target="_blank">
+                    <a href="/assets/resume/nikshep-resume.pdf" target="_blank">
                       Download the PDF
                     </a>
                   </p>
