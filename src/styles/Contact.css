@@ -643,3 +643,28 @@
     max-width: 260px;
   }
 }
+
+/* ===== MOBILE CONTACT FORM CENTER FIX ===== */
+@media (max-width: 768px) {
+  .contact-form,
+  body .contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .contact-form label {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto 0.5rem auto !important;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    text-align: center !important;
+    max-width: 300px !important;
+    margin: 0 auto 1rem auto !important;
+  }
+}
