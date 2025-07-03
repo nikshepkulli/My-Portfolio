@@ -915,3 +915,211 @@ div[class*="Wrapper"] {
 }
 */
 
+/* ===== MOBILE HERO BOXES EQUAL WIDTH FIX ===== */
+
+/* Mobile screens - Make ALL hero boxes equal width */
+@media (max-width: 768px) {
+  /* Force equal width for all hero boxes on mobile */
+  .slogan-box,
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 320px !important; /* Consistent max-width for all boxes */
+    min-width: 280px !important; /* Consistent min-width for all boxes */
+    margin: 0 auto !important;
+    flex: none !important; /* Prevent flex from changing widths */
+  }
+  
+  /* Ensure containers don't override the widths */
+  .slogan {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  .contact-sections {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Ensure hero content is properly centered */
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+/* Mobile Landscape - Same equal width approach */
+@media (max-width: 600px) {
+  .slogan-box,
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 300px !important; /* Slightly smaller for landscape */
+    min-width: 260px !important;
+    margin: 0 auto !important;
+    flex: none !important;
+  }
+}
+
+/* Mobile Portrait - Consistent equal widths */
+@media (max-width: 480px) {
+  .slogan-box,
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 280px !important; /* Consistent for portrait */
+    min-width: 240px !important;
+    margin: 0 auto !important;
+    flex: none !important;
+  }
+  
+  /* Adjust slogan box height for smaller screens */
+  .slogan-box {
+    height: 160px !important;
+  }
+}
+
+/* Extra Small Mobile - Still maintain equal widths */
+@media (max-width: 360px) {
+  .slogan-box,
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 260px !important; /* Smaller but still equal */
+    min-width: 220px !important;
+    margin: 0 auto !important;
+    flex: none !important;
+  }
+}
+
+/* ===== PRESERVE DESKTOP VIEW (DO NOT TOUCH) ===== */
+
+/* Desktop and larger - Keep original layout intact */
+@media (min-width: 769px) {
+  /* Force slogan layout - EQUAL WIDTH BOXES WITH INCREASED HEIGHT */
+  .slogan {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .slogan-box {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 210px !important;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 10px !important;
+  }
+
+  .contact-sections {
+    display: flex !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .linktree-section,
+  .resume-section {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 84px !important;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Tablet transition - Preserve desktop-like behavior */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slogan {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .slogan-box {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+  
+  .contact-sections {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .linktree-section,
+  .resume-section {
+    width: 100% !important;
+    max-width: 400px !important;
+    flex: none !important;
+  }
+}
+
+/* ===== HERO IMAGE SIZE UPDATE TO 350x350px ===== */
+
+/* Desktop Hero Image - Changed to 350x350px */
+.profile-image {
+  width: 400px !important;  /* Changed from 400px to 350px */
+  height: 400px !important; /* Changed from 500px to 350px */
+  object-fit: cover !important;
+  border-radius: 15px !important;
+}
+
+/* Hero image container - adjust for new image size */
+.hero-image-container {
+  flex: 0 0 400px !important; /* Changed from 400px to 350px */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS FOR NEW IMAGE SIZE ===== */
+
+/* Tablet and below - adjust proportionally */
+@media (max-width: 1024px) {
+  /* Keep proportional size on tablet */
+  .profile-image {
+    width: 400px !important; /* Proportionally smaller */
+    height: 400px !important;
+  }
+}
+
+/* Mobile screens - keep existing mobile sizes */
+@media (max-width: 768px) {
+  /* Mobile profile image - keep very small for mobile layout */
+  .profile-image {
+    width: 400px !important;
+    height: 400px !important;
+  }
+}
+
+/* Small mobile - even smaller */
+@media (max-width: 480px) {
+  .profile-image {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .profile-image {
+    width: 380px !important;
+    height: 380px !important;
+  }
+}
+
