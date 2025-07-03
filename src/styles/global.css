@@ -116,7 +116,7 @@ label,
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  gap: 4rem !important;
+  gap: 0.5rem !important; /* FIXED: Reduced from 4rem to 0.5rem */
   
   /* Ensure proper sizing */
   min-height: 700px !important;
@@ -352,7 +352,7 @@ div[class*="Wrapper"] {
     text-align: center !important;
     height: auto !important;
     padding: 2rem 1rem !important;
-    gap: 2rem !important;
+    gap: 2rem !important; /* Keep larger gap for mobile */
     margin: 0.5rem auto !important;
   }
   
@@ -423,6 +423,7 @@ div[class*="Wrapper"] {
   .profile-image {
     width: 40px !important;
     height: 40px !important;
+    margin: 0.25rem auto !important;
   }
   
   /* Mobile equal width boxes */
@@ -477,25 +478,49 @@ div[class*="Wrapper"] {
   }
 }
 
-/* ===== HERO SPECIFIC STYLES ===== */
-.hero-content {
-  flex: 1 !important;
-  max-width: 60% !important;
-  text-align: left !important;
+/* ===== HERO SPECIFIC STYLES - DESKTOP ONLY ===== */
+@media (min-width: 1025px) {
+  /* DESKTOP HERO - TIGHT SPACING */
+  .hero {
+    gap: 0.5rem !important; /* Very tight gap for desktop */
+  }
+  
+  .hero-content {
+    flex: 1 !important;
+    max-width: 55% !important; /* Reduced from 60% to give more space to image */
+    text-align: left !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-image-container {
+    flex: 0 0 350px !important; /* Reduced container size */
+    display: flex !important;
+    justify-content: flex-start !important; /* Align image to the left of its container */
+    align-items: center !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .profile-image {
+    width: 400px !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    margin-left: 0 !important;
+    transform: translateX(-20px) !important; /* Pull image 20px closer to content */
+  }
 }
 
-.hero-image-container {
-  flex: 0 0 400px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.profile-image {
-  width: 400px !important;
-  height: 500px !important;
-  object-fit: cover !important;
-  border-radius: 15px !important;
+/* Large desktop screens - even tighter */
+@media (min-width: 1400px) {
+  .hero {
+    gap: 0.3rem !important; /* Even tighter for large screens */
+  }
+  
+  .profile-image {
+    transform: translateX(-30px) !important; /* Pull image 30px closer */
+  }
 }
 
 /* Force slogan layout - EQUAL WIDTH BOXES WITH INCREASED HEIGHT */
@@ -896,25 +921,6 @@ div[class*="Wrapper"] {
   }
 }
 
-/* Alternative solution - if you want even more space */
-/* 
-.projects-container {
-  margin-left: 200px; // For even more spacing
-}
-
-@media (max-width: 1399px) {
-  .projects-container {
-    margin-left: 180px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .projects-container {
-    margin-left: 160px;
-  }
-}
-*/
-
 /* ===== MOBILE HERO BOXES EQUAL WIDTH FIX ===== */
 
 /* Mobile screens - Make ALL hero boxes equal width */
@@ -970,156 +976,177 @@ div[class*="Wrapper"] {
   }
 }
 
-/* Mobile Portrait - Consistent equal widths */
-@media (max-width: 480px) {
-  .slogan-box,
-  .linktree-section,
-  .resume-section {
-    width: 100% !important;
-    max-width: 280px !important; /* Consistent for portrait */
-    min-width: 240px !important;
-    margin: 0 auto !important;
-    flex: none !important;
-  }
-  
-  /* Adjust slogan box height for smaller screens */
-  .slogan-box {
-    height: 160px !important;
-  }
-}
+/* ===== SIMPLE HERO FIX - CLEAN SOLUTION ===== */
 
-/* Extra Small Mobile - Still maintain equal widths */
-@media (max-width: 360px) {
-  .slogan-box,
-  .linktree-section,
-  .resume-section {
-    width: 100% !important;
-    max-width: 260px !important; /* Smaller but still equal */
-    min-width: 220px !important;
-    margin: 0 auto !important;
-    flex: none !important;
-  }
-}
+/* Remove all the previous complex CSS and replace with this simple fix */
 
-/* ===== PRESERVE DESKTOP VIEW (DO NOT TOUCH) ===== */
-
-/* Desktop and larger - Keep original layout intact */
-@media (min-width: 769px) {
-  /* Force slogan layout - EQUAL WIDTH BOXES WITH INCREASED HEIGHT */
-  .slogan {
+/* Desktop Hero - Clean and Simple */
+@media (min-width: 1025px) {
+  .hero,
+  body .hero,
+  html body .hero {
     display: flex !important;
-    flex-direction: row !important;
-    gap: 2rem !important;
-    margin-top: 2rem !important;
-  }
-
-  .slogan-box {
-    flex: 1 !important;
-    width: auto !important;
-    min-width: 0 !important;
-    height: 210px !important;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
-    backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
-    border-radius: 10px !important;
-  }
-
-  .contact-sections {
-    display: flex !important;
-    gap: 2rem !important;
-    margin-top: 2rem !important;
-  }
-
-  .linktree-section,
-  .resume-section {
-    flex: 1 !important;
-    width: auto !important;
-    min-width: 0 !important;
-    height: 84px !important;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
-    backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
-    border-radius: 10px !important;
-  }
-}
-
-/* Tablet transition - Preserve desktop-like behavior */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .slogan {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-  
-  .slogan-box {
-    width: 100% !important;
-    max-width: 400px !important;
-    margin: 0 auto !important;
-  }
-  
-  .contact-sections {
-    flex-direction: column !important;
+    justify-content: space-between !important;
     align-items: center !important;
+    gap: 1rem !important; /* Just reduce the gap to 1rem instead of 4rem */
+    padding: 2rem 4rem !important;
   }
   
-  .linktree-section,
-  .resume-section {
-    width: 100% !important;
-    max-width: 400px !important;
-    flex: none !important;
+  /* Reset content to normal */
+  .hero-content,
+  body .hero-content,
+  html body .hero-content {
+    flex: 1 !important;
+    max-width: 60% !important;
+    text-align: left !important;
+    transform: none !important; /* Remove all transforms */
+    margin: 0 !important;
+    padding-right: 0 !important;
+    width: auto !important;
   }
-}
 
-/* ===== HERO IMAGE SIZE UPDATE TO 350x350px ===== */
-
-/* Desktop Hero Image - Changed to 350x350px */
-.profile-image {
-  width: 400px !important;  /* Changed from 400px to 350px */
-  height: 400px !important; /* Changed from 500px to 350px */
-  object-fit: cover !important;
-  border-radius: 15px !important;
-}
-
-/* Hero image container - adjust for new image size */
-.hero-image-container {
-  flex: 0 0 400px !important; /* Changed from 400px to 350px */
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-/* ===== RESPONSIVE BREAKPOINTS FOR NEW IMAGE SIZE ===== */
-
-/* Tablet and below - adjust proportionally */
-@media (max-width: 1024px) {
-  /* Keep proportional size on tablet */
-  .profile-image {
-    width: 400px !important; /* Proportionally smaller */
-    height: 400px !important;
+  /* Reset image container to normal */
+  .hero-image-container,
+  body .hero-image-container,
+  html body .hero-image-container {
+    flex: 0 0 400px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transform: none !important; /* Remove all transforms */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: none !important;
   }
-}
-
-/* Mobile screens - keep existing mobile sizes */
-@media (max-width: 768px) {
-  /* Mobile profile image - keep very small for mobile layout */
-  .profile-image {
+  
+  /* Reset image to normal */
+  .profile-image,
+  body .profile-image,
+  html body .profile-image {
     width: 400px !important;
     height: 400px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    margin: 0 !important;
+    transform: none !important; /* Remove all transforms */
   }
 }
 
-/* Small mobile - even smaller */
-@media (max-width: 480px) {
+/* Remove any conflicting rules */
+@media (min-width: 1025px) {
+  /* Clean slate - remove all the messy overrides */
+  .hero-content,
+  .hero-image-container,
   .profile-image {
-    width: 300px !important;
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+}
+
+/* ===== MOBILE IMAGE ROUNDED CORNERS FIX ===== */
+
+/* Add this to your global.css file or Hero.css file */
+
+/* Mobile screens - Fix profile image rounded corners */
+@media (max-width: 768px) {
+  .profile-image,
+  body .profile-image,
+  html body .profile-image {
+    border-radius: 15px !important; /* Force rounded corners on mobile */
+    width: 250px !important;
     height: 300px !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Small mobile - maintain rounded corners */
+@media (max-width: 480px) {
+  .profile-image,
+  body .profile-image,
+  html body .profile-image {
+    border-radius: 12px !important; /* Slightly smaller radius for small screens */
+    width: 240px !important;
+    height: 250px !important;
+    object-fit: cover !important;
   }
 }
 
 /* Extra small mobile */
 @media (max-width: 360px) {
-  .profile-image {
-    width: 380px !important;
-    height: 380px !important;
+  .profile-image,
+  body .profile-image,
+  html body .profile-image {
+    border-radius: 10px !important; /* Proportional radius for very small screens */
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Force override any conflicting styles */
+@media (max-width: 768px) {
+  .hero-image-container .profile-image,
+  .hero .hero-image-container .profile-image {
+    border-radius: 15px !important;
+    border: none !important;
+    outline: none !important;
+  }
+}
+
+/* ===== TECHNICAL SKILLS MOBILE ONLY FIX ===== */
+
+/* Add this to your global.css file */
+
+/* Mobile only - Center the technical skills section and increase width by 3px */
+@media (max-width: 768px) {
+  .technical-skills,
+  body .technical-skills,
+  html body .technical-skills {
+    width: calc(100% + 3px) !important; /* Increase width by 3px */
+    max-width: calc(100% + 3px) !important;
+    margin: 2rem auto 0 auto !important; /* Center the section */
+    padding: 1.5rem 0.5rem !important;
+    text-align: center !important; /* Center content inside */
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+  
+  .technical-skills-grid,
+  body .technical-skills-grid,
+  html body .technical-skills-grid {
+    display: grid !important;
+    justify-content: center !important; /* Center the grid */
+    align-items: stretch !important;
+    margin: 0 auto !important; /* Center the grid container */
+    padding: 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Small mobile - same treatment */
+@media (max-width: 480px) {
+  .technical-skills,
+  body .technical-skills,
+  html body .technical-skills {
+    width: calc(100% + 3px) !important;
+    margin: 1.5rem auto 0 auto !important;
+    padding: 1rem 0.25rem !important;
+    text-align: center !important;
+  }
+  
+  .technical-skills-grid {
+    justify-content: center !important;
+    margin: 0 auto !important;
+    padding: 0.25rem !important;
   }
 }
 

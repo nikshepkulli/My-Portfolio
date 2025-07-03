@@ -96,7 +96,7 @@ body {
 
 .title-large {
   position: absolute;
-  top: -200px;
+  top: -180px;
   left: 190px;
   font-size: 4.5rem;
   font-weight: bold;
@@ -113,7 +113,7 @@ body {
 
 .title-small {
   position: absolute;
-  top: -190px;
+  top: -170px;
   left: 200px;
   font-size: 1.8rem;
   font-weight: normal;
@@ -1118,5 +1118,171 @@ body {
     width: 78% !important;
     height: 52vh !important;
     align-items: center !important;
+  }
+}
+
+
+/* ===== DIRECT PROJECTS POSITIONING FIX ===== */
+
+/* Add this to the END of your Projects.css file or global.css file */
+
+/* Force projects to move right with maximum specificity */
+.projects .projects-container,
+body .projects .projects-container,
+html body .projects .projects-container {
+  display: flex !important;
+  justify-content: flex-end !important; /* Align to the right side */
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  margin-left: 0 !important;
+  margin-right: 100px !important; /* Add right margin to pull away from edge */
+  margin-top: 40px !important;
+  width: 100% !important;
+  padding: 0 !important;
+  transform: translateX(-50px) !important; /* Move entire container 50px left */
+}
+
+/* Alternative approach - use padding to center better */
+.projects-container {
+  padding-left: 0 !important;
+  padding-right: 150px !important; /* Push content away from right edge */
+  justify-content: center !important;
+  margin-left: 50px !important; /* Small left margin */
+  margin-right: 0 !important;
+}
+
+/* For large screens */
+@media (min-width: 1400px) {
+  .projects .projects-container {
+    margin-right: 150px !important;
+    transform: translateX(-80px) !important;
+  }
+}
+
+/* For medium screens */
+@media (max-width: 1399px) {
+  .projects .projects-container {
+    margin-right: 80px !important;
+    transform: translateX(-40px) !important;
+  }
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .projects .projects-container {
+    margin-right: 50px !important;
+    transform: translateX(-20px) !important;
+  }
+}
+
+/* ===== MOBILE CONTACT FORM CENTER FIX ===== */
+
+/* Add this to the end of your global.css file */
+
+/* Mobile only - Center contact form elements */
+@media (max-width: 768px) {
+  /* Center the contact form container */
+  .contact-form,
+  body .contact-form,
+  html body .contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 1rem !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Center form labels (Full Name, Email Address, Message) */
+  .contact-form label,
+  body .contact-form label,
+  html body .contact-form label {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 0.5rem auto !important;
+    font-weight: bold !important;
+  }
+  
+  /* Center form inputs and textarea */
+  .contact-form input,
+  .contact-form textarea,
+  body .contact-form input,
+  body .contact-form textarea,
+  html body .contact-form input,
+  html body .contact-form textarea {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto 1rem auto !important;
+    text-align: center !important;
+    display: block !important;
+    padding: 0.8rem !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    background: rgba(255,255,255,0.1) !important;
+  }
+  
+  /* Center the Send button */
+  .contact-form button,
+  .contact-form .send-button,
+  body .contact-form button,
+  body .contact-form .send-button,
+  html body .contact-form button,
+  html body .contact-form .send-button {
+    width: 100% !important;
+    max-width: 200px !important;
+    margin: 1rem auto !important;
+    display: block !important;
+    text-align: center !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 8px !important;
+    background: #000000 !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Center any form groups or field containers */
+  .contact-form .form-group,
+  .contact-form .field-container,
+  body .contact-form .form-group,
+  body .contact-form .field-container {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Small mobile - maintain centering */
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 280px !important;
+    padding: 0.6rem !important;
+  }
+  
+  .contact-form button,
+  .contact-form .send-button {
+    max-width: 180px !important;
+    padding: 0.6rem 1.5rem !important;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 260px !important;
+    padding: 0.5rem !important;
+  }
+  
+  .contact-form button,
+  .contact-form .send-button {
+    max-width: 160px !important;
+    padding: 0.5rem 1rem !important;
   }
 }
