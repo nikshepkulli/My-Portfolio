@@ -658,50 +658,91 @@
 }
 
 
-/* ===== MOBILE TEXT ALIGNMENT FIX ===== */
+/* ===== MOBILE TEXT JUSTIFIED BLOCK FORMATTING ===== */
 
-/* Remove justify alignment and use left alignment for better mobile readability */
+/* Create clean justified text blocks that form rectangular shapes */
 
-/* Mobile landscape - Use LEFT alignment instead of justify */
+/* Mobile landscape - Clean justified text block */
 @media (max-width: 768px) {
-  .about-content p {
-    text-align: left !important; /* Change back to left from justify */
-    font-size: 1.1rem !important;
-    line-height: 1.7 !important;
+  .about .about-content p,
+  .about-content p,
+  body .about .about-content p,
+  html body .about .about-content p,
+  section.about .about-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important; /* Better word spacing */
+    font-size: 1.05rem !important; /* Slightly smaller for better fit */
+    line-height: 1.5 !important; /* Tighter line height */
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    word-spacing: normal !important; /* Reset word spacing */
-    hyphens: none !important; /* Disable hyphenation */
+    margin-bottom: 1.5rem !important;
+    padding: 0 0.5rem !important; /* Small padding for cleaner edges */
+    word-spacing: 0.02rem !important; /* Minimal word spacing */
+    hyphens: auto !important; /* Allow hyphenation for better blocks */
+    -webkit-hyphens: auto !important;
+    -moz-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    hyphenate-limit-before: 3 !important;
+    hyphenate-limit-after: 3 !important;
+    hyphenate-limit-lines: 2 !important;
+    text-align-last: left !important; /* Last line stays left */
+    word-break: normal !important;
   }
 }
 
-/* Mobile portrait - Use LEFT alignment instead of justify */
+/* Mobile portrait - Clean justified text block */
 @media (max-width: 480px) {
-  .about-content p {
-    text-align: left !important; /* Change back to left from justify */
+  .about .about-content p,
+  .about-content p,
+  body .about .about-content p,
+  html body .about .about-content p,
+  section.about .about-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important; /* Better word spacing */
     font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.2rem !important;
+    line-height: 1.45 !important; /* Tighter line height */
+    margin-bottom: 1.3rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding: 0 !important;
-    word-spacing: normal !important; /* Reset word spacing */
-    hyphens: none !important; /* Disable hyphenation */
+    padding: 0 0.4rem !important; /* Small padding for cleaner edges */
+    word-spacing: 0.01rem !important; /* Minimal word spacing */
+    hyphens: auto !important; /* Allow hyphenation for better blocks */
+    -webkit-hyphens: auto !important;
+    -moz-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    hyphenate-limit-before: 2 !important;
+    hyphenate-limit-after: 2 !important;
+    hyphenate-limit-lines: 2 !important;
+    text-align-last: left !important; /* Last line stays left */
+    word-break: normal !important;
   }
 }
 
-/* Extra small devices - Use LEFT alignment instead of justify */
+/* Extra small devices - Clean justified text block */
 @media (max-width: 320px) {
-  .about-content p {
-    text-align: left !important; /* Change back to left from justify */
+  .about .about-content p,
+  .about-content p,
+  body .about .about-content p,
+  html body .about .about-content p,
+  section.about .about-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important; /* Better word spacing */
     font-size: 0.95rem !important;
+    line-height: 1.4 !important; /* Tighter line height */
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding: 0 !important;
-    word-spacing: normal !important; /* Reset word spacing */
-    hyphens: none !important; /* Disable hyphenation */
+    margin-bottom: 1.2rem !important;
+    padding: 0 0.3rem !important; /* Small padding for cleaner edges */
+    word-spacing: 0.01rem !important; /* Minimal word spacing */
+    hyphens: auto !important; /* Allow hyphenation for better blocks */
+    -webkit-hyphens: auto !important;
+    -moz-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    hyphenate-limit-before: 2 !important;
+    hyphenate-limit-after: 2 !important;
+    hyphenate-limit-lines: 2 !important;
+    text-align-last: left !important; /* Last line stays left */
+    word-break: normal !important;
   }
 }
 
