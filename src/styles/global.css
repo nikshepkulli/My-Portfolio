@@ -1375,3 +1375,127 @@ div[class*="Wrapper"] {
   }
   
 }
+
+/* ===== TECHNICAL SKILLS MOBILE HEIGHT FIX ===== */
+
+/* Increase height of technical skills cards ONLY in mobile view */
+
+/* Tablet Portrait - Increase card height */
+@media (max-width: 768px) {
+  .skill-category,
+  body .skill-category,
+  html body .skill-category {
+    height: 380px !important; /* Increased from 280px to 380px */
+    min-height: 380px !important;
+    max-height: 380px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important; /* Allow scrolling if needed */
+  }
+  
+  .skill-category ul {
+    max-height: 320px !important; /* Allow more space for skills list */
+    overflow-y: auto !important;
+  }
+}
+
+/* Mobile Landscape - Increase card height */
+@media (max-width: 600px) {
+  .skill-category,
+  body .skill-category,
+  html body .skill-category {
+    height: 360px !important; /* Increased from 240px to 360px */
+    min-height: 360px !important;
+    max-height: 360px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+  }
+  
+  .skill-category ul {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* Mobile Portrait - Increase card height significantly */
+@media (max-width: 480px) {
+  .skill-category,
+  body .skill-category,
+  html body .skill-category {
+    height: 400px !important; /* Increased from 280px to 400px */
+    min-height: 400px !important;
+    max-height: 400px !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+  }
+  
+  .skill-category ul {
+    max-height: 340px !important; /* More space for skills list */
+    overflow-y: auto !important;
+  }
+  
+  .skill-category li {
+    font-size: 0.75rem !important;
+    margin-bottom: 4px !important;
+    padding: 2px 0 !important;
+  }
+}
+
+/* Extra Small Mobile - Maximum height increase */
+@media (max-width: 360px) {
+  .skill-category,
+  body .skill-category,
+  html body .skill-category {
+    height: 420px !important; /* Increased from 180px to 420px */
+    min-height: 420px !important;
+    max-height: 420px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+  }
+  
+  .skill-category ul {
+    max-height: 360px !important;
+    overflow-y: auto !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 0.9rem !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .skill-category li {
+    font-size: 0.7rem !important;
+    margin-bottom: 3px !important;
+    padding: 2px 0 !important;
+  }
+}
+
+/* Custom scrollbar for mobile skill cards */
+@media (max-width: 768px) {
+  .skill-category::-webkit-scrollbar,
+  .skill-category ul::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .skill-category::-webkit-scrollbar-track,
+  .skill-category ul::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+  }
+  
+  .skill-category::-webkit-scrollbar-thumb,
+  .skill-category ul::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+  }
+  
+  .skill-category::-webkit-scrollbar-thumb:hover,
+  .skill-category ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.5);
+  }
+}
