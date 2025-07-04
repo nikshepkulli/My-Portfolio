@@ -593,3 +593,66 @@
     font-size: 0.9rem !important;
   }
 }
+
+/* ===== ABOUT SECTION WIDTH AND SPACING FIX ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1600px+) - Don't touch laptop view at all */
+@media (min-width: 1600px) {
+  .about,
+  body .about,
+  html body .about {
+    width: 100% !important;
+    max-width: 1850px !important; /* Same as hero section */
+    margin: 3rem auto !important; /* Center it like hero */
+    padding: 2rem 6rem !important; /* Same padding as hero */
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 15px !important; /* Same as hero */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
+    margin-bottom: 5rem !important; /* Extra space below about section */
+  }
+  
+  /* Ensure sections after about have proper spacing on large desktop only */
+  .publications-section,
+  .certifications-section,
+  .pub-cert-container-desktop,
+  .education-section,
+  .experience-section,
+  .technical-skills,
+  .projects,
+  .achievements-container,
+  .contact-container {
+    margin-top: 4rem !important; /* Consistent spacing after about */
+  }
+}
+
+/* Don't affect tablet and mobile views - keep existing styles */
+@media (max-width: 1024px) {
+  .about {
+    /* Keep existing mobile/tablet styles intact */
+    width: 100% !important;
+    max-width: none !important;
+    margin: 3rem auto 0 auto !important;
+    padding: 2rem 1rem !important;
+    margin-bottom: 3rem !important; /* Keep existing mobile spacing */
+  }
+}
+
+/* Mobile specific - ensure no changes */
+@media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 0.5rem !important;
+    margin: 2rem auto 0 auto !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem 0.25rem !important;
+    margin: 1.5rem auto 0 auto !important;
+    margin-bottom: 1.5rem !important;
+  }
+}

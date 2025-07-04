@@ -1286,3 +1286,99 @@ html body .projects .projects-container {
     padding: 0.5rem 1rem !important;
   }
 }
+
+/* ===== DESKTOP TITLE POSITION FIX ===== */
+/* Add this to your global.css file */
+
+/* Desktop only - Fix rotated title positioning */
+@media (min-width: 1400px) {
+  .title-container {
+    position: absolute;
+    left: -35px;
+    top: 70%; /* Adjusted from 75% */
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    height: 0px;
+    width: auto;
+  }
+
+  .title-large {
+    position: absolute;
+    top: -185px; /* Adjusted from -180px */
+    left: 185px; /* Adjusted from 190px */
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: transparent;
+    text-stroke: 2px #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    line-height: 2;
+    margin: 0;
+    z-index: 1;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+  }
+
+  .title-small {
+    position: absolute;
+    top: -175px; /* Adjusted from -170px */
+    left: 195px; /* Adjusted from 200px */
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 6;
+    margin: 0;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  }
+}
+
+/* Large desktop screens (1600px+) - Fine-tune positioning */
+@media (min-width: 1600px) {
+  .title-container {
+    left: -40px; /* Move slightly more left */
+    top: 68%; /* Slightly higher */
+  }
+
+  .title-large {
+    top: -225px; /* Move up more */
+    left: 215px; /* Move left slightly */
+    font-size: 4.8rem; /* Slightly larger for bigger screens */
+  }
+
+  .title-small {
+    top: -220px; /* Move up more */
+    left: 225px; /* Move left slightly */
+    font-size: 1.9rem; /* Slightly larger */
+  }
+}
+
+/* Medium-large desktop (1200px-1399px) - Keep existing positioning */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .title-container {
+    position: absolute;
+    left: -35px;
+    top: 75%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    height: 0px;
+    width: auto;
+  }
+
+  .title-large {
+    position: absolute;
+    top: -180px;
+    left: 190px;
+    font-size: 4.5rem;
+  }
+
+  .title-small {
+    position: absolute;
+    top: -170px;
+    left: 200px;
+    font-size: 1.8rem;
+  }
+}

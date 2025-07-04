@@ -101,3 +101,369 @@
   }
 }
 
+/* ===== PUBLICATIONS & CERTIFICATIONS INTERNAL POSITIONING FIX ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) - Don't change widths, just positioning */
+@media (min-width: 1700px) {
+  
+  /* Fix arrow positioning - move them further apart */
+  .pub-cert-container-desktop .publications-arrow,
+  .pub-cert-container-desktop .certifications-arrow,
+  .publications-arrow,
+  .certifications-arrow {
+    margin: 0 50px !important; /* Increased spacing */
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 2.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Specific positioning for left arrows */
+  .pub-cert-container-desktop .publications-arrow.left,
+  .pub-cert-container-desktop .certifications-arrow.left,
+  .publications-arrow.left,
+  .certifications-arrow.left {
+    margin-right: 60px !important;
+    margin-left: 40px !important;
+  }
+
+  /* Specific positioning for right arrows */
+  .pub-cert-container-desktop .publications-arrow.right,
+  .pub-cert-container-desktop .certifications-arrow.right,
+  .publications-arrow.right,
+  .certifications-arrow.right {
+    margin-left: 60px !important;
+    margin-right: 40px !important;
+  }
+
+  /* Fix carousel content area positioning */
+  .pub-cert-container-desktop .carousel-content,
+  .carousel-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* Fix image positioning within carousel */
+  .pub-cert-container-desktop .carousel-box img,
+  .carousel-box img {
+    width: 350px !important;
+    height: 250px !important;
+    max-width: 450px !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Fix title positioning */
+  .pub-cert-container-desktop .carousel-name,
+  .carousel-name {
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    margin: 1rem 0 0.5rem 0 !important;
+    text-align: center !important;
+    color: #000 !important;
+  }
+
+  /* Fix link positioning */
+  .pub-cert-container-desktop .carousel-link,
+  .carousel-link {
+    font-size: 1rem !important;
+    margin: 0.5rem 0 0 0 !important;
+    text-align: center !important;
+    color: #666 !important;
+  }
+
+  /* ===== TITLE ONLY FIX FOR DESKTOP ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) */
+@media (min-width: 1700px) {
+  /* Fix title positioning - bring titles in front of images */
+  .pub-cert-container-desktop .carousel-name,
+  .carousel-name,
+  .pub-cert-container-desktop .carousel-box .carousel-name,
+  .carousel-box .carousel-name,
+  .pub-cert-container-desktop h3,
+  .carousel-box h3 {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    margin: 1rem 0 0.5rem 0 !important;
+    text-align: center !important;
+    color: #000 !important;
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 100 !important; /* Higher z-index to appear in front */
+    background: rgba(255, 255, 255, 0.9) !important; /* Semi-transparent background */
+    padding: 0.5rem !important;
+    border-radius: 5px !important;
+    order: 2 !important; /* Force titles to appear after images */
+  }
+  
+  /* Make sure images have lower z-index */
+  .pub-cert-container-desktop .carousel-box img,
+  .carousel-box img {
+    z-index: 1 !important;
+    order: 1 !important; /* Force images to appear before titles */
+  }
+  
+  /* Fix carousel content layout */
+  .pub-cert-container-desktop .carousel-content,
+  .carousel-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+  /* Fix carousel frame layout */
+  .pub-cert-container-desktop .publications-carousel-frame,
+  .pub-cert-container-desktop .certifications-carousel-frame,
+  .publications-carousel-frame,
+  .certifications-carousel-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 2rem !important;
+    gap: 1rem !important;
+  }
+
+  /* Center the carousel content better */
+  .pub-cert-container-desktop .carousel-frame-content,
+  .carousel-frame-content {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Fix any content overflow */
+  .pub-cert-container-desktop .carousel-box,
+  .carousel-box {
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1rem !important;
+  }
+
+  /* Ensure proper spacing between elements */
+  .pub-cert-container-desktop .carousel-content > * {
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Fix any text alignment issues */
+  .pub-cert-container-desktop .carousel-content h3,
+  .pub-cert-container-desktop .carousel-content p,
+  .pub-cert-container-desktop .carousel-content a {
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+/* ===== FINAL IMAGE CENTERING FIX ===== */
+/* Add this to the END of your CSS file - AFTER all other rules */
+
+/* ONLY Large desktop screens (1700px+) */
+@media (min-width: 1700px) {
+  /* NUCLEAR OVERRIDE - Center images with maximum specificity */
+  html body .pub-cert-container-desktop .carousel-box img,
+  html body .carousel-box img,
+  .pub-cert-container-desktop .carousel-box img,
+  .carousel-box img {
+    width: 280px !important;
+    height: 220px !important;
+    max-width: 280px !important;
+    max-height: 220px !important;
+    min-width: 280px !important;
+    min-height: 220px !important;
+    object-fit: cover !important;
+    margin: 0 auto !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    /* Force perfect centering */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* NUCLEAR OVERRIDE - Center carousel content */
+  html body .pub-cert-container-desktop .carousel-content,
+  html body .carousel-content,
+  .pub-cert-container-desktop .carousel-content,
+  .carousel-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  /* NUCLEAR OVERRIDE - Center carousel box */
+  html body .pub-cert-container-desktop .carousel-box,
+  html body .carousel-box,
+  .pub-cert-container-desktop .carousel-box,
+  .carousel-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 2rem 1rem !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* Override any conflicting positioning */
+  .pub-cert-container-desktop .carousel-box img[style],
+  .carousel-box img[style] {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+/* ===== TITLE ONLY FIX FOR DESKTOP ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) */
+@media (min-width: 1700px) {
+  /* Simple title fix - remove background and place below images */
+  .pub-cert-container-desktop .carousel-name,
+  .carousel-name,
+  .pub-cert-container-desktop .carousel-box .carousel-name,
+  .carousel-box .carousel-name,
+  .pub-cert-container-desktop h3,
+  .carousel-box h3 {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    margin: 1rem 0 0.5rem 0 !important;
+    text-align: center !important;
+    color: #000 !important;
+    display: block !important;
+    width: 100% !important;
+    /* REMOVE ALL BACKGROUND */
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    /* PLACE BELOW IMAGES */
+    order: 2 !important;
+  }
+  
+  /* Images appear first */
+  .pub-cert-container-desktop .carousel-box img,
+  .carousel-box img {
+    order: 1 !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+
+/* ===== FINAL IMAGE CENTERING FIX ===== */
+/* Add this to the END of your CSS file - AFTER all other rules */
+
+/* ONLY Large desktop screens (1700px+) */
+@media (min-width: 1700px) {
+  /* NUCLEAR OVERRIDE - Increase image width and center images */
+  html body .pub-cert-container-desktop .carousel-box img,
+  html body .carousel-box img,
+  .pub-cert-container-desktop .carousel-box img,
+  .carousel-box img {
+    width: 350px !important; /* Increased from 280px */
+    height: 220px !important;
+    max-width: 350px !important;
+    max-height: 220px !important;
+    min-width: 350px !important;
+    min-height: 220px !important;
+    object-fit: cover !important;
+    margin: 0 auto 1.5rem auto !important; /* Added bottom margin */
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    /* Force images to appear first */
+    order: -1 !important; /* Negative order to force above */
+  }
+  
+  /* FORCE TITLES TO APPEAR BELOW IMAGES */
+  html body .pub-cert-container-desktop .carousel-name,
+  html body .carousel-name,
+  .pub-cert-container-desktop .carousel-name,
+  .carousel-name,
+  .pub-cert-container-desktop h3,
+  .carousel-box h3 {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    text-align: center !important;
+    color: #000 !important;
+    display: block !important;
+    width: 100% !important;
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    position: static !important;
+    z-index: auto !important;
+    /* Force titles to appear last */
+    order: 999 !important; /* High positive order to force below */
+  }
+  
+  /* NUCLEAR OVERRIDE - Force proper flex layout */
+  html body .pub-cert-container-desktop .carousel-content,
+  html body .carousel-content,
+  .pub-cert-container-desktop .carousel-content,
+  .carousel-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 1rem !important;
+  }
+  
+  /* Force carousel box to respect flex order */
+  html body .pub-cert-container-desktop .carousel-box,
+  html body .carousel-box,
+  .pub-cert-container-desktop .carousel-box,
+  .carousel-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 2rem 1rem !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+

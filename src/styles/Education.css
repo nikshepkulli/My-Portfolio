@@ -503,3 +503,50 @@ html, body {
     max-width: 1050px; /* INCREASED from 1000px to 1050px (+50px) */
   }
 }
+
+/* EDUCATION TITLE POSITION FIX - For screens 1700px+ */
+
+@media (min-width: 1700px) {
+  /* Large title (My) - Move up by adjusting top value */
+  .education-title-large {
+    position: absolute;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-stroke: 0.2px #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0;
+    z-index: 2;
+    left: 740px;
+    top: -680px; /* MOVED UP: Changed from -650px to -680px (-30px) */
+  }
+
+  /* Small title (Education) - Move up by adjusting top value */
+  .education-title-small {
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 1;
+    margin: 0;
+    z-index: 1;
+    left: 725px;
+    top: -640px; /* MOVED UP: Changed from -610px to -640px (-30px) */
+  }
+}
+
+/* Alternative approach - Move up more if needed */
+@media (min-width: 1700px) {
+  .education-title-large {
+    top: -700px; /* Move up even more if 30px wasn't enough */
+  }
+  
+  .education-title-small {
+    top: -660px; /* Move up even more if 30px wasn't enough */
+  }
+}

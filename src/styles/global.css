@@ -188,13 +188,6 @@ label,
   width: 550px !important;
 }
 
-/* Specific targeting for the container version */
-.pub-cert-container-desktop .carousel-box {
-  width: 550px !important;
-  height: 350px !important;
-  min-height: 350px !important;
-  margin: 0 !important;
-}
 
 /* Also target individual sections if they exist */
 .publications-section,
@@ -1150,3 +1143,235 @@ div[class*="Wrapper"] {
   }
 }
 
+/* ===== LARGE DESKTOP FIX (1600px+) ===== */
+@media (min-width: 1600px) {
+  /* Fix projects section */
+  .projects-container {
+    justify-content: center !important;
+    margin-left: 0 !important;
+    gap: 2rem !important;
+  }
+  
+  .project-block {
+    width: 450px !important;
+    min-height: 500px !important;
+  }
+  
+  /* Fix publications/certifications */
+  .pub-cert-container-desktop {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    gap: 4rem !important;
+  }
+  
+  /* Fix education section */
+  .education-section {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Fix about section */
+  .about {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 3rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .projects, .about, .education-section, .publications-section {
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ===== GLOBAL CSS TITLE FIX - ADD TO END OF GLOBAL.CSS ===== */
+/* Add this to the very END of your global.css file */
+
+/* ONLY Large desktop screens (1700px+) - Fix the existing title elements */
+@media (min-width: 1700px) {
+  /* Fix the title container positioning */
+  .publications-title-container,
+  .certifications-title-container {
+    position: absolute !important;
+    left: -80px !important; /* Move outside the carousel box */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    transform-origin: center !important;
+    white-space: nowrap !important;
+    height: auto !important;
+    width: auto !important;
+    z-index: 1000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Fix the large title (My) */
+  .publications-title-large,
+  .certifications-title-large {
+    position: absolute !important;
+    font-size: 4rem !important;
+    font-weight: bold !important;
+    color: transparent !important;
+    -webkit-text-stroke: 2px #ffffff !important;
+    text-stroke: 2px #ffffff !important;
+    letter-spacing: 1px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    z-index: 1001 !important;
+    left: 120px !important; /* Relative to container */
+    top: -60px !important; /* Relative to container */
+    transform: rotate(-90deg) !important;
+    transform-origin: center !important;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Fix the small title (Publications/Certifications) */
+  .publications-title-small,
+  .certifications-title-small {
+    position: absolute !important;
+    font-size: 1.8rem !important;
+    font-weight: normal !important;
+    color: #000000 !important;
+    letter-spacing: 0px !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    z-index: 1002 !important;
+    left: 105px !important; /* Relative to container */
+    top: -25px !important; /* Relative to container */
+    transform: rotate(-90deg) !important;
+    transform-origin: center !important;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  /* CRITICAL: Allow carousel box to show content outside its boundaries */
+  .carousel-box {
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  /* Make sure the carousel frame doesn't clip the titles */
+  .publications-carousel-frame,
+  .certifications-carousel-frame {
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  /* Make sure parent containers allow overflow */
+  .pub-cert-container-desktop,
+  .pub-cert-container-desktop .publications-section,
+  .pub-cert-container-desktop .certifications-section {
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  /* Add extra padding to prevent title clipping */
+  .pub-cert-container-desktop {
+    padding: 2rem 6rem !important; /* Extra left padding for titles */
+  }
+}
+
+/* ===== EDUCATION SECTION DESKTOP WIDTH INCREASE ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) - Don't touch laptop or mobile */
+@media (min-width: 1700px) {
+  /* Increase education section width and add rotated title */
+  .education-section,
+  body .education-section,
+  html body .education-section {
+    width: 100% !important;
+    max-width: 1850px !important; /* for desktop view */
+    margin: 3rem auto 0 auto !important;
+    padding: 3rem 6rem !important; /* Extra left padding for rotated title */
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+  
+/* ===== SIMPLE EDUCATION WIDTH INCREASE ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) - Don't touch laptop or mobile */
+@media (min-width: 1700px) {
+  /* Increase width of each education degree entry to 1450px */
+  .education-section > div,
+  .education-entry,
+  .education-section .education-entry {
+    width: 1600px !important;
+    max-width: 1600px !important;
+    margin: 0 0 1rem auto !important;
+  }
+  
+  /* Also increase the main education section container */
+  .education-section {
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin: 3rem auto 0 auto !important;
+  }
+  /* ===== SIMPLE EDUCATION WIDTH INCREASE ===== */
+/* Add this to your global.css file */
+
+/* ONLY Large desktop screens (1700px+) - Don't touch laptop or mobile */
+@media (min-width: 1600px) {
+  /* Move education section to the right like experience */
+  .education-section {
+    margin-left: 150px !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Increase width of each education entry */
+  .education-section > div,
+  .education-entry {
+    width: 1560px !important;
+}
+}}}
+
+/* ===== PROJECTS WIDTH INCREASE - DESKTOP ONLY (1700px+) ===== */
+
+/* ONLY apply these changes for screens 1700px and above */
+@media (min-width: 1700px) {
+  
+  /* Increase the main projects container width */
+  .projects {
+    max-width: 1850px !important; /* Increased from 1350px */
+    width: 100% !important;
+  }
+  
+  /* Reduce left margin to give more space to projects */
+  .projects-container {
+    margin-left: 120px !important; /* Reduced from 220px to 120px */
+    margin-right: 20px !important; /* Add right margin for balance */
+    gap: 8px !important; /* Slightly increase gap between projects */
+  }
+  
+  /* Increase project block dimensions */
+  .project-block {
+    width: 525px !important; /* Increased from 395px */
+  }
+  
+  /* Increase project image dimensions */
+  .project-img {
+    width: 450px !important; /* Increased from 350px */
+    height: 420px !important; /* Slightly increase height too */
+  }
+  
+}
