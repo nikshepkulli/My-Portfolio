@@ -811,3 +811,12 @@
   transform: scale(1.1);
 }
 */
+
+
+.certifications-arrow:focus {
+  outline: none;
+}
+
+.certifications-arrow:focus-visible {
+  outline: none;
+}
