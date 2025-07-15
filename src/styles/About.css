@@ -1,3 +1,5 @@
+/* COMPLETE About.css - REPLACE EVERYTHING IN YOUR ABOUT.CSS FILE */
+
 .about {
   height: auto;
   min-height: 30vh;
@@ -25,52 +27,57 @@
   padding-top: 1rem;
 }
 
+/* ===== ABOUT ME TITLE POSITIONING ===== */
+/* Change these values to move the "About Me" text */
 .about-content h2 {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: center;
-  white-space: nowrap;
-  z-index: 1;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute !important;
+  left: 15px !important; /* CHANGE THIS: 5px=very left, 50px=far right */
+  top: 35% !important; /* CHANGE THIS: 20%=high, 60%=low */
+  transform: translateY(-50%) rotate(-90deg) !important;
+  transform-origin: center !important;
+  white-space: nowrap !important;
+  z-index: 100 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
+/* Large "About" text styling */
 .about-large {
-  font-size: 6rem;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 2px #ffffff;
-  text-stroke: 4px #ffffff;
-  line-height: 0.8;
-  margin: 0;
-  letter-spacing: -10px;
-  position: relative;
-  text-shadow: 0 0 20px rgba(255,255,255,0.5);
+  font-size: 6rem !important;
+  font-weight: 900 !important;
+  color: transparent !important;
+  -webkit-text-stroke: 2px #ffffff !important;
+  text-stroke: 4px #ffffff !important;
+  line-height: 0.8 !important;
+  margin: 0 !important;
+  letter-spacing: -10px !important;
+  position: relative !important;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
 }
 
+/* Small "Me" text positioning */
 .me-small {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #000000;
-  background: none;
-  padding: 8px 20px;
-  border-radius: 25px;
-  line-height: 1;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
-  box-shadow: none;
+  font-size: 2.5rem !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+  background: none !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  line-height: 1 !important;
+  letter-spacing: 2px !important;
+  position: absolute !important;
+  top: 35% !important; /* CHANGE THIS: should match h2 top value */
+  left: 85% !important; /* CHANGE THIS: 70%=closer to About, 95%=further */
+  transform: translate(-50%, -50%) !important;
+  z-index: 101 !important;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+  box-shadow: none !important;
 }
 
+/* ===== CONTENT STYLING ===== */
 .about-content p {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -124,8 +131,21 @@
   padding-bottom: 1rem;
 }
 
-/* Tablet styles */
-@media (max-width: 1024px) {
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1600px+) */
+@media (min-width: 1600px) {
+  .about {
+    width: 100% !important;
+    max-width: 1850px !important;
+    margin: 3rem auto !important;
+    padding: 2rem 6rem !important;
+    margin-bottom: 5rem !important;
+  }
+}
+
+/* Tablet Large (1024px-1599px) */
+@media (max-width: 1599px) and (min-width: 1025px) {
   .about {
     max-width: 95%;
     padding: 1.8rem;
@@ -136,14 +156,21 @@
     max-width: calc(100% - 160px);
   }
   
+  .about-content h2 {
+    left: 15px !important;
+    top: 35% !important;
+  }
+  
   .about-large {
-    font-size: 4.5rem;
-    letter-spacing: -8px;
+    font-size: 4.5rem !important;
+    letter-spacing: -8px !important;
   }
   
   .me-small {
-    font-size: 2rem;
-    padding: 6px 16px;
+    font-size: 2rem !important;
+    padding: 6px 16px !important;
+    top: 35% !important;
+    left: 85% !important;
   }
   
   .about-content p {
@@ -151,300 +178,58 @@
   }
 }
 
-/* Mobile landscape */
-@media (max-width: 768px) {
+/* Tablet Medium (769px-1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
   .about {
-    flex-direction: column;
-    padding: 1.5rem;
-    margin: 2rem auto;
-    min-height: auto;
-    text-align: center; /* Center everything on mobile */
+    max-width: 95%;
+    padding: 1.6rem;
   }
   
   .about-content {
-    margin-left: 0; /* Remove left margin */
-    margin-top: 2rem; /* Reduced from 100px */
-    max-width: 100%;
-    padding-top: 0;
-    width: 100%; /* Ensure full width */
+    margin-left: 120px;
+    max-width: calc(100% - 140px);
   }
   
   .about-content h2 {
-    position: static;
-    transform: none;
-    margin-bottom: 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%; /* Full width for proper centering */
+    left: 12px !important;
+    top: 35% !important;
   }
   
   .about-large {
-    font-size: 3.5rem;
-    letter-spacing: -6px;
+    font-size: 4rem !important;
+    letter-spacing: -6px !important;
   }
   
   .me-small {
-    font-size: 1.8rem;
-    position: static;
-    transform: none;
-    margin-left: 1rem;
-    padding: 4px 12px;
+    font-size: 1.8rem !important;
+    padding: 5px 14px !important;
+    top: 35% !important;
+    left: 85% !important;
   }
   
   .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    text-align: left;
-    margin-left: 0; /* Ensure no left margin */
-    margin-right: 0; /* Ensure no right margin */
-  }
-  
-  .about-content li {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
   }
 }
 
-/* Mobile portrait */
-@media (max-width: 480px) {
-  .about {
-    padding: 1rem;
-    margin: 1.5rem auto;
-    border-radius: 10px;
-    width: 95%; /* Ensure consistent width */
-  }
-  
-  .about-content {
-    margin-top: 1.5rem; /* Reduced from 80px */
-    padding: 0; /* Remove any padding that might cause offset */
-  }
-  
-  .about-content h2 {
-    margin-bottom: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .about-large {
-    font-size: 2.8rem;
-    letter-spacing: -4px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .me-small {
-    font-size: 1.4rem;
-    margin-left: 0;
-    padding: 3px 10px;
-    letter-spacing: 1px;
-  }
-  
-  .about-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .about-content li {
-    font-size: 0.95rem;
-    padding-left: 20px;
-  }
-  
-  .about-content .sub-point {
-    font-size: 0.9rem;
-    padding-left: 30px;
-  }
-  
-  .about-section {
-    margin-bottom: 20px;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-  .about {
-    padding: 0.8rem;
-    margin: 1rem auto;
-    width: 98%; /* Ensure it fits even on very small screens */
-  }
-  
-  .about-large {
-    font-size: 2.2rem;
-    letter-spacing: -2px;
-  }
-  
-  .me-small {
-    font-size: 1.2rem;
-    padding: 2px 8px;
-  }
-  
-  .about-content p {
-    font-size: 0.95rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .about-content li {
-    font-size: 0.9rem;
-  }
-}
-
-/* Add these mobile-specific overrides to your existing About.css */
-
-/* Mobile landscape - Override existing styles */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    padding: 1.5rem !important;
-    margin: 2rem auto !important;
-    min-height: auto;
-    text-align: center;
-    width: 95% !important; /* Force center alignment */
-    max-width: 95% !important;
-    left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    position: relative !important;
-  }
-  
-  .about-content {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 2rem !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    width: 100% !important;
-    transform: none !important;
-    position: relative !important;
-  }
-  
-  .about-content h2 {
-    position: static !important;
-    transform: none !important;
-    margin-bottom: 2rem !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    left: auto !important;
-    top: auto !important;
-  }
-  
-  .about-content p {
-    font-size: 1.1rem !important;
-    line-height: 1.7 !important;
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-/* Mobile portrait - Override existing styles */
-@media (max-width: 480px) {
-  .about {
-    padding: 1rem !important;
-    margin: 1.5rem auto !important;
-    border-radius: 10px !important;
-    width: 90% !important;
-    max-width: 90% !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  
-  .about-content {
-    margin-top: 1.5rem !important;
-    padding: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important;
-  }
-  
-  .about-content p {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/* Extra small devices - Override existing styles */
-@media (max-width: 320px) {
-  .about {
-    padding: 0.8rem !important;
-    margin: 1rem auto !important;
-    width: 95% !important;
-    max-width: 85% !important;
-  }
-  
-  .about-content p {
-    font-size: 0.95rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/* Add this to your About.css to increase mobile width by 5px */
-
-@media (max-width: 768px) {
-  .about {
-    width: calc(95% + 15px) !important;
-    max-width: calc(95% + 15px) !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .about {
-    width: calc(90% + 20px) !important;
-    max-width: calc(90% + 20px) !important;
-  }
-}
-
-@media (max-width: 320px) {
-  .about {
-    width: calc(85% + 20px) !important;
-    max-width: calc(85% + 20px) !important;
-  }
-}
-
-/* REPLACE all your mobile media queries with this clean version */
-
-/* Mobile landscape */
-@media (max-width: 768px) {
+/* Mobile Landscape (481px-768px) */
+@media (max-width: 768px) and (min-width: 481px) {
   .about {
     flex-direction: column !important;
     padding: 1.5rem !important;
     margin: 2rem auto !important;
     min-height: auto !important;
     text-align: center !important;
-    width: calc(95% + 15px) !important;
-    max-width: calc(95% + 15px) !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 95% !important;
+    max-width: 95% !important;
   }
   
   .about-content {
     margin-left: 0 !important;
-    margin-right: 0 !important;
     margin-top: 2rem !important;
     max-width: 100% !important;
     padding: 0 !important;
     width: 100% !important;
-    transform: none !important;
-    position: relative !important;
   }
   
   .about-content h2 {
@@ -471,6 +256,8 @@
     transform: none !important;
     margin-left: 1rem !important;
     padding: 4px 12px !important;
+    top: auto !important;
+    left: auto !important;
   }
   
   .about-content p {
@@ -479,8 +266,6 @@
     text-align: left !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
   }
   
   .about-content li {
@@ -489,20 +274,14 @@
   }
 }
 
-/* Mobile portrait */
-@media (max-width: 480px) {
+/* Mobile Portrait (321px-480px) */
+@media (max-width: 480px) and (min-width: 321px) {
   .about {
     padding: 1rem !important;
     margin: 1.5rem auto !important;
     border-radius: 10px !important;
-    width: calc(90% + 20px) !important;
-    max-width: calc(90% + 20px) !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 90% !important;
+    max-width: 90% !important;
   }
   
   .about-content {
@@ -557,19 +336,17 @@
   }
 }
 
-/* Extra small devices */
+/* Extra Small Mobile (≤320px) */
 @media (max-width: 320px) {
   .about {
     padding: 0.8rem !important;
     margin: 1rem auto !important;
-    width: calc(85% + 20px) !important;
-    max-width: calc(85% + 20px) !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 85% !important;
+    max-width: 85% !important;
+  }
+  
+  .about-content {
+    margin-top: 1.2rem !important;
   }
   
   .about-large {
@@ -594,203 +371,156 @@
   }
 }
 
-/* ===== ABOUT SECTION WIDTH AND SPACING FIX ===== */
-/* Add this to your global.css file */
-
-/* ONLY Large desktop screens (1600px+) - Don't touch laptop view at all */
-@media (min-width: 1600px) {
-  .about,
-  body .about,
-  html body .about {
-    width: 100% !important;
-    max-width: 1850px !important; /* Same as hero section */
-    margin: 3rem auto !important; /* Center it like hero */
-    padding: 2rem 6rem !important; /* Same padding as hero */
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%) !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
-    border-radius: 15px !important; /* Same as hero */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
-    margin-bottom: 5rem !important; /* Extra space below about section */
+/* ===== POSITIONING OVERRIDE FOR DESKTOP ONLY ===== */
+/* These rules only apply to desktop screens (769px and above) */
+@media (min-width: 769px) {
+  /* Force positioning to work on desktop */
+  .about-content h2 {
+    position: absolute !important;
+    left: 5px !important; /* MAIN CONTROL: Change this to move left/right */
+    top: 5% !important; /* MAIN CONTROL: Change this to move up/down */
+    transform: translateY(-50%) rotate(-90deg) !important;
+    transform-origin: center !important;
+    white-space: nowrap !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
-  /* Ensure sections after about have proper spacing on large desktop only */
-  .publications-section,
-  .certifications-section,
-  .pub-cert-container-desktop,
-  .education-section,
-  .experience-section,
-  .technical-skills,
-  .projects,
-  .achievements-container,
-  .contact-container {
-    margin-top: 4rem !important; /* Consistent spacing after about */
+  .me-small {
+    position: absolute !important;
+    top: 5% !important; /* Should match h2 top value */
+    left: 5% !important; /* MAIN CONTROL: Change this to move "Me" */
+    transform: translate(-50%, -50%) !important;
+    z-index: 101 !important;
   }
 }
 
-/* Don't affect tablet and mobile views - keep existing styles */
-@media (max-width: 1024px) {
-  .about {
-    /* Keep existing mobile/tablet styles intact */
-    width: 100% !important;
-    max-width: none !important;
-    margin: 3rem auto 0 auto !important;
-    padding: 2rem 1rem !important;
-    margin-bottom: 3rem !important; /* Keep existing mobile spacing */
-  }
-}
+/* ===== QUICK POSITIONING EXAMPLES ===== */
+/* Uncomment one of these sections to use a preset position */
 
-/* Mobile specific - ensure no changes */
-@media (max-width: 768px) {
-  .about {
-    padding: 1.5rem 0.5rem !important;
-    margin: 2rem auto 0 auto !important;
-    margin-bottom: 2rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .about {
-    padding: 1rem 0.25rem !important;
-    margin: 1.5rem auto 0 auto !important;
-    margin-bottom: 1.5rem !important;
-  }
-}
-
-
-/* ===== MOBILE TEXT JUSTIFIED BLOCK FORMATTING ===== */
-
-/* Create clean justified text blocks that form rectangular shapes */
-
-/* Mobile landscape - Clean justified text block */
-@media (max-width: 768px) {
-  .about .about-content p,
-  .about-content p,
-  body .about .about-content p,
-  html body .about .about-content p,
-  section.about .about-content p {
-    text-align: justify !important;
-    text-justify: inter-word !important; /* Better word spacing */
-    font-size: 1.05rem !important; /* Slightly smaller for better fit */
-    line-height: 1.5 !important; /* Tighter line height */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 1.5rem !important;
-    padding: 0 0.5rem !important; /* Small padding for cleaner edges */
-    word-spacing: 0.02rem !important; /* Minimal word spacing */
-    hyphens: auto !important; /* Allow hyphenation for better blocks */
-    -webkit-hyphens: auto !important;
-    -moz-hyphens: auto !important;
-    -ms-hyphens: auto !important;
-    hyphenate-limit-before: 3 !important;
-    hyphenate-limit-after: 3 !important;
-    hyphenate-limit-lines: 2 !important;
-    text-align-last: left !important; /* Last line stays left */
-    word-break: normal !important;
-  }
-}
-
-/* Mobile portrait - Clean justified text block */
-@media (max-width: 480px) {
-  .about .about-content p,
-  .about-content p,
-  body .about .about-content p,
-  html body .about .about-content p,
-  section.about .about-content p {
-    text-align: justify !important;
-    text-justify: inter-word !important; /* Better word spacing */
-    font-size: 1rem !important;
-    line-height: 1.45 !important; /* Tighter line height */
-    margin-bottom: 1.3rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 0.4rem !important; /* Small padding for cleaner edges */
-    word-spacing: 0.01rem !important; /* Minimal word spacing */
-    hyphens: auto !important; /* Allow hyphenation for better blocks */
-    -webkit-hyphens: auto !important;
-    -moz-hyphens: auto !important;
-    -ms-hyphens: auto !important;
-    hyphenate-limit-before: 2 !important;
-    hyphenate-limit-after: 2 !important;
-    hyphenate-limit-lines: 2 !important;
-    text-align-last: left !important; /* Last line stays left */
-    word-break: normal !important;
-  }
-}
-
-/* Extra small devices - Clean justified text block */
-@media (max-width: 320px) {
-  .about .about-content p,
-  .about-content p,
-  body .about .about-content p,
-  html body .about .about-content p,
-  section.about .about-content p {
-    text-align: justify !important;
-    text-justify: inter-word !important; /* Better word spacing */
-    font-size: 0.95rem !important;
-    line-height: 1.4 !important; /* Tighter line height */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 1.2rem !important;
-    padding: 0 0.3rem !important; /* Small padding for cleaner edges */
-    word-spacing: 0.01rem !important; /* Minimal word spacing */
-    hyphens: auto !important; /* Allow hyphenation for better blocks */
-    -webkit-hyphens: auto !important;
-    -moz-hyphens: auto !important;
-    -ms-hyphens: auto !important;
-    hyphenate-limit-before: 2 !important;
-    hyphenate-limit-after: 2 !important;
-    hyphenate-limit-lines: 2 !important;
-    text-align-last: left !important; /* Last line stays left */
-    word-break: normal !important;
-  }
-}
-
-/* Override any conflicting justify styles */
-@media (max-width: 768px) {
-  .about-content p,
-  body .about-content p,
-  html body .about-content p {
-    text-align: left !important; /* Force left alignment */
-    text-align-last: left !important; /* Keep last line left-aligned */
-    word-break: normal !important; /* Normal word breaking */
-    overflow-wrap: normal !important; /* Normal text wrapping */
-  }
-}
-
-@media (max-width: 480px) {
-  .about-content p,
-  body .about-content p,
-  html body .about-content p {
-    text-align: left !important; /* Force left alignment */
-    text-align-last: left !important; /* Keep last line left-aligned */
-    word-break: normal !important; /* Normal word breaking */
-    overflow-wrap: normal !important; /* Normal text wrapping */
-  }
-}
-
-@media (max-width: 320px) {
-  .about-content p,
-  body .about-content p,
-  html body .about-content p {
-    text-align: left !important; /* Force left alignment */
-    text-align-last: left !important; /* Keep last line left-aligned */
-    word-break: normal !important; /* Normal word breaking */
-    overflow-wrap: normal !important; /* Normal text wrapping */
-  }
-}
-
-/* Alternative: If you still want justify but with better control */
-/*
-@media (max-width: 768px) {
-  .about-content p {
-    text-align: justify !important;
-    text-justify: inter-word !important;
-    word-spacing: 0.05rem !important;
-    hyphens: auto !important;
-    -webkit-hyphens: auto !important;
-    -moz-hyphens: auto !important;
-    -ms-hyphens: auto !important;
-  }
+/* Option 1: Move everything to the far left
+@media (min-width: 769px) {
+  .about-content h2 { left: 5px !important; top: 30% !important; }
+  .me-small { left: 80% !important; top: 30% !important; }
 }
 */
+
+/* Option 2: Move everything to the right
+@media (min-width: 769px) {
+  .about-content h2 { left: 40px !important; top: 40% !important; }
+  .me-small { left: 90% !important; top: 40% !important; }
+}
+*/
+
+/* Option 3: Move everything higher
+@media (min-width: 769px) {
+  .about-content h2 { left: 15px !important; top: 25% !important; }
+  .me-small { left: 85% !important; top: 25% !important; }
+}
+*/
+
+/* Option 4: Move everything lower
+@media (min-width: 769px) {
+  .about-content h2 { left: 15px !important; top: 50% !important; }
+  .me-small { left: 85% !important; top: 50% !important; }
+}
+*/
+
+/* ADD THIS TO YOUR About.css - This targets your actual JSX structure */
+
+/* Position the h2 container that holds both "About" and "Me" */
+.about-content h2 {
+  position: absolute !important;
+  left: 5px !important; /* CHANGE THIS: 5px=very left, 50px=far right */
+  top: 30% !important; /* CHANGE THIS: 20%=high, 60%=low */
+  transform: translateY(-50%) rotate(-90deg) !important;
+  transform-origin: center !important;
+  white-space: nowrap !important;
+  z-index: 100 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Style the "About" div inside h2 */
+.about-large {
+  font-size: 6rem !important;
+  font-weight: 900 !important;
+  color: transparent !important;
+  -webkit-text-stroke: 2px #ffffff !important;
+  text-stroke: 4px #ffffff !important;
+  line-height: 0.8 !important;
+  margin: 0 !important;
+  letter-spacing: -10px !important;
+  position: relative !important;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
+}
+
+/* Style and position the "Me" div inside h2 */
+.me-small {
+  font-size: 2.5rem !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+  background: none !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  line-height: 1 !important;
+  letter-spacing: 2px !important;
+  position: relative !important; /* Changed from absolute to relative */
+  transform: none !important; /* Removed transform since it's relative now */
+  z-index: 101 !important;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+  box-shadow: none !important;
+  margin-top: 10px !important; /* Add space between "About" and "Me" */
+}
+
+/* Force override for desktop screens only */
+@media (min-width: 769px) {
+  .about-content h2 {
+    position: absolute !important;
+    left: -20px !important; /* MAIN CONTROL: Change this number */
+    top: 170px !important; /* MAIN CONTROL: Change this percentage */
+    transform: translateY(-50%) rotate(-90deg) !important;
+    transform-origin: center !important;
+    white-space: nowrap !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .about-large {
+    font-size: 6rem !important;
+    font-weight: 900 !important;
+    color: transparent !important;
+    -webkit-text-stroke: 2px #ffffff !important;
+    line-height: 0.8 !important;
+    margin: 0 !important;
+    letter-spacing: -10px !important;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
+  }
+  
+  .me-small {
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    background: none !important;
+    padding: 8px 20px !important;
+    border-radius: 25px !important;
+    line-height: 1 !important;
+    letter-spacing: 2px !important;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+    margin-top: 10px !important;
+    left: 0px !important; /* MAIN CONTROL: Change this number */
+    top: -45px !important; /* MAIN CONTROL: Change this percentage */
+    
+  }
+}
