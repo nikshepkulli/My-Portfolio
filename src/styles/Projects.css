@@ -817,3 +817,146 @@
     font-size: 0.8rem !important;
   }
 }
+
+/* Update these sections in your Projects.css file */
+
+/* Main projects container - updated for 4 projects */
+.projects-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for better spacing */
+  margin-left: 220px;
+  margin-top: 0;
+}
+
+/* Project blocks - decreased width by another 10px */
+.project-block {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 12px; /* Reduced padding */
+  border-radius: 10px;
+  width: 290px; /* Decreased from 300px to 290px (-10px) */
+  height: 280px; /* Added fixed height to make them shorter */
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Project images - decreased width by another 10px */
+.project-img {
+  width: 260px; /* Decreased from 270px to 260px (-10px) */
+  height: 180px; /* Significantly reduced from 400px to 180px */
+  border-radius: 10px;
+  margin: 5px 0; /* Reduced margin */
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Logo images - decreased width by another 10px for compact design */
+.project-logo-img {
+  width: 260px; /* Decreased from 270px to 260px (-10px) */
+  height: 180px; /* Significantly reduced from 400px to 180px */
+  border-radius: 10px;
+  margin: 5px 0; /* Reduced margin */
+  border: none;
+  object-fit: contain;
+  background: transparent;
+  padding: 10px; /* Reduced padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Project header and title - centered */
+.project-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 5px;
+  justify-content: center; /* Center the project titles */
+  width: 100%;
+}
+
+/* Project title styling for compact design */
+.project-title {
+  font-size: 1.3rem; /* Increased from 1rem to 1.3rem */
+  color: #000000;
+  margin: 5px 0; /* Reduced margin */
+  flex-grow: 0; /* Don't let title grow */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width for centering */
+  font-weight: 600; /* Added bold weight for better visibility */
+}
+
+/* Large Desktop - to accommodate 4 projects */
+@media (min-width: 1400px) {
+  .projects {
+    max-width: 1500px; /* Increased max-width */
+  }
+  
+  .projects-container {
+    margin-left: 250px;
+    gap: 20px;
+  }
+  
+  .project-block {
+    width: 310px; /* Decreased from 320px to 310px (-10px) */
+    height: 320px; /* Increased height for large screens */
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 280px; /* Decreased from 290px to 280px (-10px) */
+    height: 200px; /* Reduced height */
+  }
+}
+
+/* Desktop/Laptop - 4 projects side by side */
+@media (max-width: 1399px) {
+  .projects {
+    width: 98%;
+    max-width: 1300px;
+    padding: 18px 20px; /* Reduced horizontal padding */
+  }
+  
+  .projects-container {
+    margin-left: 200px;
+    gap: 12px;
+  }
+  
+  .project-block {
+    width: 270px; /* Decreased from 280px to 270px (-10px) */
+    height: 280px; /* Fixed height for medium screens */
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 240px; /* Decreased from 250px to 240px (-10px) */
+    height: 170px; /* Reduced height */
+    padding: 8px;
+  }
+}
+
+/* Tablet Large - 2 projects per row */
+@media (max-width: 1024px) {
+  .projects-container {
+    margin-left: 180px;
+    gap: 15px;
+    justify-content: center; /* Center the 2x2 grid */
+  }
+  
+  .project-block {
+    width: 320px; /* Larger when only 2 per row */
+    height: 300px; /* Fixed height for tablets */
+    margin-bottom: 15px;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 290px;
+    height: 180px; /* Reduced height */
+    padding: 12px;
+  }
+}
