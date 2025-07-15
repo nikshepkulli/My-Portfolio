@@ -950,3 +950,13 @@
 .publications-arrow:focus-visible {
   outline: none;
 }
+
+.publications-arrow:focus,
+.publications-arrow:focus-visible {
+  outline: none;
+}
+
+.certifications-arrow:focus,
+.certifications-arrow:focus-visible {
+  outline: none;
+}
