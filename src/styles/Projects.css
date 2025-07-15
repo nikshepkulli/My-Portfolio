@@ -33,8 +33,8 @@
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: 10px;
-  top: 230px;
+  left: -20px;
+  top: 150px;
   transform: rotate(-90deg);
   white-space: nowrap;
   text-shadow: 0 0 20px rgba(255,255,255,0.5);
@@ -50,8 +50,8 @@
   line-height: 1;
   margin: 0;
   z-index: 1;
-  left: 15px;
-  top: 250px;
+  left: -15px;
+  top: 170px;
   transform: rotate(-90deg);
   white-space: nowrap;
 }
@@ -598,5 +598,222 @@
     height: 140px !important;
     max-width: 230px !important;
     margin: 8px auto !important;
+  }
+}
+
+/* Update these sections in your Projects.css file */
+
+/* Main projects container - updated for 4 projects */
+.projects-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for better spacing */
+  margin-left: 220px;
+  margin-top: 0;
+}
+
+/* Project blocks - smaller width and height to fit 4 in a row */
+.project-block {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 12px; /* Reduced padding */
+  border-radius: 10px;
+  width: 280px; /* Reduced from 395px to fit 4 projects */
+  height: 280px; /* Added fixed height to make them shorter */
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Project images - much smaller to fit compact design */
+.project-img {
+  width: 250px; /* Reduced from 350px */
+  height: 180px; /* Significantly reduced from 400px to 180px */
+  border-radius: 10px;
+  margin: 5px 0; /* Reduced margin */
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Logo images - updated sizes for compact design */
+.project-logo-img {
+  width: 250px; /* Reduced from 350px */
+  height: 180px; /* Significantly reduced from 400px to 180px */
+  border-radius: 10px;
+  margin: 5px 0; /* Reduced margin */
+  border: none;
+  object-fit: contain;
+  background: transparent;
+  padding: 10px; /* Reduced padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Project header and title - centered */
+.project-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 5px;
+  justify-content: center; /* Center the project titles */
+  width: 100%;
+}
+
+/* Project title styling for compact design */
+.project-title {
+  font-size: 1.3rem; /* Increased from 1rem to 1.3rem */
+  color: #000000;
+  margin: 5px 0; /* Reduced margin */
+  flex-grow: 0; /* Don't let title grow */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width for centering */
+  font-weight: 600; /* Added bold weight for better visibility */
+}
+
+/* Large Desktop - to accommodate 4 projects */
+@media (min-width: 1400px) {
+  .projects {
+    max-width: 1500px; /* Increased max-width */
+  }
+  
+  .projects-container {
+    margin-left: 250px;
+    gap: 20px;
+  }
+  
+  .project-block {
+    width: 300px; /* Slightly larger on big screens */
+    height: 320px; /* Increased height for large screens */
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 270px;
+    height: 200px; /* Reduced height */
+  }
+}
+
+/* Desktop/Laptop - 4 projects side by side */
+@media (max-width: 1399px) {
+  .projects {
+    width: 98%;
+    max-width: 1300px;
+    padding: 18px 20px; /* Reduced horizontal padding */
+  }
+  
+  .projects-container {
+    margin-left: 200px;
+    gap: 12px;
+  }
+  
+  .project-block {
+    width: 260px; /* Smaller for medium screens */
+    height: 280px; /* Fixed height for medium screens */
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 230px;
+    height: 170px; /* Reduced height */
+    padding: 8px;
+  }
+}
+
+/* Tablet Large - 2 projects per row */
+@media (max-width: 1024px) {
+  .projects-container {
+    margin-left: 180px;
+    gap: 15px;
+    justify-content: center; /* Center the 2x2 grid */
+  }
+  
+  .project-block {
+    width: 320px; /* Larger when only 2 per row */
+    height: 300px; /* Fixed height for tablets */
+    margin-bottom: 15px;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 290px;
+    height: 180px; /* Reduced height */
+    padding: 12px;
+  }
+}
+
+/* Add this CSS to your Projects.css to fix the expansion issue */
+
+/* Fix project expansion - no scroll bars, full expansion */
+.project-block {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 12px;
+  border-radius: 10px;
+  width: 280px;
+  min-height: 280px; /* Minimum height when collapsed */
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease; /* Smooth transition when expanding */
+}
+
+/* When expanded, allow natural height expansion */
+.project-block.expanded {
+  min-height: auto; /* Let it expand naturally */
+  height: auto; /* Auto height to fit all content */
+}
+
+/* Project details - no scroll, full content visible */
+.project-details {
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.project-details li {
+  margin-bottom: 8px;
+  color: #333;
+  padding-right: 5px;
+}
+
+/* Ensure projects container handles expansion properly */
+.projects-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Align to top */
+  gap: 15px;
+  margin-left: 220px;
+  margin-top: 0;
+}
+
+/* Enhanced visual effect when expanded */
+.project-block.expanded {
+  transform: scale(1.02);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  z-index: 10;
+  position: relative;
+}
+
+/* Responsive fixes for mobile */
+@media (max-width: 768px) {
+  .project-block {
+    min-height: 200px !important;
+  }
+  
+  .project-block.expanded {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  .project-details {
+    font-size: 0.8rem !important;
   }
 }

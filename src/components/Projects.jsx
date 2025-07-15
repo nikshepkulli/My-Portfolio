@@ -4,13 +4,19 @@ import '../styles/Projects.css';
 import prj1 from '../assets/prj1.webp';
 import prj2 from '../assets/prj2.webp';
 import prj3 from '../assets/prj3.webp';
-// Removed clickmeGif import since we're removing the hand icon
+
+// Import company logos
+import cernerLogo from '../assets/cerner.png';
+import sixDLogo from '../assets/6D.png';
+import probotsLogo from '../assets/probots.png';
+import starteryouLogo from '../assets/starteryou.png';
 
 const Projects = () => {
   const [expanded, setExpanded] = useState({
     cerner: false,
     sixD: false,
-    probots: false
+    probots: false,
+    starteryou: false
   });
 
   const toggleExpand = (key) => {
@@ -44,10 +50,9 @@ const Projects = () => {
             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
           }}
         >
-          <img src={prj1} alt="Cerner Project" className="project-img" />
+          <img src={cernerLogo} alt="Cerner Logo" className="project-img project-logo-img" />
           <div className="project-header-row">
             <h3 className="project-title">Cerner Corporation</h3>
-            {/* Removed the hand icon */}
           </div>
           {expanded.cerner && (
             <ul className="project-details">
@@ -81,10 +86,9 @@ const Projects = () => {
             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
           }}
         >
-          <img src={prj2} alt="6D Project" className="project-img" />
+          <img src={sixDLogo} alt="6D Technology Logo" className="project-img project-logo-img" />
           <div className="project-header-row">
             <h3 className="project-title">6D Technology</h3>
-            {/* Removed the hand icon */}
           </div>
           {expanded.sixD && (
             <ul className="project-details">
@@ -112,10 +116,9 @@ const Projects = () => {
             e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
           }}
         >
-          <img src={prj3} alt="Probots Project" className="project-img" />
+          <img src={probotsLogo} alt="Probots Logo" className="project-img project-logo-img" />
           <div className="project-header-row">
             <h3 className="project-title">Probots Techno Solutions</h3>
-            {/* Removed the hand icon */}
           </div>
           {expanded.probots && (
             <ul className="project-details">
@@ -125,6 +128,38 @@ const Projects = () => {
               <li>Pet tracker app with Arduino, Maps API, JSON.</li>
               <li>Custom camera app with photo/QR & autofocus.</li>
               <li>Live video streaming via RTSP and RTMP.</li>
+            </ul>
+          )}
+        </div>
+
+        {/* Starteryou Inc */}
+        <div 
+          className={`project-block clickable-project ${expanded.starteryou ? 'expanded' : ''}`}
+          onClick={() => toggleExpand('starteryou')}
+          style={{
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-3px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+          }}
+        >
+          <img src={starteryouLogo} alt="Starteryou Logo" className="project-img project-logo-img" />
+          <div className="project-header-row">
+            <h3 className="project-title">Starteryou Inc</h3>
+          </div>
+          {expanded.starteryou && (
+            <ul className="project-details">
+              <li>Co-founded and led platform connecting teenagers and college students with part-time job opportunities.</li>
+              <li>Developed and managed scalable multi-environment infrastructure for development and production needs.</li>
+              <li>Implemented HTTPS encryption using Let's Encrypt, enabling secure communication across the platform.</li>
+              <li>Enhanced database access control by enabling IP whitelisting on MongoDB server to restrict unauthorized access.</li>
+              <li>Designed and developed caching and cookie management mechanisms integrated with metadata-driven framework.</li>
             </ul>
           )}
         </div>
