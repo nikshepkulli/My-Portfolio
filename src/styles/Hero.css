@@ -1446,21 +1446,53 @@ html body .projects .projects-container {
 @media (min-width: 1700px) {
   body .hero .profile-image,
   html body .hero .profile-image {
-    width: 300px !important;
-    height: 650px !important;
+    width: 600px !important;
+    height: 600px !important;
     max-width: none !important;
     min-width: 500px !important;
   }
 }
 
+/* FORCE OVERRIDE - Laptop/Desktop image fix */
+@media (min-width: 1200px) and (max-width: 1699px) {
+  body .hero .profile-image,
+  html body .hero .profile-image {
+    width: 450px !important;
+    height: 450px !important;
+    max-width: none !important;
+    min-width: 300px !important;
+  }
+}
 
-/* FORCE OVERRIDE - Ultra-wide image fix */
-@media (min-width: 1200px) {
+/* Alternative approach - More specific breakpoints */
+/* 
+@media (min-width: 1200px) and (max-width: 1399px) {
   body .hero .profile-image,
   html body .hero .profile-image {
     width: 300px !important;
     height: 450px !important;
     max-width: none !important;
+    min-width: 300px !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1699px) {
+  body .hero .profile-image,
+  html body .hero .profile-image {
+    width: 400px !important;
+    height: 550px !important;
+    max-width: none !important;
     min-width: 400px !important;
   }
 }
+
+@media (min-width: 1700px) {
+  body .hero .profile-image,
+  html body .hero .profile-image {
+    width: 600px !important;
+    height: 750px !important;
+    max-width: none !important;
+    min-width: 500px !important;
+  }
+}
+*/
