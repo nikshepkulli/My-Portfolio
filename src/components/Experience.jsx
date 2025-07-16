@@ -1,91 +1,143 @@
 import React, { useState } from "react";
 import "../styles/Experience.css"; // Ensure path is correct
-// Removed FaChevronDown, FaChevronUp imports since we're not using arrows anymore
-// Remove this import: import clickMeGif from "../assets/clickme.gif";
+
+// Import company logos
+import cernerLogo from '../assets/cerner.png';
+import sixDLogo from '../assets/6D.png';
+import probotsLogo from '../assets/probots.png';
+import starteryouLogo from '../assets/starteryou.png';
+import robotLogo from '../assets/robot.png';
+import sacredheartLogo from '../assets/sacredheart.png';
+import britishairwaysLogo from '../assets/britishairways.png';
 
 const Experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Starteryou Inc., New York, NY (Remote)",
-    date: "Jul 2024 – Present",
+    key: 'starteryou',
+    title: 'Senior Software Engineer',
+    company: 'Starteryou Inc., New York, NY (Remote)',
+    date: 'Jul 2024 – Present',
+    logo: starteryouLogo,
     points: [
-      "1. Lead the vision and strategy for an innovative platform connecting teenagers and college students with meaningful part-time job opportunities.",
-      "2. Oversee development of robust software solutions using a modern tech stack:",
-      "   Front-end: React with Vite, Bootstrap",
-      "   Back-end: Node.js",
-      "   Database: MongoDB",
-      "   Infrastructure: AWS (EC2), Docker, Kubernetes",
-      "3. Implement secure communication protocols and manage SSL certificates.",
-      "4. Utilize GitHub for source control and CI/CD processes.",
-      "5. Design scalable, container-based infrastructure with plans for Kubernetes orchestration.",
-      "6. Mentor emerging tech talent and foster a culture of innovation.",
-      "7. Ensure user-centric platform development and continuous technological improvement.",
-    ],
+      "Lead the vision and strategy for an innovative platform connecting teenagers and college students with meaningful part-time job opportunities.",
+      "Oversee development of robust software solutions using a modern tech stack: React with Vite, Bootstrap, Node.js, MongoDB, AWS (EC2), Docker, Kubernetes",
+      "Implement secure communication protocols and manage SSL certificates.",
+      "Utilize GitHub for source control and CI/CD processes.",
+      "Design scalable, container-based infrastructure with plans for Kubernetes orchestration.",
+      "Mentor emerging tech talent and foster a culture of innovation.",
+      "Ensure user-centric platform development and continuous technological improvement.",
+    ]
   },
   {
-    title: "Adjunct Professor",
-    company: "Sacred Heart University, Fairfield, CT",
-    date: "Jan 2024 - Dec 2024",
+    key: 'professor',
+    title: 'Adjunct Professor',
+    company: 'Sacred Heart University, Fairfield, CT',
+    date: 'Jan 2024 - Dec 2024',
+    logo: sacredheartLogo,
     points: [
-      "1. Specialize in instructing courses on Data Science Architecture, Big Data, Data Structures, MongoDB, and Text-Based Analysis.",
-      "2. Employ interactive teaching methods to facilitate deep understanding and engagement.",
-      "3. Integrate industry insights and continuously update course material.",
-      "4. Provide real-world applications through industry expertise.",
-    ],
+      "Specialize in instructing courses on Data Science Architecture, Big Data, Data Structures, MongoDB, and Text-Based Analysis.",
+      "Employ interactive teaching methods to facilitate deep understanding and engagement.",
+      "Integrate industry insights and continuously update course material.",
+      "Provide real-world applications through industry expertise.",
+    ]
   },
   {
-    title: "Data Science Virtual Intern",
-    company: "British Airways, Fairfield, CT",
-    date: "May 2023 - May 2023",
+    key: 'british_airways',
+    title: 'Data Science Virtual Intern',
+    company: 'British Airways, Fairfield, CT',
+    date: 'May 2023 - May 2023',
+    logo: britishairwaysLogo,
     points: [
-      "1. Developed web scraping techniques using Beautiful Soup.",
-      "2. Performed data analysis and visualization using Python libraries.",
-      "3. Uncovered competitor strategies and market dynamics.",
-      "4. Predicted customer buying behavior using ML (85% accuracy).",
-      "5. Empowered marketing strategy and business optimization.",
-    ],
+      "Developed web scraping techniques using Beautiful Soup.",
+      "Performed data analysis and visualization using Python libraries.",
+      "Uncovered competitor strategies and market dynamics.",
+      "Predicted customer buying behavior using ML (85% accuracy).",
+      "Empowered marketing strategy and business optimization.",
+    ]
   },
   {
-    title: "Research Assistant",
-    company: "Sacred Heart University, Fairfield, CT",
-    date: "Jan 2023 - May 2023",
+    key: 'research_assistant',
+    title: 'Research Assistant',
+    company: 'Sacred Heart University, Fairfield, CT',
+    date: 'Jan 2023 - May 2023',
+    logo: sacredheartLogo,
     points: [
-      "1. Achieved 95% accuracy in breast cancer prediction using linear regression.",
-      "2. Sentiment analysis on tweets with 85% accuracy.",
-      "3. LDA analysis on COVID-19 tweets.",
-      "4. Designed Vinyl Rack for IDEA Lab (30% capacity increase).",
-      "5. Demonstrated strong data-driven and analytical skills.",
-    ],
+      "Achieved 95% accuracy in breast cancer prediction using linear regression.",
+      "Sentiment analysis on tweets with 85% accuracy.",
+      "LDA analysis on COVID-19 tweets.",
+      "Designed Vinyl Rack for IDEA Lab (30% capacity increase).",
+      "Demonstrated strong data-driven and analytical skills.",
+    ]
   },
   {
-    title: "Software Engineer II",
-    company: "Oracle Cerner, Bengaluru, India",
-    date: "Dec 2019 – Aug 2022",
+    key: 'cerner',
+    title: 'Software Engineer II',
+    company: 'Oracle Cerner, Bengaluru, India',
+    date: 'Dec 2019 – Aug 2022',
+    logo: cernerLogo,
     points: [
-      "1. Improved features for Operations team (50% workload reduction).",
-      "2. Revamped data framework with Olympus and Jetstream.",
-      "3. Optimized script management and crash resolution.",
-    ],
+      "Improved features for Operations team (50% workload reduction).",
+      "Revamped data framework with Olympus and Jetstream.",
+      "Optimized script management and crash resolution.",
+      "Worked on AI and ML-based life-saving leaf blower technology for Cerner.",
+      "Wrote Call Home scripts using SQL, PL-SQL, T-SQL, VB Script, PowerShell.",
+      "Improved Jetstream framework CSV reader and Call Home data collection.",
+      "Created Java Native Interface using JavaScript & C++.",
+      "Enhanced server identification scripts and crash gather dumps collection.",
+    ]
   },
   {
-    title: "Software Engineer",
-    company: "6D Technologies, Bengaluru, India",
-    date: "Aug 2019 – Dec 2019",
+    key: 'sixD',
+    title: 'Software Engineer',
+    company: '6D Technologies, Bengaluru, India',
+    date: 'Aug 2019 – Dec 2019',
+    logo: sixDLogo,
     points: [
-      "1. Developed SMSC GUI and served as React UI & backend dev for Sony Ericsson's MAGIK.",
-      "   Achieved 40% system efficiency and 25% downtime reduction.",
-    ],
+      "Developed SMSC GUI and served as React UI & backend dev for Sony Ericsson's MAGIK.",
+      "Achieved 40% system efficiency and 25% downtime reduction.",
+      "Constructed tree structure React component using JSON & Reactstrap.",
+      "Built Spring Boot services with CRUD for tree view.",
+      "Implemented MSISDN report viewing using Java and JSP servlets.",
+    ]
   },
+  {
+    key: 'robotics',
+    title: 'Robotics',
+    company: 'Personal Project',
+    date: '2018 - 2019',
+    logo: robotLogo,
+    points: [
+      "Designed and built a hexapod robot with advanced locomotion capabilities.",
+      "Implemented servo motor control systems for multi-directional movement.",
+      "Programmed inverse kinematics algorithms for smooth gait patterns.",
+      "Integrated sensor feedback systems for obstacle detection and avoidance.",
+      "View project documentation and videos: https://photos.google.com/share/hexapod-robot",
+    ]
+  },
+  {
+    key: 'probots',
+    title: 'Probots Techno Solutions',
+    company: 'Probots Techno Solutions',
+    date: '2017 - 2018',
+    logo: probotsLogo,
+    points: [
+      "Created native C/C++ API for dialysis unit control.",
+      "Built Android GPS tracker app for Alpine Star.",
+      "Bluetooth remote for video via RTMP/RTSP.",
+      "Pet tracker app with Arduino, Maps API, JSON.",
+      "Custom camera app with photo/QR & autofocus.",
+      "Live video streaming via RTSP and RTMP.",
+    ]
+  }
 ];
 
 const Experience = () => {
-  const [expandedIndexes, setExpandedIndexes] = useState([]);
+  const [expandedExperiences, setExpandedExperiences] = useState([]);
 
-  const toggleExpand = (index) => {
-    setExpandedIndexes((prev) =>
-      prev.includes(index)
-        ? prev.filter((i) => i !== index)
-        : [...prev, index]
+  const toggleExperienceExpand = (key) => {
+    setExpandedExperiences((prev) =>
+      prev.includes(key)
+        ? prev.filter((k) => k !== key)
+        : [...prev, key]
     );
   };
 
@@ -96,32 +148,44 @@ const Experience = () => {
       <h2 className="experience-title-small">Experience</h2>
       
       <div className="experience-content">
-        {Experiences.map((exp, index) => (
-          <div 
-            key={index} 
-            className={`experience-card clickable-experience-card ${expandedIndexes.includes(index) ? 'expanded' : ''}`}
-            onClick={() => toggleExpand(index)}
-          >
-            <div className="experience-header">
-              <div className="title-with-icon">
-                <h3 className="title-text">{exp.title}</h3>
-                {/* Removed the expand-icon span and chevron icons */}
+        {/* All 8 experiences displayed as experience cards */}
+        <div className="experience-container">
+          {Experiences.map((experience) => (
+            <div 
+              key={experience.key}
+              className={`experience-block ${expandedExperiences.includes(experience.key) ? 'expanded' : ''}`}
+              onClick={() => toggleExperienceExpand(experience.key)}
+              style={{
+                cursor: 'pointer',
+                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+              }}
+            >
+              <img src={experience.logo} alt={`${experience.title} Logo`} className="experience-img experience-logo-img" />
+              <div className="experience-header-row">
+                <div className="experience-info">
+                  <h3 className="experience-title">{experience.title}</h3>
+                  <p className="experience-company">{experience.company}</p>
+                  <p className="experience-date">{experience.date}</p>
+                </div>
               </div>
-              <p>{exp.date}</p>
-            </div>
-            
-            {expandedIndexes.includes(index) && (
-              <div className="experience-details">
-                <h4>{exp.company}</h4>
-                <ul>
-                  {exp.points.map((point, i) => (
+              {expandedExperiences.includes(experience.key) && (
+                <ul className="experience-details">
+                  {experience.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
-              </div>
-            )}
-          </div>
-        ))}
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
