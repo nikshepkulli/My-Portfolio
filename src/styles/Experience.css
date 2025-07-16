@@ -25,7 +25,7 @@
   line-height: 1;
   margin: 0;
   z-index: 2;
-  left: 30px;
+  left: 15px;
   top: 280px;
   transform: rotate(-90deg);
   transform-origin: center;
@@ -42,7 +42,7 @@
   line-height: 1;
   margin: 0;
   z-index: 1;
-  left: 35px;
+  left: 20px;
   top: 310px;
   transform: rotate(-90deg);
   transform-origin: center;
