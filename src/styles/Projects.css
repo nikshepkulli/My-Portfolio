@@ -961,3 +961,65 @@
   }
 }
 
+/* MOBILE LOGO FIX - Add this to the END of your Projects.css file */
+
+/* Force mobile logo sizing with maximum specificity */
+@media (max-width: 480px) {
+  .projects .project-logo-img,
+  .projects-container .project-logo-img,
+  .project-block .project-logo-img,
+  body .project-logo-img,
+  html body .project-logo-img {
+    width: 50px !important; /* Fixed tiny width */
+    height: 90px !important; /* Increased from 70px to 90px */
+    max-width: 50px !important;
+    max-height: 90px !important; /* Increased from 70px to 90px */
+    min-width: 50px !important;
+    min-height: 90px !important; /* Increased from 70px to 90px */
+    padding: 0 !important;
+    margin: 2px auto !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border: none !important;
+    display: block !important;
+  }
+  
+  /* Force project blocks to be wider */
+  .projects .project-block,
+  .projects-container .project-block,
+  body .project-block,
+  html body .project-block {
+    width: 95% !important;
+    max-width: 95% !important;
+    min-height: 160px !important; /* Increased to accommodate taller logos */
+    padding: 5px !important;
+    margin: 5px auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Force project titles to be smaller */
+  .projects .project-title,
+  .project-block .project-title,
+  body .project-title,
+  html body .project-title {
+    font-size: 0.7rem !important;
+    margin: 2px 0 !important;
+    text-align: center !important;
+  }
+}
+
+/* Even more specific for very small screens */
+@media (max-width: 320px) {
+  .projects .project-logo-img,
+  .projects-container .project-logo-img,
+  .project-block .project-logo-img,
+  body .project-logo-img,
+  html body .project-logo-img {
+    width: 40px !important; /* Even smaller */
+    height: 80px !important; /* Increased from 60px to 80px */
+    max-width: 40px !important;
+    max-height: 80px !important; /* Increased from 60px to 80px */
+    min-width: 40px !important;
+    min-height: 80px !important; /* Increased from 60px to 80px */
+  }
+}

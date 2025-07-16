@@ -484,8 +484,346 @@
 @media (min-width: 769px) {
   .about-content h2 {
     position: absolute !important;
-    left: -20px !important; /* MAIN CONTROL: Change this number */
-    top: 170px !important; /* MAIN CONTROL: Change this percentage */
+    left: 0px !important; /* MAIN CONTROL: Change this number */
+    top: 70px !important; /* MAIN CONTROL: Change this percentage */
+    transform: translateY(-50%) rotate(-90deg) !important;
+    transform-origin: center !important;
+    white-space: nowrap !important;
+    z-index: 100 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .about-large {
+    font-size: 6rem !important;
+    font-weight: 900 !important;
+    color: transparent !important;
+    -webkit-text-stroke: 2px #ffffff !important;
+    line-height: 0.8 !important;
+    margin: 0 !important;
+    letter-spacing: -10px !important;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5) !important;
+    left: -65px !important; /* MAIN CONTROL: Change this number */
+    top: -25px !important; /* MAIN CONTROL: Change this percentage */
+     
+  }
+
+  
+  .me-small {
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    background: none !important;
+    padding: 8px 20px !important;
+    border-radius: 25px !important;
+    line-height: 1 !important;
+    letter-spacing: 2px !important;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+    margin-top: 10px !important;
+    left: -50px !important; /* MAIN CONTROL: Change this number */
+    top: -75px !important; /* MAIN CONTROL: Change this percentage */
+    
+  }
+}
+
+/* COMPLETE About.css - Works with your JSX structure + Mobile Responsive */
+
+/* Base About section styling */
+.about {
+  height: auto;
+  min-height: 30vh;
+  width: 100%;
+  max-width: 1375px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+  display: flex;
+  border-radius: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+  margin: 3rem auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  margin-left: 180px;
+  flex: 1;
+  max-width: calc(100% - 200px);
+  padding-top: 1rem;
+}
+
+/* Content text styling */
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  word-spacing: 0.1rem;
+  margin-top: 0;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1600px+) */
+@media (min-width: 1600px) {
+  .about {
+    width: 100% !important;
+    max-width: 1850px !important;
+    margin: 3rem auto !important;
+    padding: 2rem 6rem !important;
+    margin-bottom: 5rem !important;
+  }
+}
+
+/* Tablet Large (1025px-1599px) */
+@media (max-width: 1599px) and (min-width: 1025px) {
+  .about {
+    max-width: 95%;
+    padding: 1.8rem;
+  }
+  
+  .about-content {
+    margin-left: 140px;
+    max-width: calc(100% - 160px);
+  }
+  
+  .about-content h2 {
+    left: 8px !important;
+    top: 35% !important;
+  }
+  
+  .about-large {
+    font-size: 4.5rem !important;
+    letter-spacing: -8px !important;
+  }
+  
+  .me-small {
+    font-size: 2rem !important;
+    padding: 6px 16px !important;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet Medium (769px-1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .about {
+    max-width: 95%;
+    padding: 1.6rem;
+  }
+  
+  .about-content {
+    margin-left: 120px;
+    max-width: calc(100% - 140px);
+  }
+  
+  .about-content h2 {
+    left: 10px !important;
+    top: 35% !important;
+  }
+  
+  .about-large {
+    font-size: 4rem !important;
+    letter-spacing: -6px !important;
+  }
+  
+  .me-small {
+    font-size: 1.8rem !important;
+    padding: 5px 14px !important;
+  }
+  
+  .about-content p {
+    font-size: 1.05rem;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+
+/* Mobile Landscape (481px-768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .about {
+    flex-direction: column !important;
+    padding: 1.5rem !important;
+    margin: 2rem auto !important;
+    min-height: auto !important;
+    text-align: center !important;
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+  
+  .about-content {
+    margin-left: 0 !important;
+    margin-top: 2rem !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* MOBILE: Reset h2 positioning - make it normal flow */
+  .about-content h2 {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 2rem !important;
+    flex-direction: row !important; /* Side by side on mobile landscape */
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    gap: 1rem !important; /* Space between "About" and "Me" */
+  }
+  
+  .about-large {
+    font-size: 3.5rem !important;
+    letter-spacing: -6px !important;
+    margin: 0 !important;
+  }
+  
+  .me-small {
+    font-size: 1.8rem !important;
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 4px 12px !important;
+    margin-top: 0 !important; /* Remove desktop margin */
+  }
+  
+  .about-content p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Mobile Portrait (321px-480px) */
+@media (max-width: 480px) and (min-width: 321px) {
+  .about {
+    padding: 1rem !important;
+    margin: 1.5rem auto !important;
+    border-radius: 10px !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .about-content {
+    margin-left: 0 !important;
+    margin-top: 1.5rem !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* MOBILE PORTRAIT: Stack "About" and "Me" vertically */
+  .about-content h2 {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 1.5rem !important;
+    flex-direction: column !important; /* Stack vertically on mobile portrait */
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+  
+  .about-large {
+    font-size: 2.8rem !important;
+    letter-spacing: -4px !important;
+    margin: 0 !important;
+  }
+  
+  .me-small {
+    font-size: 1.4rem !important;
+    margin: 0 !important;
+    padding: 3px 10px !important;
+    letter-spacing: 1px !important;
+    margin-top: 0 !important;
+  }
+  
+  .about-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+}
+
+/* Extra Small Mobile (≤320px) */
+@media (max-width: 320px) {
+  .about {
+    padding: 0.8rem !important;
+    margin: 1rem auto !important;
+    width: 85% !important;
+    max-width: 85% !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .about-content {
+    margin-left: 0 !important;
+    margin-top: 1.2rem !important;
+    width: 100% !important;
+  }
+  
+  .about-content h2 {
+    position: static !important;
+    transform: none !important;
+    margin-bottom: 1.2rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 0.3rem !important;
+  }
+  
+  .about-large {
+    font-size: 2.2rem !important;
+    letter-spacing: -2px !important;
+    margin: 0 !important;
+  }
+  
+  .me-small {
+    font-size: 1.2rem !important;
+    padding: 2px 8px !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  .about-content p {
+    font-size: 0.95rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+}
+
+/* ===== DESKTOP OVERRIDE - Ensure positioning works ===== */
+@media (min-width: 769px) {
+  .about-content h2 {
+    position: absolute !important;
+    left: 5px !important; /* MAIN CONTROL: Change this number */
+    top: 30% !important; /* MAIN CONTROL: Change this percentage */
     transform: translateY(-50%) rotate(-90deg) !important;
     transform-origin: center !important;
     white-space: nowrap !important;
@@ -519,8 +857,7 @@
     letter-spacing: 2px !important;
     text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
     margin-top: 10px !important;
-    left: 0px !important; /* MAIN CONTROL: Change this number */
-    top: -45px !important; /* MAIN CONTROL: Change this percentage */
-    
+    position: relative !important;
+    transform: none !important;
   }
 }
