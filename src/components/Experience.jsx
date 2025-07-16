@@ -100,20 +100,6 @@ const Experiences = [
     ]
   },
   {
-    key: 'robotics',
-    title: 'Robotics',
-    company: 'Personal Project',
-    date: '2018 - 2019',
-    logo: robotLogo,
-    points: [
-      "Designed and built a hexapod robot with advanced locomotion capabilities.",
-      "Implemented servo motor control systems for multi-directional movement.",
-      "Programmed inverse kinematics algorithms for smooth gait patterns.",
-      "Integrated sensor feedback systems for obstacle detection and avoidance.",
-      "View project documentation and videos: https://photos.google.com/share/hexapod-robot",
-    ]
-  },
-  {
     key: 'probots',
     title: 'Probots Techno Solutions',
     company: 'Probots Techno Solutions',
