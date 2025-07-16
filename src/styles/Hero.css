@@ -1382,3 +1382,85 @@ html body .projects .projects-container {
     font-size: 1.8rem;
   }
 }
+
+/* Add this CSS rule for ultra-wide screens (1700px+) */
+
+/* Ultra-wide desktop screens (1700px+) - Scale up profile image */
+@media (min-width: 1700px) {
+  .profile-image {
+    width: 600px;  /* Increased from 500px */
+    height: 650px; /* Increased from 550px to maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 0;
+    margin-left: 2rem;
+  }
+  
+  /* Also scale up the hero container */
+  .hero {
+    max-width: 1400px; /* Increased from 1250px */
+    padding: 2rem 7rem; /* Increased padding */
+    gap: 5rem; /* Increased gap */
+  }
+  
+  /* Scale up text elements proportionally */
+  .hero-content h1 {
+    font-size: 4.5rem; /* Increased from 4rem */
+  }
+  
+  .hero-content h2 {
+    font-size: 3.5rem; /* Increased from 3rem */
+  }
+  
+  .hero-content p {
+    font-size: 1.7rem; /* Increased from 1.5rem */
+  }
+}
+
+/* Extra ultra-wide screens (2000px+) */
+@media (min-width: 2000px) {
+  .profile-image {
+    width: 700px;
+    height: 750px;
+  }
+  
+  .hero {
+    max-width: 1600px;
+    padding: 2rem 8rem;
+    gap: 6rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 4rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.8rem;
+  }
+}
+
+/* FORCE OVERRIDE - Ultra-wide image fix */
+@media (min-width: 1700px) {
+  body .hero .profile-image,
+  html body .hero .profile-image {
+    width: 300px !important;
+    height: 650px !important;
+    max-width: none !important;
+    min-width: 500px !important;
+  }
+}
+
+
+/* FORCE OVERRIDE - Ultra-wide image fix */
+@media (min-width: 1200px) {
+  body .hero .profile-image,
+  html body .hero .profile-image {
+    width: 300px !important;
+    height: 450px !important;
+    max-width: none !important;
+    min-width: 400px !important;
+  }
+}

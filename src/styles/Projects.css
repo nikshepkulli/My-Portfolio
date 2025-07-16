@@ -1023,3 +1023,228 @@
     min-height: 80px !important; /* Increased from 60px to 80px */
   }
 }
+
+/* ===== ULTRA-WIDE SCREENS ONLY (1700px+) - 4 PROJECTS IN ROW ===== */
+
+/* Only affects screens 1700px and above - does not touch laptop/mobile */
+@media (min-width: 1700px) {
+  .projects-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* Force 4 columns */
+    gap: 20px !important;
+    justify-content: center !important;
+    margin-left: 250px !important;
+    margin-right: 50px !important;
+    width: calc(100% - 300px) !important; /* Account for left margin */
+  }
+  
+  .project-block {
+    width: 100% !important; /* Fill grid cell */
+    max-width: 720px !important; /* Limit max width */
+    height: 300px !important;
+    margin: 0 !important;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 280px !important;
+    height: 190px !important;
+  }
+}
+
+/* Even larger ultra-wide screens (2000px+) */
+@media (min-width: 2000px) {
+  .projects-container {
+    gap: 35px !important;
+    margin-left: 300px !important;
+    margin-right: 100px !important;
+  }
+  
+  .project-block {
+    max-width: 550px !important;
+    height: 320px !important;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 310px !important;
+    height: 200px !important;
+  }
+}
+
+/* ===== ULTRA-WIDE SCREENS ONLY (1700px+) - 4 PROJECTS IN ROW ===== */
+
+/* Only affects screens 1700px and above */
+@media (min-width: 1700px) {
+  .projects {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+    min-height: 600px;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: 250px;
+    margin-right: 50px;
+    position: relative;
+    align-items: flex-start;
+  }
+  
+  .project-block {
+    width: 470px;
+    min-height: 280px;
+    height: auto;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+  }
+  
+  .project-block.expanded {
+    height: auto;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    transform: scale(1.02);
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 240px;
+    height: 170px;
+    padding: 8px;
+  }
+  
+  .project-details {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+}
+
+/* Even larger ultra-wide screens (2000px+) */
+@media (min-width: 2000px) {
+  .projects-container {
+    gap: 25px;
+    margin-left: 300px;
+    margin-right: 100px;
+  }
+  
+  .project-block {
+    max-width: 550px;
+    height: 270px;
+  }
+  
+  .project-block.expanded {
+    overflow: visible;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 310px;
+    height: 200px;
+  }
+}
+
+/* ===== ULTRA-WIDE SCREENS ONLY (1700px+) - 4 PROJECTS IN ROW ===== */
+
+/* Only affects screens 1700px and above */
+@media (min-width: 1700px) {
+  .projects {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+    padding-top: 80px;
+    min-height: 600px;
+    margin-top: 80px;
+  }
+  
+  .projects-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 180px;
+    margin-right: 50px;
+    position: relative;
+    align-items: flex-start;
+  }
+  
+  .project-block {
+    width: 350px !important;
+    height: 240px !important;
+    min-height: 240px !important;
+    max-height: 240px !important;
+    margin: 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .project-block.expanded {
+    height: auto !important;
+    max-height: 450px !important;
+    min-height: auto !important;
+    overflow-y: auto !important;
+    z-index: 10 !important;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3) !important;
+    transform: scale(1.02) !important;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 290px !important;
+    height: 140px !important;
+    padding: 5px !important;
+    margin: 5px 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .project-header-row {
+    flex-shrink: 0 !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .project-details {
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    padding-right: 10px !important;
+    margin-top: 5px !important;
+    flex: 1 !important;
+  }
+}
+
+/* Even larger ultra-wide screens (2000px+) */
+@media (min-width: 2000px) {
+  .projects-container {
+    gap: 25px;
+    margin-left: 300px;
+    margin-right: 100px;
+  }
+  
+  .project-block {
+    max-width: 350px;
+    height: 270px;
+  }
+  
+  .project-block.expanded {
+    overflow: visible;
+  }
+  
+  .project-img,
+  .project-logo-img {
+    width: 310px;
+    height: 200px;
+  }
+}
+
+
