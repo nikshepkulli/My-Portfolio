@@ -82,7 +82,7 @@
   border: 1px solid rgba(255,255,255,0.3);
   padding: 15px; /* REDUCED PADDING FROM 20px TO 15px */
   border-radius: 10px;
-  width: 395px;
+  width: 250px; /* REDUCED FROM 395px TO 250px */
   box-sizing: border-box;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   /* ALLOW DYNAMIC HEIGHT EXPANSION */
@@ -95,7 +95,7 @@
 
 .project-img,
 .project-logo-img {
-  width: 350px;
+  width: 220px; /* REDUCED FROM 350px TO 220px */
   height: 60px; /* REDUCED HEIGHT FROM 80px TO 60px */
   border-radius: 10px;
   margin: 8px 0; /* REDUCED MARGIN FROM 10px TO 8px */
@@ -157,7 +157,7 @@
   color: #333;
 }
 
-/* DESKTOP SPECIFIC - ALLOW EXPANSION */
+/* DESKTOP SPECIFIC - ALLOW EXPANSION WITH REDUCED WIDTH */
 @media (min-width: 1024px) {
   .projects .project-block,
   .projects-container .project-block,
@@ -168,7 +168,7 @@
     border: 1px solid rgba(255,255,255,0.3) !important;
     padding: 15px !important; /* REDUCED PADDING */
     border-radius: 10px !important;
-    width: 395px !important;
+    width: 250px !important; /* REDUCED FROM 395px TO 250px */
     box-sizing: border-box !important;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
     /* ALLOW DYNAMIC HEIGHT EXPANSION */
@@ -188,7 +188,7 @@
   body .projects .project-logo-img,
   html body .projects .project-img,
   html body .projects .project-logo-img {
-    width: 350px !important;
+    width: 220px !important; /* REDUCED FROM 350px TO 220px */
     height: 60px !important; /* REDUCED HEIGHT */
     border-radius: 10px !important;
     margin: 8px 0 !important; /* REDUCED MARGIN */
@@ -233,8 +233,13 @@
     gap: 20px;
   }
   
+  .project-block {
+    width: 250px; /* REDUCED FROM 395px TO 250px */
+  }
+  
   .project-img,
   .project-logo-img {
+    width: 220px; /* REDUCED FROM 350px TO 220px */
     height: 80px;
   }
 }
@@ -255,13 +260,13 @@
   }
   
   .project-block {
-    width: 395px;
+    width: 320px !important; /* REDUCED FROM 395px TO 320px */
     padding: 20px;
   }
   
   .project-img,
   .project-logo-img {
-    width: 350px;
+    width: 280px !important; /* REDUCED FROM 350px TO 280px */
     height: 80px;
     margin: 10px 0;
     padding: 0;
@@ -718,12 +723,12 @@
   }
   
   .project-block {
-    width: 395px;
+    width: 320px; /* REDUCED FROM 395px TO 320px */
   }
   
   .project-img,
   .project-logo-img {
-    width: 350px;
+    width: 280px; /* REDUCED FROM 350px TO 280px */
     height: 80px;
   }
 }
@@ -759,12 +764,12 @@
   }
   
   .project-block {
-    width: 420px;
+    width: 250px; /* REDUCED FROM 420px TO 250px */
   }
   
   .project-img,
   .project-logo-img {
-    width: 380px;
+    width: 220px; /* REDUCED FROM 380px TO 220px */
     height: 80px;
   }
 }
@@ -927,8 +932,6 @@ div.projects .projects-container {
   }
 }
 
-/* Add this to your existing Projects.css file */
-
 /* Gallery Button Section */
 .project-gallery-section {
   margin-top: 15px;
@@ -942,14 +945,14 @@ div.projects .projects-container {
   border: none !important;
   border-radius: 8px !important;
   color: white !important;
-  padding: 12px 24px !important;
+  padding: 12px 20px !important; /* SLIGHTLY REDUCED PADDING */
   fontSize: 14px !important;
   font-weight: 600 !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
   width: 100% !important;
-  max-width: 200px !important;
+  max-width: 150px !important; /* REDUCED FROM 180px TO 150px */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1003,4 +1006,140 @@ div.projects .projects-container {
 .project-block .gallery-button {
   position: relative !important;
   z-index: 10 !important;
+}
+
+/* FORCE REDUCED WIDTH WITH MAXIMUM SPECIFICITY - FINAL OVERRIDE */
+html body .projects .project-block,
+body .projects .project-block,
+.projects .project-block,
+.projects-container .project-block,
+section.projects .project-block,
+div.projects .project-block {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  padding: 15px !important;
+  border-radius: 10px !important;
+  width: 250px !important; /* FORCED REDUCED WIDTH */
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+  height: auto !important;
+  min-height: 160px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  transition: height 0.3s ease !important;
+}
+
+/* FORCE REDUCED IMAGE WIDTH WITH MAXIMUM SPECIFICITY - FINAL OVERRIDE */
+html body .projects .project-img,
+html body .projects .project-logo-img,
+body .projects .project-img,
+body .projects .project-logo-img,
+.projects .project-img,
+.projects .project-logo-img,
+.projects-container .project-img,
+.projects-container .project-logo-img,
+.project-block .project-img,
+.project-block .project-logo-img,
+section.projects .project-img,
+section.projects .project-logo-img,
+div.projects .project-img,
+div.projects .project-logo-img {
+  width: 220px !important; /* FORCED REDUCED WIDTH */
+  height: 60px !important;
+  border-radius: 10px !important;
+  margin: 8px 0 !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  max-height: 60px !important;
+  min-height: 60px !important;
+}
+
+/* DESKTOP SPECIFIC - FORCED REDUCED WIDTH WITH MAXIMUM SPECIFICITY - FINAL OVERRIDE */
+@media (min-width: 1024px) {
+  html body .projects .project-block,
+  body .projects .project-block,
+  .projects .project-block,
+  .projects-container .project-block,
+  section.projects .project-block,
+  div.projects .project-block {
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    width: 250px !important; /* FORCED REDUCED FROM 395px TO 250px */
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    height: auto !important;
+    min-height: 160px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  html body .projects .project-img,
+  html body .projects .project-logo-img,
+  body .projects .project-img,
+  body .projects .project-logo-img,
+  .projects .project-img,
+  .projects .project-logo-img,
+  .projects-container .project-img,
+  .projects-container .project-logo-img,
+  .project-block .project-img,
+  .project-block .project-logo-img,
+  section.projects .project-img,
+  section.projects .project-logo-img,
+  div.projects .project-img,
+  div.projects .project-logo-img {
+    width: 220px !important; /* FORCED REDUCED FROM 350px TO 220px */
+    height: 60px !important;
+    border-radius: 10px !important;
+    margin: 8px 0 !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    max-height: 60px !important;
+    min-height: 60px !important;
+  }
+}
+
+/* Desktop/Laptop (1024px to 1399px) - FORCED REDUCED WIDTH - FINAL OVERRIDE */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  html body .projects .project-block,
+  body .projects .project-block,
+  .projects .project-block,
+  .project-block {
+    width: 320px !important; /* FORCED REDUCED FROM 395px TO 320px */
+    padding: 20px !important;
+  }
+  
+  html body .projects .project-img,
+  html body .projects .project-logo-img,
+  body .projects .project-img,
+  body .projects .project-logo-img,
+  .projects .project-img,
+  .projects .project-logo-img,
+  .project-img,
+  .project-logo-img {
+    width: 280px !important; /* FORCED REDUCED FROM 350px TO 280px */
+    height: 80px !important;
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 10px !important;
+    object-fit: contain !important;
+  }
+}
+
+/* EMERGENCY WIDTH OVERRIDE - LAST RESORT */
+* .project-block {
+  width: 250px !important;
+  max-width: 250px !important;
+}
+
+* .project-img,
+* .project-logo-img {
+  width: 220px !important;
+  max-width: 220px !important;
 }
