@@ -56,6 +56,13 @@ const Achievements = () => {
         {!isOpen && (
           <div className="achievements-header">
             <h2 className="achievements-title">Achievements</h2>
+            <p
+              className="achievement-highlight"
+              style={{ margin: "10px 0 0", fontSize: "0.95rem", lineHeight: 1.55, opacity: 0.9 }}
+            >
+              <strong>Adjunct Professor</strong> — Sacred Heart University (2024): taught MongoDB,
+              Data Architecture, C++/Data Structures &amp; NLP.
+            </p>
           </div>
         )}
 
