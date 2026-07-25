@@ -6,19 +6,34 @@ import cernerLogo from '../assets/cerner.png';
 import sixDLogo from '../assets/6D.png';
 import probotsLogo from '../assets/probots.png';
 import starteryouLogo from '../assets/starteryou.png';
+import organicmandyaLogo from '../assets/organicmandya.png';
 import robotLogo from '../assets/robot.png';
 import sacredheartLogo from '../assets/sacredheart.png';
 import britishairwaysLogo from '../assets/britishairways.png';
 
 const Experiences = [
   {
+    key: 'organicmandya',
+    title: 'Head of Engineering',
+    company: 'Organic Mandya (Mandya Organic Foods Pvt. Ltd.), Bengaluru, India',
+    date: '2026 – Present',
+    logo: organicmandyaLogo,
+    points: [
+      "Lead engineering across the omnichannel stack of a 21-store organic retail business — a Flutter customer app, a Shopify storefront, and a React/Supabase staff analytics platform.",
+      "Architected the omnichannel availability system: a per-pincode available-to-promise stock gate (FastAPI + Redis on AWS) syncing Odoo inventory to the storefront in real time — eliminating false “sold out” and overselling.",
+      "Built CI/CD and deployment pipelines across the mobile app (Flutter/TestFlight), the Shopify theme (staging → publish), and the analytics dashboard — replacing manual, error-prone releases.",
+      "Drove data-integrity, observability, and security hardening — automated catalog audits, AWS-based secrets management, and least-privilege access across services.",
+      "Set engineering standards and process — issue-first tracking, PR review with CI gates, and reproducible infrastructure — across the team.",
+    ]
+  },
+  {
     key: 'starteryou',
-    title: 'Senior Software Engineer',
+    title: 'Co-Founder & CTO',
     company: 'Starteryou Inc., New York, NY (Remote)',
     date: 'Jul 2024 – Present',
     logo: starteryouLogo,
     points: [
-      "Lead the vision and strategy for an innovative platform connecting teenagers and college students with meaningful part-time job opportunities.",
+      "Co-founded the company and lead engineering, architecture, and infrastructure for a platform connecting teenagers and college students with meaningful part-time job opportunities.",
       "Oversee development of robust software solutions using a modern tech stack: React with Vite, Bootstrap, Node.js, MongoDB, AWS (EC2), Docker, Kubernetes",
       "Implement secure communication protocols and manage SSL certificates.",
       "Utilize GitHub for source control and CI/CD processes.",

@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Glad you're here,</h1>
           <h2>I'm Nikshep A Kulli</h2>
-          <p>Full-Stack Developer | DevOps-Focused Full-Stack Engineer</p>
+          <p>Co-Founder &amp; CTO @ Starteryou · Head of Engineering @ Organic Mandya</p>
                    
           <div className="slogan">
             <div className="slogan-box">
@@ -57,9 +57,9 @@ const Hero = () => {
                 <span className="title-small">Position</span>
               </div>
               <div className="job-title">
-                <div>Senior</div>
-                <div>Software</div>
-                <div>Engineer</div>
+                <div>Co-Founder</div>
+                <div>&amp;</div>
+                <div>CTO</div>
               </div>
             </div>
                        
