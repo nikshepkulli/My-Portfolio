@@ -4,19 +4,33 @@ import "../styles/Experience.css"; // Ensure path is correct
 // Import company logos
 import cernerLogo from '../assets/cerner.png';
 import sixDLogo from '../assets/6D.png';
-import probotsLogo from '../assets/probots.png';
 import starteryouLogo from '../assets/starteryou.png';
 import organicmandyaLogo from '../assets/organicmandya.png';
-import robotLogo from '../assets/robot.png';
-import sacredheartLogo from '../assets/sacredheart.png';
-import britishairwaysLogo from '../assets/britishairways.png';
+
+// ── Dynamic dates ─────────────────────────────────────────────────────────────
+// Each role stores a `start` (and optional `end`) as "YYYY" or "YYYY-MM". The
+// display range and the duration are COMPUTED at render time, so "Present" roles
+// and their year counts update themselves — nothing here to hand-edit each year.
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const parse = (s) => { const [y, m] = s.split("-").map(Number); return [y, m || 1]; };
+const label = (s) => (s.includes("-") ? `${MONTHS[parse(s)[1] - 1]} ${parse(s)[0]}` : s);
+const duration = (start, end) => {
+  const [sy, sm] = parse(start);
+  const now = new Date();
+  const [ey, em] = end ? parse(end) : [now.getFullYear(), now.getMonth() + 1];
+  let months = Math.max(0, (ey - sy) * 12 + (em - sm));
+  const y = Math.floor(months / 12), m = months % 12;
+  return [y ? `${y} yr${y > 1 ? "s" : ""}` : "", m ? `${m} mo${m > 1 ? "s" : ""}` : ""].filter(Boolean).join(" ") || "1 mo";
+};
+const formatRange = (start, end) => `${label(start)} – ${end ? label(end) : "Present"} · ${duration(start, end)}`;
 
 const Experiences = [
   {
     key: 'organicmandya',
     title: 'Head of Engineering',
     company: 'Organic Mandya (Mandya Organic Foods Pvt. Ltd.), Bengaluru, India',
-    date: '2026 – Present',
+    start: '2026-06',
+    end: null,
     logo: organicmandyaLogo,
     points: [
       "Lead engineering across the omnichannel stack of a 21-store organic retail business — a Flutter customer app, a Shopify storefront, and a React/Supabase staff analytics platform.",
@@ -28,105 +42,46 @@ const Experiences = [
   },
   {
     key: 'starteryou',
-    title: 'Co-Founder & CTO',
+    title: 'Co-Founder & Chief Technology Officer',
     company: 'Starteryou Inc., New York, NY (Remote)',
-    date: 'Jul 2024 – Present',
+    start: '2024-07',
+    end: null,
     logo: starteryouLogo,
     points: [
-      "Co-founded the company and lead engineering, architecture, and infrastructure for a platform connecting teenagers and college students with meaningful part-time job opportunities.",
-      "Oversee development of robust software solutions using a modern tech stack: React with Vite, Bootstrap, Node.js, MongoDB, AWS (EC2), Docker, Kubernetes",
-      "Implement secure communication protocols and manage SSL certificates.",
-      "Utilize GitHub for source control and CI/CD processes.",
-      "Design scalable, container-based infrastructure with plans for Kubernetes orchestration.",
-      "Mentor emerging tech talent and foster a culture of innovation.",
-      "Ensure user-centric platform development and continuous technological improvement.",
-    ]
-  },
-  {
-    key: 'professor',
-    title: 'Adjunct Professor',
-    company: 'Sacred Heart University, Fairfield, CT',
-    date: 'Jan 2024 - Dec 2024',
-    logo: sacredheartLogo,
-    points: [
-      "Specialize in instructing courses on Data Science Architecture, Big Data, Data Structures, MongoDB, and Text-Based Analysis.",
-      "Employ interactive teaching methods to facilitate deep understanding and engagement.",
-      "Integrate industry insights and continuously update course material.",
-      "Provide real-world applications through industry expertise.",
-    ]
-  },
-  {
-    key: 'british_airways',
-    title: 'Data Science Virtual Intern',
-    company: 'British Airways, Fairfield, CT',
-    date: 'May 2023 - May 2023',
-    logo: britishairwaysLogo,
-    points: [
-      "Developed web scraping techniques using Beautiful Soup.",
-      "Performed data analysis and visualization using Python libraries.",
-      "Uncovered competitor strategies and market dynamics.",
-      "Predicted customer buying behavior using ML (85% accuracy).",
-      "Empowered marketing strategy and business optimization.",
-    ]
-  },
-  {
-    key: 'research_assistant',
-    title: 'Research Assistant',
-    company: 'Sacred Heart University, Fairfield, CT',
-    date: 'Jan 2023 - May 2023',
-    logo: sacredheartLogo,
-    points: [
-      "Achieved 95% accuracy in breast cancer prediction using linear regression.",
-      "Sentiment analysis on tweets with 85% accuracy.",
-      "LDA analysis on COVID-19 tweets.",
-      "Designed Vinyl Rack for IDEA Lab (30% capacity increase).",
-      "Demonstrated strong data-driven and analytical skills.",
+      "Architected and operated a scalable multi-environment platform (dev/staging/prod) on AWS, owning the foundational infrastructure and shared tooling the entire engineering team depended on to ship reliably.",
+      "Built reusable Terraform modules to provision and manage infrastructure as code, enabling consistent, repeatable environment setup and multi-cloud scalability.",
+      "Established CI/CD pipelines with GitHub Actions, cutting release times by 40%; optimized delivery with multi-stage Docker builds that significantly reduced image size and deployment time.",
+      "Containerized services with Docker and designed Kubernetes orchestration for auto-scaling, rollout, and self-healing of platform workloads.",
+      "Hardened platform security end-to-end: HTTPS/TLS (Let's Encrypt), database access controls (IP whitelisting, SSL), and a caching + cookie/session layer on a metadata-driven framework to improve response times.",
+      "Integrated Stripe with webhook-driven post-payment workflows, and built a real-time geolocation matching service — distributed, latency-sensitive systems serving production traffic.",
+      "Led a cross-functional team of 10–12 (engineers, DevOps, design) with Agile sprint planning, code review, and retrospectives.",
     ]
   },
   {
     key: 'cerner',
     title: 'Software Engineer II',
-    company: 'Oracle Cerner, Bengaluru, India',
-    date: 'Dec 2019 – Aug 2022',
+    company: 'Cerner Corporation, Bengaluru, India',
+    start: '2019-12',
+    end: '2022-08',
     logo: cernerLogo,
     points: [
-      "Improved features for Operations team (50% workload reduction).",
-      "Revamped data framework with Olympus and Jetstream.",
-      "Optimized script management and crash resolution.",
-      "Worked on AI and ML-based life-saving leaf blower technology for Cerner.",
-      "Wrote Call Home scripts using SQL, PL-SQL, T-SQL, VB Script, PowerShell.",
-      "Improved Jetstream framework CSV reader and Call Home data collection.",
-      "Created Java Native Interface using JavaScript & C++.",
-      "Enhanced server identification scripts and crash gather dumps collection.",
+      "Developed RESTful microservices in Spring Boot for CRUD operations across a multi-module enterprise platform serving healthcare systems.",
+      "Leveraged Spring Cloud for service discovery, centralized configuration, and distributed logging/tracing (Eureka, Config Server, Sleuth) — core platform/service-mesh concerns at scale.",
+      "Secured API endpoints with Spring Security, integrating OAuth2 and JWT for authentication and authorization.",
+      "Implemented Spring Data JPA for efficient query handling; performance-tuned services with caching and asynchronous processing to improve scalability.",
+      "Built telemetry/‘Call Home’ data-collection frameworks (SQL/PL-SQL/T-SQL, PowerShell), a Java Native Interface for Linux disk metrics, and crash-dump collection — observability and reliability tooling for fleets of servers.",
+      "Deployed containerized Spring Boot services to cloud (Azure, internal CCTS) with Docker; wrote JUnit/Mockito unit and integration tests to ensure code quality and reliability.",
     ]
   },
   {
-    key: 'sixD',
-    title: 'Software Engineer',
-    company: '6D Technologies, Bengaluru, India',
-    date: 'Aug 2019 – Dec 2019',
+    key: 'earlier',
+    title: 'Earlier Engineering Roles',
+    company: '6D Technology (SWE) • Probots Techno Solutions (SWE), India',
+    start: '2018-06',
+    end: '2019-11',
     logo: sixDLogo,
     points: [
-      "Developed SMSC GUI and served as React UI & backend dev for Sony Ericsson's MAGIK.",
-      "Achieved 40% system efficiency and 25% downtime reduction.",
-      "Constructed tree structure React component using JSON & Reactstrap.",
-      "Built Spring Boot services with CRUD for tree view.",
-      "Implemented MSISDN report viewing using Java and JSP servlets.",
-    ]
-  },
-  {
-    key: 'probots',
-    title: 'Probots Techno Solutions',
-    company: 'Probots Techno Solutions',
-    date: '2017 - 2018',
-    logo: probotsLogo,
-    points: [
-      "Created native C/C++ API for dialysis unit control.",
-      "Built Android GPS tracker app for Alpine Star.",
-      "Bluetooth remote for video via RTMP/RTSP.",
-      "Pet tracker app with Arduino, Maps API, JSON.",
-      "Custom camera app with photo/QR & autofocus.",
-      "Live video streaming via RTSP and RTMP.",
+      "Built Spring Boot services and React UI components (Magik UI), and shipped native C/C++ REST integrations and Android applications for IoT/hardware control — full-stack and systems-level breadth.",
     ]
   }
 ];
@@ -147,12 +102,11 @@ const Experience = () => {
       {/* Rotated Title */}
       <h1 className="experience-title-large">My</h1>
       <h2 className="experience-title-small">Experience</h2>
-      
+
       <div className="experience-content">
-        {/* All 8 experiences displayed as experience cards */}
         <div className="experience-container">
           {Experiences.map((experience) => (
-            <div 
+            <div
               key={experience.key}
               className={`experience-block ${expandedExperiences.includes(experience.key) ? 'expanded' : ''}`}
               onClick={() => toggleExperienceExpand(experience.key)}
@@ -174,7 +128,7 @@ const Experience = () => {
                 <div className="experience-info">
                   <h3 className="experience-title">{experience.title}</h3>
                   <p className="experience-company">{experience.company}</p>
-                  <p className="experience-date">{experience.date}</p>
+                  <p className="experience-date">{formatRange(experience.start, experience.end)}</p>
                 </div>
               </div>
               {expandedExperiences.includes(experience.key) && (
