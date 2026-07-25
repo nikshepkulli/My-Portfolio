@@ -830,3 +830,30 @@
 .certifications-arrow:focus-visible {
   outline: none;
 }
+
+/* UI QA fix: above 1400px the base rule forces each .carousel-box to 750px, so the
+   two side-by-side carousels (1500px) overflowed the 1400px row and the right
+   (Certifications) card was clipped. Cap the box so both fit; the existing
+   <=1400px breakpoints already handle narrower widths, so only touch the wide zone. */
+@media (min-width: 1401px) {
+  .carousel-box {
+    width: 640px !important;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .publications-carousel-frame,
+  .certifications-carousel-frame {
+    width: 100% !important;
+  }
+  .carousel-img {
+    width: 340px !important;
+    height: 220px !important;
+    max-width: 100%;
+  }
+  .carousel-name {
+    width: 100% !important;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}

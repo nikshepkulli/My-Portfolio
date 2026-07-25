@@ -156,7 +156,7 @@ const Contact = () => {
       
       {/* Copyright stays OUTSIDE the contact section */}
       <div className="copyright-footer">
-        © 2025 Nikshep A Kulli. All rights reserved.
+        © {new Date().getFullYear()} Nikshep A Kulli. All rights reserved.
       </div>
     </>
   );

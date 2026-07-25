@@ -7,12 +7,12 @@ import '../styles/Publications.css';
 const publications = [
   {
     img: pub1,
-    name: "SpringerPublication",
+    name: "Springer Publication",
     link: "https://link.springer.com/chapter/10.1007/978-3-031-53963-3_7",
   },
   {
     img: pub2,
-    name: "AIRCCPublication",
+    name: "AIRCC Publication",
     link: "https://aircconline.com/csit/papers/vol14/csit142214.pdf",
   },
 ];
