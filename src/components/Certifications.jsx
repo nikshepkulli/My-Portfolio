@@ -7,12 +7,12 @@ import '../styles/Certifications.css';
 const certifications = [
   {
     img: cert1,
-    name: "MongoDBCertificate",
+    name: "MongoDB Certificate",
     link: "https://github.com/nikshepkulli/niku/tree/master/MongoDB%20Certificates",
   },
   {
     img: cert2,
-    name: "ForageCertificate",
+    name: "Forage Certificate",
     link: "https://github.com/nikshepkulli/niku/tree/master/Forage%20Certificate",
   },
 ];
