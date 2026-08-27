@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Glad you're here,</h1>
           <h2>I'm Nikshep A Kulli</h2>
-          <p>Co-Founder &amp; CTO @ Starteryou</p>
+          <p>Founder @ Kulli &amp; Co · Co-Founder &amp; CTO @ Starteryou</p>
                    
           <div className="slogan">
             <div className="slogan-box">

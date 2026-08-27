@@ -5,6 +5,7 @@ import "../styles/Experience.css"; // Ensure path is correct
 import cernerLogo from '../assets/cerner.png';
 import sixDLogo from '../assets/6D.png';
 import starteryouLogo from '../assets/starteryou.png';
+import kulliandcoLogo from '../assets/kulli-and-co.svg';
 
 // ── Dynamic dates ─────────────────────────────────────────────────────────────
 // Each role stores a `start` (and optional `end`) as "YYYY" or "YYYY-MM". The
@@ -24,6 +25,19 @@ const duration = (start, end) => {
 const formatRange = (start, end) => `${label(start)} – ${end ? label(end) : "Present"} · ${duration(start, end)}`;
 
 const Experiences = [
+  {
+    key: 'kulliandco',
+    title: 'Founder & Principal Engineer',
+    company: 'Kulli & Co — Senior Engineering Studio',
+    start: '2026-08',
+    end: null,
+    logo: kulliandcoLogo,
+    points: [
+      "Founded a senior engineering studio: embed a small, seasoned team inside a company, ship the hard technical work in production, and hand back clean systems the client owns.",
+      "Offerings span scoped deployment sprints, embedded forward-deployed pods, technical due diligence, and fractional CTO — senior-led, dollar-smart, built to hand back.",
+      "Built the studio's own operating system end-to-end: a static Next.js site on Cloudflare, a Git-backed CMS, and a Zoho-native client pipeline (onboarding, e-signature, CRM, invoicing).",
+    ]
+  },
   {
     key: 'starteryou',
     title: 'Co-Founder & Chief Technology Officer',
