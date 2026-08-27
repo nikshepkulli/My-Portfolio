@@ -5,7 +5,6 @@ import "../styles/Experience.css"; // Ensure path is correct
 import cernerLogo from '../assets/cerner.png';
 import sixDLogo from '../assets/6D.png';
 import starteryouLogo from '../assets/starteryou.png';
-import organicmandyaLogo from '../assets/organicmandya.png';
 
 // ── Dynamic dates ─────────────────────────────────────────────────────────────
 // Each role stores a `start` (and optional `end`) as "YYYY" or "YYYY-MM". The
@@ -25,21 +24,6 @@ const duration = (start, end) => {
 const formatRange = (start, end) => `${label(start)} – ${end ? label(end) : "Present"} · ${duration(start, end)}`;
 
 const Experiences = [
-  {
-    key: 'organicmandya',
-    title: 'Head of Engineering',
-    company: 'Organic Mandya (Mandya Organic Foods Pvt. Ltd.), Bengaluru, India',
-    start: '2026-06',
-    end: null,
-    logo: organicmandyaLogo,
-    points: [
-      "Lead engineering across the omnichannel stack of a 21-store organic retail business — a Flutter customer app, a Shopify storefront, and a React/Supabase staff analytics platform.",
-      "Architected the omnichannel availability system: a per-pincode available-to-promise stock gate (FastAPI + Redis on AWS) syncing Odoo inventory to the storefront in real time — eliminating false “sold out” and overselling.",
-      "Built CI/CD and deployment pipelines across the mobile app (Flutter/TestFlight), the Shopify theme (staging → publish), and the analytics dashboard — replacing manual, error-prone releases.",
-      "Drove data-integrity, observability, and security hardening — automated catalog audits, AWS-based secrets management, and least-privilege access across services.",
-      "Set engineering standards and process — issue-first tracking, PR review with CI gates, and reproducible infrastructure — across the team.",
-    ]
-  },
   {
     key: 'starteryou',
     title: 'Co-Founder & Chief Technology Officer',
