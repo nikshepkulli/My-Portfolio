@@ -196,7 +196,7 @@
   
   .experience-block {
     width: 310px;
-    height: 320px;
+    min-height: 320px;
   }
   
   .experience-img,
@@ -237,7 +237,7 @@
   
   .experience-block {
     width: 270px;
-    height: 280px;
+    min-height: 280px;
   }
   
   .experience-img,
@@ -262,7 +262,7 @@
   
   .experience-block {
     width: 280px;
-    height: 300px;
+    min-height: 300px;
     margin: 0;
   }
   
@@ -317,7 +317,7 @@
   
   .experience-block {
     width: 320px;
-    height: 300px;
+    min-height: 300px;
     margin-bottom: 15px;
   }
   
@@ -614,17 +614,15 @@
     margin-left: 0;
     margin-right: 50px;
     position: relative;
-    align-items: flex-start;
+    align-items: stretch;
   }
   
   .experience-block {
     width: 350px !important;
-    height: 240px !important;
     min-height: 240px !important;
-    max-height: 240px !important;
+    height: auto !important;
     margin: 0 !important;
     position: relative !important;
-    overflow: hidden !important;
     padding: 15px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -673,7 +671,7 @@
   
   .experience-block {
     max-width: 350px;
-    height: 270px;
+    min-height: 270px;
   }
   
   .experience-block.expanded {
