@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import photo from '../assets/profile-480.webp';
+import lakehouseShot from '../assets/lakehouse-dashboard.webp';
+
+const projectImages = { lakehouse: lakehouseShot };
 import { person, experience, projects, skills, education, teaching, writing } from './content';
 import './site.css';
 
@@ -94,7 +97,7 @@ function ContactForm() {
           {state === 'sending' ? 'Sending…' : 'Send message'}
         </button>
         <p className="form-status" role="status">
-          {state === 'sent' && 'Message sent. I usually reply within a day.'}
+          {state === 'sent' && 'Message sent. I’ll reply to the email you gave.'}
           {state === 'error' && `The message didn't send. Email me directly at ${person.email}.`}
         </p>
       </div>
@@ -107,9 +110,9 @@ export default function Site() {
     <div className="page">
       <header className="hero">
         <div className="hero-text">
-          <p className="status"><span className="status-dot" aria-hidden="true" />{person.status}</p>
           <h1>{person.name}</h1>
           <p className="hero-role">{person.role}</p>
+          <p className="status"><span className="status-dot" aria-hidden="true" />{person.status}</p>
           <p className="hero-pitch">{person.pitch}</p>
           <div className="hero-actions">
             <a className="btn btn-primary" href={person.resume} target="_blank" rel="noopener noreferrer">View resume</a>
@@ -139,6 +142,11 @@ export default function Site() {
           <div className="projects">
             {projects.map((p) => (
               <article className="project" key={p.name}>
+                {p.image && (
+                  <a className="project-shot" href={p.links[0].href} target="_blank" rel="noopener noreferrer" aria-label={`${p.name}: open the live dashboard`}>
+                    <img src={projectImages[p.image]} alt={`${p.name} dashboard: paid cost, claims count and denial rate tiles`} width="1120" height="335" loading="lazy" />
+                  </a>
+                )}
                 <h3>{p.name} <span className="project-year">{p.year}</span></h3>
                 <p>{p.summary}</p>
                 <p className="project-stack">{p.stack}</p>

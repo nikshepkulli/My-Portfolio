@@ -4,7 +4,7 @@ export const person = {
   name: 'Nikshep Kulli',
   role: 'AI Engineer and engineering leader in Bengaluru',
   pitch:
-    'I build AI and cloud systems that people actually use, and lead the teams that ship them: Java and Spring Boot microservices, React and Node.js, AWS and Azure, and production RAG.',
+    'I build AI and cloud systems for real users and lead the teams that ship them: Java and Spring Boot microservices, React and Node.js, AWS and Azure, and production RAG.',
   status: 'Open to roles in Bengaluru, joining immediately',
   email: 'nikshepkulli9@gmail.com',
   linkedin: 'https://www.linkedin.com/in/nikshepkulli/',
@@ -82,6 +82,7 @@ export const projects = [
   {
     name: 'Claims Lakehouse Analytics',
     year: '2026',
+    image: 'lakehouse',
     summary:
       'A health-insurance claims data platform that keeps a raw copy of every feed, quarantines bad records with a stated reason, and reconciles row counts so nothing silently disappears. Member and provider ids are tokenised; all data is synthetic.',
     stack: 'Spark, Delta Lake, dbt, Great Expectations, Airflow, Terraform, Snowflake',

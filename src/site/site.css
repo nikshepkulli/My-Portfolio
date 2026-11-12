@@ -31,6 +31,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+::selection { background: var(--accent-soft); color: var(--ink); }
+input, textarea { caret-color: var(--accent); }
+
 a { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
@@ -53,7 +56,7 @@ a { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickn
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 0 0 20px;
+  margin: 20px 0 0;
   padding: 6px 14px 6px 12px;
   background: var(--accent-soft);
   color: var(--accent-ink);
@@ -133,7 +136,7 @@ a { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickn
   font-weight: 700;
   color: var(--ink);
 }
-.section-body { max-width: 720px; min-width: 0; }
+.section-body { max-width: 68ch; min-width: 0; }
 h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 .muted { color: var(--muted); }
 
@@ -161,8 +164,9 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 .role-points li { margin: 6px 0; }
 .role-points li::marker { color: var(--muted); }
 .text-btn {
-  margin-top: 6px;
-  padding: 6px 0;
+  margin-top: 2px;
+  min-height: 44px;
+  padding: 0;
   background: none;
   border: 0;
   color: var(--accent-ink);
@@ -185,7 +189,11 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 .project p { margin: 10px 0 0; }
 .project-year { margin-left: 6px; color: var(--muted); font-weight: 500; font-size: 15px; }
 .project-stack { color: var(--muted); font-size: 15px; }
-.project-links { display: flex; gap: 20px; font-weight: 500; }
+.project .project-links { display: flex; gap: 24px; font-weight: 500; margin-top: 4px; }
+.project-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.project-shot { display: block; margin: -4px -4px 18px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+.project-shot img { display: block; width: 100%; height: auto; transition: transform 300ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .project-shot:hover img { transform: scale(1.02); } }
 
 /* Skills */
 .skills { margin: 0; display: grid; gap: 14px; }
