@@ -5,7 +5,8 @@ import "../styles/Experience.css"; // Ensure path is correct
 import cernerLogo from '../assets/cerner.png';
 import sixDLogo from '../assets/6D.png';
 import starteryouLogo from '../assets/starteryou.png';
-import kulliandcoLogo from '../assets/kulli-and-co.svg';
+import aiLogo from '../assets/ai.svg';
+import omLogo from '../assets/om.svg';
 
 // ── Dynamic dates ─────────────────────────────────────────────────────────────
 // Each role stores a `start` (and optional `end`) as "YYYY" or "YYYY-MM". The
@@ -26,16 +27,30 @@ const formatRange = (start, end) => `${label(start)} – ${end ? label(end) : "P
 
 const Experiences = [
   {
-    key: 'kulliandco',
-    title: 'Founder & Principal Engineer',
-    company: 'Kulli & Co — Senior Engineering Studio',
-    start: '2026-08',
+    key: 'independent',
+    title: 'AI Engineer',
+    company: 'Independent, Bengaluru (Remote)',
+    start: '2026-11',
     end: null,
-    logo: kulliandcoLogo,
+    logo: aiLogo,
     points: [
-      "Founded a senior engineering studio: embed a small, seasoned team inside a company, ship the hard technical work in production, and hand back clean systems the client owns.",
-      "Offerings span scoped deployment sprints, embedded forward-deployed pods, technical due diligence, and fractional CTO — senior-led, dollar-smart, built to hand back.",
-      "Built the studio's own operating system end-to-end: a static Next.js site on Cloudflare, a Git-backed CMS, and a Zoho-native client pipeline (onboarding, e-signature, CRM, invoicing).",
+      "Building production-style AI and data engineering projects with AI coding agents, under full code review and CI gates.",
+      "Claims Lakehouse Analytics: Spark and Delta Lake pipeline with streaming quality gates, dbt models, Great Expectations checks, an Airflow DAG, Terraform for AWS, Azure and Snowflake, and CI with 23 checks on every pull request.",
+    ]
+  },
+  {
+    key: 'organicmandya',
+    title: 'Head of Engineering',
+    company: 'Organic Mandya, Bengaluru (Remote)',
+    start: '2026-06',
+    end: '2026-09',
+    logo: omLogo,
+    points: [
+      "Led engineering for a farm-to-consumer organic food brand, owning the Suggi mobile app and the e-commerce platform.",
+      "Built and grew a fully remote engineering team to 6 engineers.",
+      "Set up automated CI/CD for the Android and iOS apps (signing, Firebase config, Google Play and App Store Connect releases).",
+      "Defined the migration strategy from Shopify to a custom commerce platform.",
+      "Created a Forward Deployed Engineer role connecting engineering with farmer cooperatives and retail partners.",
     ]
   },
   {
@@ -43,9 +58,11 @@ const Experiences = [
     title: 'Co-Founder & Chief Technology Officer',
     company: 'Starteryou Inc., New York, NY (Remote)',
     start: '2024-07',
-    end: null,
+    end: '2026-11',
     logo: starteryouLogo,
     points: [
+      "Took a two-sided student–employer platform from zero to 15,000+ users and 342 employer partners, supporting a $1.2M pre-seed raise.",
+      "Built and shipped a production RAG-based AI assistant (Node.js/Express, Hugging Face LLMs): ingestion, chunking, retrieval and grounding rules, evaluated on the first 100 real user queries.",
       "Architected and operated a scalable multi-environment platform (dev/staging/prod) on AWS, owning the foundational infrastructure and shared tooling the entire engineering team depended on to ship reliably.",
       "Built reusable Terraform modules to provision and manage infrastructure as code, enabling consistent, repeatable environment setup and multi-cloud scalability.",
       "Established CI/CD pipelines with GitHub Actions, cutting release times by 40%; optimized delivery with multi-stage Docker builds that significantly reduced image size and deployment time.",

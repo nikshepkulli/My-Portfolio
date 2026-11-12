@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import '../styles/Projects.css';
 import robotLogo from '../assets/robot.png';
+import lakehouseLogo from '../assets/lakehouse.svg';
 
 const Projects = () => {
   const [expanded, setExpanded] = useState({
-    robotics: false
+    robotics: false,
+    lakehouse: false
   });
 
   const toggleExpand = (key) => {
@@ -28,6 +30,46 @@ const Projects = () => {
       </div>
       <div className="projects-container">
         
+        {/* Claims Lakehouse Project */}
+        <div
+          className={`project-block clickable-project ${expanded.lakehouse ? 'expanded' : ''}`}
+          onClick={() => toggleExpand('lakehouse')}
+          style={{ cursor: 'pointer', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}
+        >
+          <img src={lakehouseLogo} alt="Claims Lakehouse Logo" className="project-img project-logo-img" />
+          <div className="project-header-row">
+            <h3 className="project-title">Claims Lakehouse Analytics</h3>
+            <span className="project-company">Data &amp; AI Engineering</span>
+            <span className="project-date">2026</span>
+          </div>
+          {expanded.lakehouse && (
+            <div className="project-details">
+              <ul>
+                <li>Health-insurance claims data platform: raw copy of every feed, record-level cleaning with quarantined rows and stated reasons, and a reconciliation check so no row silently vanishes.</li>
+                <li>Spark and Delta Lake pipeline with streaming quality gates, dbt models, Great Expectations checks and an Airflow DAG.</li>
+                <li>Terraform for AWS, Azure and Snowflake; CI with 23 checks on every pull request.</li>
+                <li>Member and provider ids replaced by keyed tokens in analyst-ready tables. All data is synthetic.</li>
+              </ul>
+              <div className="project-gallery-section">
+                <button
+                  className="gallery-button"
+                  onClick={(e) => handleLinkClick(e, 'https://nikshepkulli.github.io/claims-lakehouse/')}
+                  style={{ background: 'linear-gradient(135deg, #0e7490 0%, #4f46e5 100%)', border: 'none', borderRadius: '8px', color: 'white', padding: '12px 24px', fontSize: '14px', fontWeight: '600', cursor: 'pointer', marginTop: '15px', width: '100%' }}
+                >
+                  View live dashboard
+                </button>
+                <button
+                  className="gallery-button"
+                  onClick={(e) => handleLinkClick(e, 'https://github.com/nikshepkulli/claims-lakehouse')}
+                  style={{ background: 'linear-gradient(135deg, #334155 0%, #0f172a 100%)', border: 'none', borderRadius: '8px', color: 'white', padding: '12px 24px', fontSize: '14px', fontWeight: '600', cursor: 'pointer', marginTop: '15px', width: '100%' }}
+                >
+                  View code on GitHub
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+
         {/* Robotics Project */}
         <div 
           className={`project-block clickable-project ${expanded.robotics ? 'expanded' : ''}`}

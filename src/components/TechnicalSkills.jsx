@@ -3,15 +3,17 @@ import React from 'react';
 import '../styles/TechnicalSkills.css';
 
 const skills = {
-  'Programming Languages': ['Java', 'R', 'C', 'JavaScript', 'Python', 'C#'],
+  'AI / LLM': ['RAG', 'LLM Agents', 'Hugging Face', 'Prompt Engineering', 'Amazon SageMaker'],
+  'Programming Languages': ['Java', 'Python', 'JavaScript', 'C', 'C#', 'R'],
+  'Frameworks': ['Spring Boot', 'Spring', 'React', 'Node.js', 'Django', 'Hibernate'],
+  'Cloud': ['AWS', 'Azure', 'Terraform'],
   'Big Data / Database': ['Hadoop', 'Cassandra', 'MongoDB', 'PostgreSQL'],
   'ML / AI Libraries and Tools': [
     'Keras', 'Pandas', 'NumPy', 'Scikit-learn', 'Jupyter', 'Pytest',
-    'NLTK', 'SpaCy', 'Hugging Face', 'Seaborn', 'Matplotlib'
+    'NLTK', 'SpaCy', 'Seaborn', 'Matplotlib'
   ],
-  'DevOps / Tools': ['Jira', 'Jenkins', 'Git', 'Docker', 'Kubernetes', 'Airflow'],
+  'DevOps / Tools': ['Docker', 'Kubernetes', 'GitHub Actions', 'Jenkins', 'Git', 'Airflow', 'Jira'],
   'Operating Systems': ['Linux', 'Windows'],
-  'Frameworks': ['Spring', 'Hibernate', 'Django'],
 };
 
 const getIconPath = (tool) => {
@@ -40,6 +42,12 @@ const getIconPath = (tool) => {
     Jira: 'jira',
     Airflow: 'apacheairflow',
     Spring: 'spring',
+    'Spring Boot': 'spring',
+    React: 'react',
+    'Node.js': 'nodejs',
+    Azure: 'azure',
+    Terraform: 'terraform',
+    'GitHub Actions': 'githubactions',
     Hibernate: 'hibernate',
     Pytest: 'pytest',
     Matplotlib: 'matplotlib',
@@ -52,6 +60,7 @@ const getIconPath = (tool) => {
     'Hugging Face': 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg',
     'Seaborn': 'https://seaborn.pydata.org/_images/logo-mark-lightbg.svg',
     'Django': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
   };
 
   // Check custom icons first
