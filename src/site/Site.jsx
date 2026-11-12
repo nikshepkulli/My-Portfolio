@@ -79,11 +79,11 @@ function ContactForm() {
     <form className="contact-form" onSubmit={send}>
       <label>
         Your name
-        <input name="name" value={form.name} onChange={update} required autoComplete="name" />
+        <input name="name" value={form.name} onChange={update} required autoComplete="name" autoCapitalize="words" />
       </label>
       <label>
         Your email
-        <input name="email" type="email" value={form.email} onChange={update} required autoComplete="email" />
+        <input name="email" type="email" value={form.email} onChange={update} required autoComplete="email" autoCapitalize="none" autoCorrect="off" inputMode="email" />
       </label>
       <label className="full">
         Message
@@ -118,7 +118,14 @@ export default function Site() {
             <a className="btn" href={person.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
-        <img className="hero-photo" src={photo} alt="Nikshep Kulli" width="240" height="240" />
+        <img
+          className="hero-photo"
+          src={photo}
+          alt="Portrait of Nikshep Kulli"
+          width="240"
+          height="240"
+          onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
+        />
       </header>
 
       <main>

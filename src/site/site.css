@@ -8,6 +8,7 @@
   --accent-ink: #0a4f40;
   --accent-soft: #e1efea;
   --radius: 10px;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   color-scheme: light;
 }
 
@@ -15,7 +16,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   margin: 0;
@@ -28,15 +32,18 @@ body {
 }
 
 a { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
-a:hover { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-.page { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 max(24px, env(safe-area-inset-right, 0px)) 0 max(24px, env(safe-area-inset-left, 0px));
+}
 
 /* Hero */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 48px;
   align-items: center;
   padding: 88px 0 72px;
@@ -55,6 +62,7 @@ a:hover { color: var(--accent); }
   font-weight: 500;
 }
 .status-dot {
+  flex-shrink: 0;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -83,6 +91,7 @@ a:hover { color: var(--accent); }
   object-fit: cover;
   border-radius: 20px;
   filter: grayscale(1);
+  background: var(--line);
 }
 
 .btn {
@@ -100,17 +109,20 @@ a:hover { color: var(--accent); }
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 160ms var(--ease-out), border-color 150ms ease, background-color 150ms ease;
 }
-.btn:hover { border-color: var(--ink); color: var(--ink); }
+.btn:active { transform: scale(0.97); }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; }
+.btn-primary:active { background: var(--accent-ink); }
 .btn:disabled { opacity: 0.6; cursor: default; }
 
 /* Sections */
 .section {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 200px minmax(0, 1fr);
   gap: 32px;
   padding: 56px 0;
   border-bottom: 1px solid var(--line);
@@ -121,7 +133,7 @@ a:hover { color: var(--accent); }
   font-weight: 700;
   color: var(--ink);
 }
-.section-body { max-width: 720px; }
+.section-body { max-width: 720px; min-width: 0; }
 h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 .muted { color: var(--muted); }
 
@@ -160,7 +172,11 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 3px;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
 }
+.text-btn:active { opacity: 0.6; }
 
 /* Projects */
 .projects { display: grid; gap: 28px; }
@@ -173,7 +189,7 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 
 /* Skills */
 .skills { margin: 0; display: grid; gap: 14px; }
-.skills div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; }
+.skills div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; }
 .skills dt { font-weight: 700; }
 .skills dd { margin: 0; color: var(--ink); }
 
@@ -181,8 +197,8 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
 .plain-list li { margin: 8px 0; }
 
 /* Contact */
-.contact-lead { margin: 0 0 20px; }
-.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-lead { margin: 0 0 20px; overflow-wrap: anywhere; }
+.contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .contact-form label { display: grid; gap: 6px; font-size: 15px; font-weight: 500; }
 .contact-form .full { grid-column: 1 / -1; }
 .contact-form input,
@@ -216,6 +232,12 @@ h3 { margin: 0; font-size: 19px; line-height: 1.35; font-weight: 700; }
   .skills div { grid-template-columns: 1fr; gap: 2px; }
   .contact-form { grid-template-columns: 1fr; }
   .project { padding: 20px; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover { color: var(--accent); }
+  .btn:hover { border-color: var(--ink); color: var(--ink); }
+  .btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: #fff; }
 }
 
 @media (prefers-reduced-motion: reduce) {
